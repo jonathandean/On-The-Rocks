@@ -1,0 +1,3 @@
+[submodule "scss/neat"]
+	path = scss/neat
+	url = git://github.com/thoughtbot/neat.git
