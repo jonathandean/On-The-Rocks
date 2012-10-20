@@ -11,6 +11,20 @@ Go into your project's wp-content/themes/ directory and run:
     cd [project root]/wp-content/themes/
     git clone git@github.com:jonathandean/On-The-Rocks.git on_the_rocks
     
+This projects contains neat as a submodule. When you clone the repository you'll have the directory that contain the submodule but not the files yet. To get them, you'll have to run:
+
+    git submodule init
+    git submodule update
+    
+Compiling the SCSS
+==================
+
+First you must install SASS if you don't already have it. I would recommend at least version 3.2.1
+
+    gem install sass
+    sass --watch scss/style.scss:style.css
+    
+More information at http://sass-lang.com/
 
 Use as a git submodule
 ======================
@@ -53,8 +67,10 @@ If you are using SCSS then you can also make the import statement compile the On
 
 You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
-Contribute/Setup
-================
+Setup
+=====
+
+These are the steps I used to set up bourbon and neat. You don't need to do this when you clone the repository, but I thought it might be useful for you to see how I did it and also for my own future reference:
 
 Install bourbon (first time)
 
@@ -75,6 +91,7 @@ Install neat (git submodule)
     
 Compile SCSS
 
+    gem install sass
     cd [project root]
     sass --watch scss/style.scss:style.css
 
