@@ -28,6 +28,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 */
 get_header(); ?>
 <div id="content" role="main">
+  <div class="container">
   <?php
   /* Run the loop to output the posts.
    * If you want to overload this in a child theme then include a file
@@ -35,5 +36,6 @@ get_header(); ?>
    */
    echo "hello, world";
   ?>
+  </div>
 </div>
 <?php get_footer(); ?>

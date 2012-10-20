@@ -1,0 +1,36 @@
+$sprite_url: "images/sprite.png";
+
+@mixin image-replace($image_url: $sprite_url){
+  display: block;
+  text-indent: -99999px;
+  background: url($image_url) no-repeat;
+}
+
+@mixin image-replace-link($image_url: $sprite_url){
+  &, & a{
+    display: block;
+    background: url($image_url) no-repeat;
+  }
+  a{
+    text-indent: -99999px;
+    text-decoration: none;
+  }
+}
+
+@mixin unformatted-list{
+  list-style: none;
+  &, li{
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@mixin floated-list{
+  list-style: none;
+  &, li{
+    display: block;
+  }
+  li{
+    float: left;
+  }
+}

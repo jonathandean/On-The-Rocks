@@ -6,5 +6,6 @@
 
   wp_footer();
 ?>
+  </div><?php /* #page */ ?>
 </body>
 </html>

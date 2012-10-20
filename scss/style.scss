@@ -25,10 +25,56 @@ License:
 License URI: http://www.apache.org/licenses/LICENSE-2.0
 
 */
-
+// HTML5 alternative to a reset css: https://github.com/necolas/normalize.css
+@import "normalize";
 // Bourbon: SASS Mixin library
 // https://github.com/thoughtbot/bourbon
 @import "bourbon/bourbon";
+// Custom settings for Neat and other variables
+@import "variables";
 // Neat: Fluid grid framework
 // https://github.com/thoughtbot/neat
 @import "neat/neat";
+// Custom mixins
+@import "mixins";
+
+body{
+  font: 100%/1 $font-family;
+  color: $dark-font-color;
+  -webkit-text-size-adjust: 100%;
+  position:relative;
+  background-color: $page-background-color;
+}
+
+#page{
+}
+header{
+  background-color: $header-top-background-color;
+  border-top: $header-top-border-size solid $header-top-border-color;
+  &, a{
+    color: $light-font-color;
+  }
+  .container{
+    @include outer-container;
+    h1{
+      @include span-columns(4);
+      color: $logo-color;
+      font-weight: normal;
+      text-transform: lowercase;
+    }
+    nav{
+      @include span-columns(6);
+      ul{
+        @include floated-list;
+        li{
+          padding-right: 1em;
+        }
+      }
+    }
+  }
+}
+#content{
+  .container{
+    @include outer-container;
+  }
+}
