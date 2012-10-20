@@ -15,6 +15,14 @@ This projects contains neat as a submodule. When you clone the repository you'll
 
     git submodule init
     git submodule update
+
+To get the latest version of On The Rocks in a repostory where you added it as a submodule:
+
+    cd [project root]/wp-content/themes/on_the_rocks/
+    git checkout master
+    git pull
+    cd [project root]
+    git commit -am "Updated On The Rocks with the latest version in master"
     
 Compiling the SCSS
 ==================
