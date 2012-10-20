@@ -351,23 +351,23 @@ body {
   position: relative;
   background-color: #eeeeeb; }
 
-header {
+header.main {
   background-color: #222627;
   border-top: 16px solid #141717; }
-  header, header a {
+  header.main, header.main a {
     color: #eeeeee; }
-  header .container {
+  header.main .container {
     zoom: 1;
     max-width: 46.97082em;
     text-align: left;
     margin-left: auto;
     margin-right: auto; }
-    header .container:before, header .container:after {
+    header.main .container:before, header.main .container:after {
       content: "";
       display: table; }
-    header .container:after {
+    header.main .container:after {
       clear: both; }
-    header .container h1 {
+    header.main .container h1 {
       display: block;
       float: left;
       margin-right: 2.35765%;
@@ -375,22 +375,22 @@ header {
       color: #eeeeee;
       font-weight: normal;
       text-transform: lowercase; }
-      header .container h1:last-child {
+      header.main .container h1:last-child {
         margin-right: 0; }
-    header .container nav {
+    header.main .container nav {
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 48.82117%; }
-      header .container nav:last-child {
+      header.main .container nav:last-child {
         margin-right: 0; }
-      header .container nav ul {
+      header.main .container nav ul {
         list-style: none; }
-        header .container nav ul, header .container nav ul li {
+        header.main .container nav ul, header.main .container nav ul li {
           display: block; }
-        header .container nav ul li {
+        header.main .container nav ul li {
           float: left; }
-        header .container nav ul li {
+        header.main .container nav ul li {
           padding-right: 1em; }
 
 #content .container {

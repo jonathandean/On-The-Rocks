@@ -51,9 +51,9 @@
 </head>
 <body <?php body_class(); ?>>
   <div id="page">
-    <header>
+    <header class="main">
       <div class="container">
-        <h1><?php bloginfo('name'); ?></h1>
+        <h1><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
         <nav role="navigation">
           <?php if ( has_nav_menu( 'primary-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>
             <?php wp_nav_menu( array( 'theme_location' => 'primary-menu') ); ?>

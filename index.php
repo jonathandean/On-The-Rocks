@@ -29,13 +29,13 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 get_header(); ?>
 <div id="content" role="main">
   <div class="container">
-  <?php
-  /* Run the loop to output the posts.
-   * If you want to overload this in a child theme then include a file
-   * called loop-index.php and that will be used instead.
-   */
-   echo "hello, world";
-  ?>
+  <?php if ( have_posts() ) : ?>
+    <?php while ( have_posts() ) : the_post(); ?>
+      <?php get_template_part( 'content', get_post_format() ); ?>
+    <?php endwhile; // end while ( have_posts() ) ?>
+  <?php else : ?>
+    <p>No posts yet!</p>
+  <?php endif; // end have_posts() ?>
   </div>
 </div>
 <?php get_footer(); ?>

@@ -48,7 +48,7 @@ body{
 
 #page{
 }
-header{
+header.main{
   background-color: $header-top-background-color;
   border-top: $header-top-border-size solid $header-top-border-color;
   &, a{
