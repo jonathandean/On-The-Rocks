@@ -57,20 +57,24 @@ Contribute/Setup
 ================
 
 Install bourbon (first time)
+
     gem install bourbon
     cd scss/
     bourbon install
     
 Update bourbon (when needed)
+
     gem update bourbon
     cd scss/
     bourbon update
     
 Install neat (git submodule)
+
     cd [project root]
     git submodule add git://github.com/thoughtbot/neat.git scss/neat
     
 Compile SCSS
+
     cd [project root]
     sass --watch scss/style.scss:style.css
 
