@@ -34,3 +34,10 @@ $sprite_url: "images/sprite.png";
     float: left;
   }
 }
+
+@mixin underline-on-hover{
+  text-decoration: none;
+  a{
+    text-decoration: underline;
+  }
+}

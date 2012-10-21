@@ -38,43 +38,114 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 // Custom mixins
 @import "mixins";
 
+/* Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
+
+// Tablet (Portrait), Design for a width of 768px
+// @include breakpoint(min-width 768px max-width 959px);
+// @media only screen and (min-width: 768px) and (max-width: 959px) 
+
+// Mobile (Portrait), Design for a width of 320px
+// @include breakpoint(max-width 767px);
+// @media only screen and (max-width: 767px)
+
+// Mobile (Landscape), Design for a width of 480px
+// @include breakpoint(min-width 480px max-width 767px);
+// @media only screen and (min-width: 480px) and (max-width: 767px)
+
 body{
-  font: 100%/1 $font-family;
+  font: 14px/1 $font-family;
   color: $dark-font-color;
   -webkit-text-size-adjust: 100%;
   position:relative;
   background-color: $page-background-color;
 }
 
-#page{
+a{
+  color: $dark-font-color;
 }
+a:visited{
+  color: $visited-link-color;
+}
+a:active{
+  color: $active-link-color;
+}
+
 header.main{
   background-color: $header-top-background-color;
   border-top: $header-top-border-size solid $header-top-border-color;
   &, a{
     color: $light-font-color;
   }
+  a{
+    @include underline-on-hover;
+  }
   .container{
     @include outer-container;
     h1{
-      @include span-columns(4);
+      @include span-columns($header-logo-columns);
       color: $logo-color;
       font-weight: normal;
-      text-transform: lowercase;
+      //text-transform: lowercase; // TODO move to child
+      padding-left: $content-side-padding;
+      text-shadow: 3px 4px 6px rgba(0,0,0,.5);
     }
     nav{
-      @include span-columns(6);
+      @include span-columns($header-nav-columns);
       ul{
         @include floated-list;
+        padding-top: 1em;
+        float: right;
+        padding-right: $content-side-padding;
         li{
           padding-right: 1em;
+          &:last-child{
+            padding-right: 0;
+          }
         }
       }
     }
   }
+  border-bottom: 10px solid rgba(0,0,0,0.1);
+  -moz-background-clip: content;     /* Firefox 3.6 */
+  -webkit-background-clip: content;  /* Safari 4? Chrome 6? */
+  background-clip: content-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 }
 #content{
   .container{
     @include outer-container;
+    article{
+      @include border-radius($article-border-radius);
+      box-shadow: 0 0 14px 1px rgba(0,0,0,0.1); // why is this necessary?
+      @include box-shadow(0 0 14px 1px rgba(0,0,0,0.1));
+      background: $article-background-color;
+      border: $article-border-size solid $article-border-color;
+      padding: 30px $content-side-padding;
+      margin: 20px 0;
+      h1{
+        margin: 0;
+        padding: 5px;
+        border-bottom: 4px double #ccc;
+        a{
+          @include underline-on-hover;
+        }
+      }
+      .content{
+        line-height: 1.5;
+      }
+    }
+    article.collapse{
+      padding: 0 $content-side-padding;
+      margin: 10px 0;
+      header{
+        display: none;
+      }
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      @include box-shadow(none);
+    }
+    article.hidden{
+      display: none;
+    }
   }
 }

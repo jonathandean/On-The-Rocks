@@ -29,6 +29,12 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 get_header(); ?>
 <div id="content" role="main">
   <div class="container">
+  <?php
+  $otr_settings = get_option( 'otr_options', $otr_options );
+  if(is_home() && in_category($otr_settings['hidden_category']) && $otr_settings['hidden_category_method'] == 'filter'){
+    query_posts($query_string . '&cat=-'.$otr_settings['hidden_category']);
+  }
+  ?>
   <?php if ( have_posts() ) : ?>
     <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'content', get_post_format() ); ?>

@@ -1,15 +1,26 @@
 // Neat settings
-$max-width: golden-ratio(1em, 8);
+$max-width: golden-ratio(1em, 9);
 
 // Custom variables
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $dark-font-color: #333;
 $light-font-color: #eee;
+$visited-link-color: #666;
+$active-link-color: #999;
 
 $page-background-color: #eeeeeb;
+
+$content-side-padding: 40px;
 
 $header-top-border-color: #141717;
 $header-top-border-size: 16px;
 $header-top-background-color: #222627;
+$header-logo-columns: 4;
+$header-nav-columns: 8;
 
 $logo-color: $light-font-color;
+
+$article-background-color: #f9f9f9;
+$article-border-radius: 4px;
+$article-border-color: #fff;
+$article-border-size: 1px;

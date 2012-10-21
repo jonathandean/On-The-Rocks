@@ -344,21 +344,42 @@ table {
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
 body {
-  font: 100%/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
   -webkit-text-size-adjust: 100%;
   position: relative;
   background-color: #eeeeeb; }
 
+a {
+  color: #333333; }
+
+a:visited {
+  color: #666666; }
+
+a:active {
+  color: #999999; }
+
 header.main {
   background-color: #222627;
-  border-top: 16px solid #141717; }
+  border-top: 16px solid #141717;
+  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
+  -moz-background-clip: content;
+  /* Firefox 3.6 */
+  -webkit-background-clip: content;
+  /* Safari 4? Chrome 6? */
+  background-clip: content-box;
+  /* Firefox 4, Safari 5, Opera 10, IE 9 */ }
   header.main, header.main a {
     color: #eeeeee; }
+  header.main a {
+    text-decoration: none; }
+    header.main a a {
+      text-decoration: underline; }
   header.main .container {
     zoom: 1;
-    max-width: 46.97082em;
+    max-width: 75.99879em;
     text-align: left;
     margin-left: auto;
     margin-right: auto; }
@@ -374,28 +395,34 @@ header.main {
       width: 31.76157%;
       color: #eeeeee;
       font-weight: normal;
-      text-transform: lowercase; }
+      padding-left: 40px;
+      text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5); }
       header.main .container h1:last-child {
         margin-right: 0; }
     header.main .container nav {
       display: block;
       float: left;
       margin-right: 2.35765%;
-      width: 48.82117%; }
+      width: 65.88078%; }
       header.main .container nav:last-child {
         margin-right: 0; }
       header.main .container nav ul {
-        list-style: none; }
+        list-style: none;
+        padding-top: 1em;
+        float: right;
+        padding-right: 40px; }
         header.main .container nav ul, header.main .container nav ul li {
           display: block; }
         header.main .container nav ul li {
           float: left; }
         header.main .container nav ul li {
           padding-right: 1em; }
+          header.main .container nav ul li:last-child {
+            padding-right: 0; }
 
 #content .container {
   zoom: 1;
-  max-width: 46.97082em;
+  max-width: 75.99879em;
   text-align: left;
   margin-left: auto;
   margin-right: auto; }
@@ -404,3 +431,35 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
+  #content .container article {
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: compact(0 0 14px 1px rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false);
+    box-shadow: compact(0 0 14px 1px rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false);
+    background: #f9f9f9;
+    border: 1px solid white;
+    padding: 30px 40px;
+    margin: 20px 0; }
+    #content .container article h1 {
+      margin: 0;
+      padding: 5px;
+      border-bottom: 4px double #ccc; }
+      #content .container article h1 a {
+        text-decoration: none; }
+        #content .container article h1 a a {
+          text-decoration: underline; }
+    #content .container article .content {
+      line-height: 1.5; }
+  #content .container article.collapse {
+    padding: 0 40px;
+    margin: 10px 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    -webkit-box-shadow: compact(none, false, false, false, false, false, false, false, false);
+    box-shadow: compact(none, false, false, false, false, false, false, false, false); }
+    #content .container article.collapse header {
+      display: none; }
+  #content .container article.hidden {
+    display: none; }
