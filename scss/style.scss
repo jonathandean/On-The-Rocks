@@ -123,14 +123,27 @@ header.main{
       margin: 20px 0;
       h1{
         margin: 0;
-        padding: 5px;
+        padding: 5px 0;
         border-bottom: 4px double #ccc;
+        font-size: 1.8em;
         a{
           @include underline-on-hover;
         }
       }
       .content{
         line-height: 1.5;
+      }
+      footer.meta{
+        font-size: 0.8em;
+        color: $subtle-font-color;
+        .date{
+          span{
+            display: none;
+          }
+        }
+        .author{
+          display: none;
+        }
       }
     }
     article.collapse{

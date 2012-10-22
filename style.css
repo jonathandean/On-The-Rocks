@@ -443,14 +443,22 @@ header.main {
     margin: 20px 0; }
     #content .container article h1 {
       margin: 0;
-      padding: 5px;
-      border-bottom: 4px double #ccc; }
+      padding: 5px 0;
+      border-bottom: 4px double #ccc;
+      font-size: 1.8em; }
       #content .container article h1 a {
         text-decoration: none; }
         #content .container article h1 a a {
           text-decoration: underline; }
     #content .container article .content {
       line-height: 1.5; }
+    #content .container article footer.meta {
+      font-size: 0.8em;
+      color: #999999; }
+      #content .container article footer.meta .date span {
+        display: none; }
+      #content .container article footer.meta .author {
+        display: none; }
   #content .container article.collapse {
     padding: 0 40px;
     margin: 10px 0;
