@@ -18,7 +18,7 @@ function get_otr_option($name){
 }
 
 function otr_collapse_to_single(){
-  if(get_otr_option('collapse_to_single') === true || get_otr_option('collapse_to_single') === 'true'){
+  if(get_otr_option('hidden_category_method') === 'collapse' && (get_otr_option('collapse_to_single') === true || get_otr_option('collapse_to_single') === 'true')){
     return true;
   }else{
     return false;
