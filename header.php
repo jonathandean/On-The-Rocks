@@ -38,11 +38,16 @@
     if(otr_collapse_to_single()){
   ?>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript">
-      var otr_cts_label = "<?php echo get_otr_option('collapse_to_single_label'); ?>";
-      var otr_cts_label_pl = "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>";
-    </script>
     <script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/otr_collapse.js"></script>
+    <script type="text/javascript">
+      var otr_c = new OTR.Collapse({
+        otr_cts_label: "<?php echo get_otr_option('collapse_to_single_label'); ?>",
+        otr_cts_label_plural: "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>"
+      });
+      $(function(){
+        otr_c.setup();
+      });
+    </script>
   <?php
     }
   ?>

@@ -5,7 +5,9 @@ OTR.Collapse = function(options) {
   defaultOpts.prototype = {
     article_selector: 'article',
     collapsed_article_class: 'collapse',
-    collapse_link_class: 'otr_show_collapsed'
+    collapse_link_class: 'otr_show_collapsed',
+    otr_cts_label: 'tweet',
+    otr_cts_label_plural: 'tweets'
   }
   // private vars
   var self = this,
@@ -17,7 +19,7 @@ OTR.Collapse = function(options) {
   }
   function otr_collapse(items){
     if(items.length < 1){ return; }
-    $('<p class="'+opts.collapse_link_class+'"><a href="#" class="'+opts.collapse_link_class+'">Show '+items.length+' hidden '+(items.length > 1 ? otr_cts_label_pl : otr_cts_label)+'</a></p>').insertBefore(items[0]);
+    $('<p class="'+opts.collapse_link_class+'"><a href="#" class="'+opts.collapse_link_class+'">Show '+items.length+' hidden '+(items.length > 1 ? opts.otr_cts_label_plural : opts.otr_cts_label)+'</a></p>').insertBefore(items[0]);
     $.each(items, function(i,v){
       items[i].hide();
     });
@@ -42,8 +44,3 @@ OTR.Collapse = function(options) {
     otr_collapse(currentSet);
   }
 };
-
-var otr_c = new OTR.Collapse();
-$(function(){
-  otr_c.setup();
-});
