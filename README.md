@@ -1,7 +1,61 @@
 On-The-Rocks
 ============
 
-Lightweight WordPress theme using SASS, Bourbon and Neat
+Lightweight and responsive WordPress theme that uses SASS, Bourbon and Neat. Although anyone can run this theme, this is intended to be more a developer theme to get you started with some basic functionality and tools to build your own. It is essentially going to be the new theme for my website (jonathandean.com) minus a few design elements that are unique to my own "brand".
+
+Status
+======
+
+Currently in active development. Many things are still missing, many things are poorly done.
+
+Features
+========
+
+- Responsive design to support all screen types from Desktop to Tablet to Mobile (using Neat: https://github.com/thoughtbot/neat)
+- Clean CSS source using SASS (http://sass-lang.com/) and Bourbon (http://thoughtbot.com/bourbon/), though for your purposes you are free to just edit the compiled CSS or just use normal CSS in your child theme. Pull requests must modify the SASS (.scss) files to accepted.
+- HTML5 and CSS3
+- Image free, CSS only
+- Settings page in Appearance > Theme Options to hide or specially display a particluar category (I use this for posts created from my twitter updates, courtesty of the twitter tools plugin: http://wordpress.org/extend/plugins/twitter-tools/) You can hide a category from the main blog loop, "collapse" that category in a special smaller display format or keep in the page but hide via CSS. Check out the theme settings page in WordPress admin to see all options.
+- Threaded comments support when enabled in Settings > Discussions
+- Main nav supports WordPress Menus or will fall back to displaying all pages if none is created in your Appearance > Menus settings
+
+Browser support
+===============
+
+I don't care much about catering to older browsers, escpecially Internet Explorer. My audience wouldn't be using them and I don't believe in supporting out of date software that is free to upgrade unless critical to your users or business. You can support browsers that don't support CSS3 yourself.
+    
+Creating your own Child Theme
+=============================
+
+This is probably the best way to use On The Rocks in our own site. Rather than modifying the this theme itself, you can create your own Child Theme and still be able to pull in updates to On The Rocks. (Changes to contribute to On The Rocks itself should come in the form of a fork and pull request for the benefit of the community.) For more information see http://codex.wordpress.org/Child_Themes
+
+The simpliest Child Theme contains just a style.css where you adjust the visual display of the theme with your own look and branding. A basic Child Theme looks something like this, where you import the On The Rocks compiled style.css in your own css file and then override or add styles below. For example, create a directory in your wp-content/themes/ directory for your new theme and put something like this in it:
+
+    /*
+    Theme Name: On The Rocks Child
+    Description: Child theme for the On The Rocks theme 
+    Author: Your name here
+    Template: on_the_rocks
+    */
+    
+    @import url("../on_the_rocks/style.css");
+    
+    // Custom CSS goes here
+
+If you are using SCSS then you can also make the import statement compile the On The Rocks CSS into it by pointing to the SCSS source instead. This will prevent an extra request in the browser. This would look like:
+
+    /*
+    Theme Name: On The Rocks Child using SCSS
+    Description: Child theme for the On The Rocks theme 
+    Author: Your name here
+    Template: on_the_rocks
+    */
+    
+    @import url("../on_the_rocks/scss/style.scss");
+    
+    // Custom CSS goes here
+
+You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
 Clone the repository
 ====================
@@ -41,39 +95,6 @@ You may wish to use this as a submodule in your existing git repository. For ins
 
     cd [project root]
     git submodule add git@github.com:jonathandean/On-The-Rocks.git wp-content/themes/on_the_rocks
-    
-Creating your own Child Theme
-=============================
-
-This is probably the best way to use On The Rocks in our own site. Rather than modifying the this theme itself, you can create your own Child Theme and still be able to pull in updates to On The Rocks. (Changes to contribute to On The Rocks itself should come in the form of a fork and pull request for the benefit of the community.) For more information see http://codex.wordpress.org/Child_Themes
-
-The simpliest Child Theme contains just a style.css where you adjust the visual display of the theme with your own look and branding. A basic Child Theme looks something like this, where you import the On The Rocks compiled style.css in your own css file and then override or add styles below. For example, create a directory in your wp-content/themes/ directory for your new theme and put something like this in it:
-
-    /*
-    Theme Name: On The Rocks Child
-    Description: Child theme for the On The Rocks theme 
-    Author: Your name here
-    Template: on_the_rocks
-    */
-    
-    @import url("../on_the_rocks/style.css");
-    
-    // Custom CSS goes here
-
-If you are using SCSS then you can also make the import statement compile the On The Rocks CSS into it by pointing to the SCSS source instead. This will prevent an extra request in the browser. This would look like:
-
-    /*
-    Theme Name: On The Rocks Child using SCSS
-    Description: Child theme for the On The Rocks theme 
-    Author: Your name here
-    Template: on_the_rocks
-    */
-    
-    @import url("../on_the_rocks/scss/style.scss");
-    
-    // Custom CSS goes here
-
-You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
 Setup
 =====

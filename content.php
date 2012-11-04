@@ -1,12 +1,11 @@
 <?php
-  $otr_settings = get_option( 'otr_options', $otr_options );
   $hidden = false;
   $article_class_extra = '';
-  if(in_category($otr_settings['hidden_category'])){
+  if(in_category(get_otr_option('hidden_category'))){
     $hidden = true;
-    if($otr_settings['hidden_category_method'] == 'hide'){
+    if(get_otr_option('hidden_category_method') == 'hide'){
       $article_class_extra = 'hidden';
-    }else if($otr_settings['hidden_category_method'] == 'collapse'){
+    }else if(get_otr_option('hidden_category_method') == 'collapse'){
       $article_class_extra = 'collapse';
     }
   }
@@ -21,7 +20,7 @@
     </div>
   <?php else : ?>
     <div class="content">
-      <?php the_content('more...'); ?>
+      <?php the_content('continue reading...'); ?>
     </div>
   <?php endif; ?>
   <footer class="meta">

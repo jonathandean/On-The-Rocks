@@ -35,11 +35,24 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   
   <?php
+    if(otr_collapse_to_single()){
+  ?>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script type="text/javascript">
+      var otr_cts_label = "<?php echo get_otr_option('collapse_to_single_label'); ?>";
+      var otr_cts_label_pl = "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>";
+    </script>
+    <script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/otr_collapse.js"></script>
+  <?php
+    }
+  ?>
+  
+  <?php
     /* We add some JavaScript to pages with the comment form
      * to support sites with threaded comments (when in use).
      */
-    //if ( is_singular() && get_option( 'thread_comments' ) )
-    //  wp_enqueue_script( 'comment-reply' );
+    if ( is_singular() && get_option( 'thread_comments' ) )
+      wp_enqueue_script( 'comment-reply' );
   
     /* Always have wp_head() just before the closing </head>
      * tag of your theme, or you will break many plugins, which

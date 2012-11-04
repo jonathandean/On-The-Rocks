@@ -5,7 +5,10 @@
 // Default options values
 $otr_options = array(
   'hidden_category' => 0,
-  'hidden_category_method' => 'filter'
+  'hidden_category_method' => 'filter',
+  'collapse_to_single' => 'true',
+  'collapse_to_single_label' => 'tweet',
+  'collapse_to_single_label_plural' => 'tweets'
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -103,6 +106,24 @@ function otr_theme_options_page() {
     <input type="radio" id="<?php echo $hidden_method['value']; ?>" name="otr_options[hidden_category_method]" value="<?php esc_attr_e( $hidden_method['value'] ); ?>" <?php checked( $settings['hidden_category_method'], $hidden_method['value'] ); ?> />
     <label for="<?php echo $hidden_method['value']; ?>"><?php echo $hidden_method['label']; ?></label><br />
     <?php endforeach; ?>
+    </td>
+  </tr>
+  
+  <tr valign="top"><th colspan="2">Collapsed view options</th></tr>
+  
+  <tr valign="top"><th scope="row">Collapsed to a single post (uses JavaScript)</th>
+    <td>
+    <input type="radio" id="single_true" name="otr_options[collapse_to_single]" value="true" <?php checked( $settings['collapse_to_single'], 'true' ); ?> />
+    <label for="single_true">True</label><br />
+    <input type="radio" id="single_false" name="otr_options[collapse_to_single]" value="false" <?php checked( $settings['collapse_to_single'], 'false' ); ?> />
+    <label for="single_true">False</label><br />
+    </td>
+  </tr>
+  
+  <tr valign="top"><th scope="row">Collapse to single labels</th>
+    <td>
+    <label for="collapse_to_single_label" style="width: 60px; display: inline-block;">Singular</label> <input type="text" id="collapse_to_single_label" name="otr_options[collapse_to_single_label]" value="<?php echo $settings['collapse_to_single_label']; ?>" /> <em>Example: "tweet" displays as "Show 1 hidden tweet"</em><br />
+    <label for="collapse_to_single_label_plural" style="width: 60px; display: inline-block;">Plural</label> <input type="text" id="collapse_to_single_label_plural" name="otr_options[collapse_to_single_label_plural]" value="<?php echo $settings['collapse_to_single_label_plural']; ?>" /> <em>Example: "tweets" displays as "Show 2 hidden tweets"</em>
     </td>
   </tr>
 

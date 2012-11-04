@@ -145,6 +145,19 @@ header.main{
           display: none;
         }
       }
+      .more-link{
+        color: $subtle-font-color;
+        font-style: italic;
+      }
+    }
+    article.comments{
+      background-color: $comments-background-color;
+      ol{
+        padding: 0;
+        ol{
+          margin-left: 10%;
+        }
+      }
     }
     article.collapse{
       padding: 0 $content-side-padding;
@@ -156,9 +169,29 @@ header.main{
       border: none;
       box-shadow: none;
       @include box-shadow(none);
+      p{
+        margin-bottom: 0;
+      }
+      footer.meta{
+        .author,
+        .category,
+        .comments,
+        .edit-post{
+          display: none;
+        }
+      }
     }
     article.hidden{
       display: none;
+    }
+    nav.pagination{
+      @include outer-container;
+      .previous, .next{
+        @include span-columns(6);
+      }
+      .previous{
+        text-align: right;
+      }
     }
   }
 }
