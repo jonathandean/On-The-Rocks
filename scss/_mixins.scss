@@ -41,3 +41,12 @@ $sprite_url: "images/sprite.png";
     text-decoration: underline;
   }
 }
+
+@mixin nested-comment($depth: 1){
+  @include unformatted-list;
+  @include outer-container;
+  article{
+  @include span-columns(12-$depth);
+    @include shift($depth);
+  }
+}
