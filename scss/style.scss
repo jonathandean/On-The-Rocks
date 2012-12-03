@@ -153,9 +153,30 @@ header.main{
     article.comments{
       background-color: $comments-background-color;
       ol{
-        padding: 0;
+        @include unformatted-list;
         ol{
-          margin-left: 10%;
+          @include nested-comment(1);
+          ol{
+            @include nested-comment(2);
+            ol{
+              @include nested-comment(3);
+              ol{
+                @include nested-comment(4);
+                ol{
+                  @include nested-comment(5);
+                  ol{
+                    @include nested-comment(6);
+                    ol{
+                      @include nested-comment(7);
+                      ol{
+                        @include nested-comment(8);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
