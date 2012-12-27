@@ -339,6 +339,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* $comments-background-color: lighten($page-background-color, 3%); */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -431,7 +432,21 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-  #content .container article {
+  #content .container section.posts {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    #content .container section.posts:last-child {
+      margin-right: 0; }
+  #content .container aside.sidebar {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%; }
+    #content .container aside.sidebar:last-child {
+      margin-right: 0; }
+  #content .container article.post {
     -webkit-border-radius: 4px;
     border-radius: 4px;
     box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.1);
@@ -441,29 +456,29 @@ header.main {
     border: 1px solid white;
     padding: 30px 40px;
     margin: 20px 0; }
-    #content .container article h1 {
+    #content .container article.post h1 {
       margin: 0;
       padding: 5px 0;
       border-bottom: 4px double #ccc;
       font-size: 1.8em; }
-      #content .container article h1 a {
+      #content .container article.post h1 a {
         text-decoration: none; }
-        #content .container article h1 a a {
+        #content .container article.post h1 a a {
           text-decoration: underline; }
-    #content .container article .content {
+    #content .container article.post .content {
       line-height: 1.5; }
-    #content .container article footer.meta {
+    #content .container article.post footer.meta {
       font-size: 0.8em;
       color: #999999; }
-      #content .container article footer.meta .date span {
+      #content .container article.post footer.meta .date span {
         display: none; }
-      #content .container article footer.meta .author {
+      #content .container article.post footer.meta .author {
         display: none; }
-    #content .container article .more-link {
+    #content .container article.post .more-link {
       color: #999999;
       font-style: italic; }
   #content .container article.comments {
-    background-color: #f5f5f3; }
+    background-color: none; }
     #content .container article.comments ol {
       list-style: none; }
       #content .container article.comments ol, #content .container article.comments ol li {
