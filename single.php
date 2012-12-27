@@ -33,14 +33,6 @@ get_header(); ?>
     <?php while ( have_posts() ) : the_post(); ?>
       <?php get_template_part( 'content', get_post_format() ); ?>
     <?php endwhile; // end while ( have_posts() ) ?>
-    <?php /* TODO is <article> most appropriate here? Chosen over <section> or <div> because contents can be syndicated */ ?>
-    <article class="comments">
-    <?php
-      // If comments are open or we have at least one comment, load up the comment template
-      if ( comments_open() || '0' != get_comments_number() )
-        comments_template( '', true );
-      ?>
-    </article>
   <?php else : ?>
     <p>No posts found.</p>
   <?php endif; // end have_posts() ?>
