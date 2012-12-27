@@ -15,20 +15,28 @@ if ( ! function_exists( 'load_theme_options' ) ) {
 }
 add_action('init', 'load_theme_options');
 
-$otr_settings = null;
 if ( ! function_exists( 'get_otr_option' ) ) {
   function get_otr_option($name){
-    global $otr_settings;
-    if(!isset($otr_settings)){
-      $otr_settings = get_option( 'otr_options', $otr_options );
+    if(!isset($GLOBALS['otr_settings'])){
+      $GLOBALS['otr_settings'] = get_option( 'otr_options', $GLOBALS['otr_options'] );
     }
-    return $otr_settings[$name];
+    return $GLOBALS['otr_settings'][$name];
   }
 }
 
 if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   function otr_collapse_to_single(){
     if(get_otr_option('hidden_category_method') === 'collapse' && (get_otr_option('collapse_to_single') === true || get_otr_option('collapse_to_single') === 'true')){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
+if ( ! function_exists( 'use_home_page_sidebar' ) ) {
+  function use_home_page_sidebar(){
+    if(get_otr_option('home_page_sidebar') === true || get_otr_option('home_page_sidebar') === 'true'){
       return true;
     }else{
       return false;

@@ -34,17 +34,22 @@ get_header(); ?>
     query_posts($query_string . '&cat=-'.get_otr_option('hidden_category'));
   }
   ?>
-  <?php if ( have_posts() ) : ?>
-    <?php while ( have_posts() ) : the_post(); ?>
-      <?php get_template_part( 'content', get_post_format() ); ?>
-    <?php endwhile; // end while ( have_posts() ) ?>
-    <nav class="pagination">
-      <div class="next"><?php next_posts_link('&larr; Older'); ?> &nbsp;</div>
-      <div class="previous"><?php previous_posts_link('Newer Entries &rarr;'); ?> &nbsp;</div>
-    </nav>
-  <?php else : ?>
-    <p>No posts found.</p>
-  <?php endif; // end have_posts() ?>
+    <section class="posts">
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+          <?php get_template_part( 'content', get_post_format() ); ?>
+        <?php endwhile; // end while ( have_posts() ) ?>
+      <?php else : // have_posts()?>
+        <p>No posts found.</p>
+      <?php endif; // end have_posts() ?>
+      <nav class="pagination">
+        <div class="next"><?php next_posts_link('&larr; Older'); ?> &nbsp;</div>
+        <div class="previous"><?php previous_posts_link('Newer Entries &rarr;'); ?> &nbsp;</div>
+      </nav>
+    </section>
+    <?php if( use_home_page_sidebar() ) : ?>
+      <?php get_sidebar(); ?>
+    <?php endif; //if(use_home_page_sidebar()) ?>
   </div>
 </div>
 <?php get_footer(); ?>

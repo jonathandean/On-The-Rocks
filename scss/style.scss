@@ -113,7 +113,13 @@ header.main{
 #content{
   .container{
     @include outer-container;
-    article{
+    section.posts{
+      @include span-columns(8);
+    }
+    aside.sidebar{
+      @include span-columns(4);
+    }
+    article.post{
       @include border-radius($article-border-radius);
       box-shadow: 0 0 14px 1px rgba(0,0,0,0.1); // why is this necessary?
       @include box-shadow(0 0 14px 1px rgba(0,0,0,0.1));
