@@ -46,7 +46,7 @@ $sprite_url: "images/sprite.png";
   @include unformatted-list;
   @include outer-container;
   article{
-  @include span-columns(12-$depth);
+    @include span-columns(12-$depth);
     @include shift($depth);
   }
 }
