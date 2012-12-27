@@ -26,4 +26,5 @@ $article-border-radius: 4px;
 $article-border-color: #fff;
 $article-border-size: 1px;
 
-$comments-background-color: lighten($page-background-color, 3%);
+/* $comments-background-color: lighten($page-background-color, 3%); */
+$comments-background-color: none;
