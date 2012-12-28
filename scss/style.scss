@@ -90,6 +90,8 @@ header.main{
       //text-transform: lowercase; // TODO move to child
       padding-left: $content-side-padding;
       text-shadow: 3px 4px 6px rgba(0,0,0,.5);
+      margin-top: 10px;
+      margin-bottom: 10px;
     }
     nav{
       @include span-columns($header-nav-columns);

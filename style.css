@@ -469,7 +469,9 @@ header.main {
       color: #eeeeee;
       font-weight: normal;
       padding-left: 40px;
-      text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5); }
+      text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5);
+      margin-top: 10px;
+      margin-bottom: 10px; }
       header.main .container h1:last-child {
         margin-right: 0; }
     header.main .container nav {
