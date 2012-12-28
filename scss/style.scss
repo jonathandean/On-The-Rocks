@@ -37,6 +37,8 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 @import "neat/neat";
 // Custom mixins
 @import "mixins";
+// Typography
+@import "typography";
 
 /* Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
 
@@ -131,7 +133,6 @@ header.main{
         margin: 0;
         padding: 5px 0;
         border-bottom: 4px double #ccc;
-        font-size: 1.8em;
         a{
           @include underline-on-hover;
         }
@@ -140,7 +141,7 @@ header.main{
         line-height: 1.5;
       }
       footer.meta{
-        font-size: 0.8em;
+        margin-top: 20px;
         color: $subtle-font-color;
         .date{
           span{
