@@ -74,6 +74,13 @@ To take advantage of the variables and mixins of On The Rocks, you can import th
 
 You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
+Adding your logo in the main navigation rather
+==============================================
+
+You can easily customize the logo area by making a file in your child theme called logo.php. To use an image there, you can do something like this:
+
+    <h1><a href="<?php echo site_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>"/></a></h1>
+
 Clone the repository
 ====================
 
