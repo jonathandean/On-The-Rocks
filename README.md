@@ -51,9 +51,26 @@ If you are using SCSS then you can also make the import statement compile the On
     Template: on_the_rocks
     */
     
-    @import url("../on_the_rocks/scss/style.scss");
+    @import "../../on_the_rocks/scss/style.scss";
     
-    // Custom CSS goes here
+    // Custom SCSS goes here
+
+Note that in this version there is no url and the path points to the .scss file instead of .css.
+
+To take advantage of the variables and mixins of On The Rocks, you can import those as well:
+
+    /*
+    Theme Name: On The Rocks Child using SCSS
+    Description: Child theme for the On The Rocks theme
+    Author: Your name here
+    Template: on_the_rocks
+    */
+
+    @import "../../on_the_rocks/scss/variables";
+    @import "../../on_the_rocks/scss/mixins";
+    @import "../../on_the_rocks/scss/style.scss";
+
+    // Custom SCSS goes here
 
 You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
