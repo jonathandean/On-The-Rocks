@@ -438,11 +438,11 @@ header.main {
   background-color: #222627;
   border-top: 16px solid #141717;
   border-bottom: 10px solid rgba(0, 0, 0, 0.1);
-  -moz-background-clip: content;
+  -moz-background-clip: padding-box;
   /* Firefox 3.6 */
-  -webkit-background-clip: content;
+  -webkit-background-clip: padding-box;
   /* Safari 4? Chrome 6? */
-  background-clip: content-box;
+  background-clip: padding-box;
   /* Firefox 4, Safari 5, Opera 10, IE 9 */ }
   header.main, header.main a {
     color: #eeeeee; }
