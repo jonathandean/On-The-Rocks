@@ -71,7 +71,7 @@
   <div id="page">
     <header class="main">
       <div class="container">
-        <h1><a href="<?php echo site_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+        <?php get_template_part( 'logo' ); ?>
         <nav role="navigation">
           <?php if ( has_nav_menu( 'primary-menu' ) ) { /* if menu location 'primary-menu' exists then use custom menu */ ?>
             <?php wp_nav_menu( array( 'theme_location' => 'primary-menu') ); ?>
