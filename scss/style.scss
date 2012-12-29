@@ -137,6 +137,13 @@ header.main{
         border-bottom: 4px double #ccc;
         a{
           @include underline-on-hover;
+          color: $title-font-color;
+          &:visited{
+            color: $visited-link-color;
+          }
+          &:active{
+            color: $active-link-color;
+          }
         }
       }
       .content{

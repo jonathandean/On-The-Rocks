@@ -535,9 +535,14 @@ header.main {
       padding: 5px 0;
       border-bottom: 4px double #ccc; }
       #content .container article.post h1 a {
-        text-decoration: none; }
+        text-decoration: none;
+        color: #333333; }
         #content .container article.post h1 a a {
           text-decoration: underline; }
+        #content .container article.post h1 a:visited {
+          color: #666666; }
+        #content .container article.post h1 a:active {
+          color: #999999; }
     #content .container article.post .content {
       line-height: 1.5; }
     #content .container article.post footer.meta {

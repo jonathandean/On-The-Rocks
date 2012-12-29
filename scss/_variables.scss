@@ -2,29 +2,30 @@
 $max-width: golden-ratio(1em, 9);
 
 // Custom variables
-$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$dark-font-color: #333;
-$light-font-color: #eee;
-$subtle-font-color: #999;
-$visited-link-color: #666;
-$active-link-color: #999;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$dark-font-color: #333 !default;
+$title-font-color: $dark-font-color !default;
+$light-font-color: #eee !default;
+$subtle-font-color: #999 !default;
+$visited-link-color: #666 !default;
+$active-link-color: #999 !default;
 
-$page-background-color: #eeeeeb;
+$page-background-color: #eeeeeb !default;
 
-$content-side-padding: 40px;
+$content-side-padding: 40px !default;
 
-$header-top-border-color: #141717;
-$header-top-border-size: 16px;
-$header-top-background-color: #222627;
-$header-logo-columns: 4;
-$header-nav-columns: 8;
+$header-top-border-color: #141717 !default;
+$header-top-border-size: 16px !default;
+$header-top-background-color: #222627 !default;
+$header-logo-columns: 4 !default;
+$header-nav-columns: 8 !default;
 
-$logo-color: $light-font-color;
+$logo-color: $light-font-color !default;
 
-$article-background-color: #f9f9f9;
-$article-border-radius: 4px;
-$article-border-color: #fff;
-$article-border-size: 1px;
+$article-background-color: #f9f9f9 !default;
+$article-border-radius: 4px !default;
+$article-border-color: #fff !default;
+$article-border-size: 1px !default;
 
 /* $comments-background-color: lighten($page-background-color, 3%); */
-$comments-background-color: none;
+$comments-background-color: none !default;
