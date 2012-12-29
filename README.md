@@ -108,10 +108,16 @@ More information at http://sass-lang.com/
 Use as a git submodule
 ======================
 
-You may wish to use this as a submodule in your existing git repository. For instance, if you have your whole WordPress site in your repository, you can do something like this to add On The Rocks to your themes directory as a submodule. For more on git submodules, see http://git-scm.com/book/en/Git-Tools-Submodules
+You may wish to use this as a submodule in your existing git repository. For instance, if you have your whole WordPress site in your repository, you can do something like this to add On The Rocks to your themes directory as a submodule:
 
     cd [project root]
     git submodule add git@github.com:jonathandean/On-The-Rocks.git wp-content/themes/on_the_rocks
+
+Now the directory wp-content/themes/on_the_rocks acts as its own repository inside of your main repository. Now you can go into this directory and pull the latest or checkout a particular revision. Then when you commit the directory in the parent repository it essentially commits the info that you are using a particular revision of On The Rocks there.
+
+This allows you to stay up to date with On The Rocks using git rather than manually pasting in the files into your own repository.
+
+For more on git submodules, see http://git-scm.com/book/en/Git-Tools-Submodules
 
 Setup
 =====
