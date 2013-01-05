@@ -100,6 +100,8 @@ functions.php (in your Child Theme)
     }
     add_action( 'wp_footer', 'load_svg_fallback_js' );
 
+For more information in the scripts, see https://github.com/jonathandean/svg_fallback
+
 Clone the repository
 ====================
 

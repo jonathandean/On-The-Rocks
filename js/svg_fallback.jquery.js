@@ -1,4 +1,4 @@
-// Safe to use anywhere in the page (after jQuery has been loaded) but always best to load JS before the closing </body> tag
+// From https://github.com/jonathandean/svg_fallback
 jQuery(function(){
   var svg = !!('createElementNS' in document && document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect);
   if (!svg){

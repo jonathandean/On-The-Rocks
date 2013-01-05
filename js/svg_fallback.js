@@ -1,5 +1,4 @@
-// Adapted from https://gist.github.com/3202087
-// Must put before the closing </body> tag (best) or adapt to use window.onload or some DOM-ready handler
+// From https://github.com/jonathandean/svg_fallback
 (function(global){
   var svg = !!('createElementNS' in document && document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect);
   if (!svg){
