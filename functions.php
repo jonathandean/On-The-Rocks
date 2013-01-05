@@ -24,6 +24,16 @@ if ( ! function_exists( 'get_otr_option' ) ) {
   }
 }
 
+if ( ! function_exists( 'load_svg_to_png_js' ) ) {
+  function load_svg_to_png_js() {
+  ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/svg_to_png.jquery.js"></script>
+  <?php
+  }
+}
+add_action( 'wp_head', 'load_svg_to_png_js' );
+
 if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   function otr_collapse_to_single(){
     if(get_otr_option('hidden_category_method') === 'collapse' && (get_otr_option('collapse_to_single') === true || get_otr_option('collapse_to_single') === 'true')){
