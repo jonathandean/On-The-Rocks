@@ -35,36 +35,25 @@
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   
   <?php
-    if(otr_collapse_to_single()){
-  ?>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script type="text/javascript" src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/otr_collapse.js"></script>
-    <script type="text/javascript">
-      var otr_c = new OTR.Collapse({
-        otr_cts_label: "<?php echo get_otr_option('collapse_to_single_label'); ?>",
-        otr_cts_label_plural: "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>"
-      });
-      $(function(){
-        otr_c.setup();
-      });
-    </script>
-  <?php
-    }
-  ?>
-  
-  <?php
-    /* We add some JavaScript to pages with the comment form
-     * to support sites with threaded comments (when in use).
-     */
     if ( is_singular() && get_option( 'thread_comments' ) )
       wp_enqueue_script( 'comment-reply' );
-  
-    /* Always have wp_head() just before the closing </head>
-     * tag of your theme, or you will break many plugins, which
-     * generally use this hook to add elements to <head> such
-     * as styles, scripts, and meta tags.
-     */
+
     wp_head();
+
+    if(otr_collapse_to_single()){
+      ?>
+      <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/otr_collapse.js"></script>
+      <script type="text/javascript">
+        var otr_c = new OTR.Collapse({
+          otr_cts_label: "<?php echo get_otr_option('collapse_to_single_label'); ?>",
+          otr_cts_label_plural: "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>"
+        });
+        jQuery(function(){
+          otr_c.setup();
+        });
+      </script>
+      <?php
+    }
   ?>
 </head>
 <body <?php body_class(); ?>>
