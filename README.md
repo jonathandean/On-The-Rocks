@@ -89,9 +89,16 @@ TODO
 Using the SVG image fallback script
 ===================================
 
-There's a small JavaScript script included that will automatically replace all SVG images on the page (using an <img> tag with a .svg extension) with a fallback format when SVG is not supported by the browser. If the image has the attribute data-svg-fallback replaces the image src with that value. If it doesn't have that attribute it sets the image src to the same filename but with a .png extension. Therefore, if you intended to use .svg images, you should either provide an alternative via the data-svg-fallback attribute or by putting a .png image with the same name in the same directory.
+There are two small JavaScript scripts included that will automatically replace all SVG images on the page (using an <img> tag with a .svg extension) with a fallback format when SVG is not supported by the browser. If the image has the attribute data-svg-fallback replaces the image src with that value. If it doesn't have that attribute it sets the image src to the same filename but with a .png extension. Therefore, if you intended to use .svg images, you should either provide an alternative via the data-svg-fallback attribute or by putting a .png image with the same name in the same directory.
 
-Note: the current version requires jQuery but a non-jQuery version will likely be added soon. I may also add a theme option to select the desired version or none.
+Both versions work the same way and the the only difference is whether or not it uses jQuery. By default, the version using jQuery is used since WordPress comes with jQuery out of the box. However, if you wish, you can switch to the non-jQuery version by doing the following:
+
+functions.php (in your Child Theme)
+
+    function load_svg_fallback_jquery() {
+      // Redefine this method but don't do anything in it
+    }
+    add_action( 'wp_footer', 'load_svg_fallback_js' );
 
 Clone the repository
 ====================

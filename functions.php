@@ -24,15 +24,27 @@ if ( ! function_exists( 'get_otr_option' ) ) {
   }
 }
 
-if ( ! function_exists( 'load_svg_to_png_js' ) ) {
-  function load_svg_to_png_js() {
+if ( ! function_exists( 'load_svg_fallback_jquery' ) ) {
+  function load_svg_fallback_jquery() {
   ?>
 
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/svg_to_png.jquery.js"></script>
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/svg_fallback.jquery.js"></script>
   <?php
   }
 }
-add_action( 'wp_head', 'load_svg_to_png_js' );
+add_action( 'wp_head', 'load_svg_fallback_jquery' );
+
+if ( ! function_exists( 'load_svg_fallback_js' ) ) {
+  function load_svg_fallback_js() {
+  ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/svg_fallback.js"></script>
+  <?php
+  }
+}
+// Not using this version, using the jQuery version defined above. Left here in case you prefer to un-register that action and register this one instead in your Child Theme
+// See the README for how to do this in your Child Theme
+// add_action( 'wp_footer', 'load_svg_fallback_js' );
 
 if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   function otr_collapse_to_single(){
