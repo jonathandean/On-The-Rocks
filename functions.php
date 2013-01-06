@@ -66,6 +66,16 @@ if ( ! function_exists( 'use_home_page_sidebar' ) ) {
   }
 }
 
+if ( ! function_exists( 'use_summaries_on_homepage' ) ) {
+  function use_summaries_on_homepage(){
+    if(get_otr_option('summaries_on_homepage') === true || get_otr_option('summaries_on_homepage') === 'true'){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
 if ( ! function_exists( 'otr_comment' ) ) :
 /**
  * Template for comments and pingbacks.

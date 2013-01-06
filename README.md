@@ -18,14 +18,17 @@ Features
 - "Retina" screen helpers:
     - SASS mixin for targeting retina screens
     - JavaScript for using SVG images and falling back to a non-SVG version on unsupported browsers
-- Settings page in Appearance > Theme Options to hide or specially display a particluar category (I use this for posts created from my twitter updates, courtesty of the twitter tools plugin: http://wordpress.org/extend/plugins/twitter-tools/) You can hide a category from the main blog loop, "collapse" that category in a special smaller display format or keep in the page but hide via CSS. Check out the theme settings page in WordPress admin to see all options.
+- Settings page in Appearance > Theme Options
+    - Whether or not to hide or specially display a particular category (I use this for posts created from my twitter updates, courtesy of the twitter tools plugin: http://wordpress.org/extend/plugins/twitter-tools/) You can hide a category from the main blog loop, "collapse" that category in a special smaller display format or keep in the page but hide via CSS. Check out the theme settings page in WordPress admin to see all options.
+    - Whether or not to show summaries on the home page (when supplied for the post) or always show the full post
+    - Whether ot not to show a sidebar on the home page
 - Threaded comments support when enabled in Settings > Discussions
 - Main nav supports WordPress Menus or will fall back to displaying all pages if none is created in your Appearance > Menus settings
 
 Browser support
 ===============
 
-I don't care much about catering to older browsers, escpecially Internet Explorer. My audience wouldn't be using them and I don't believe in supporting out of date software that is free to upgrade unless critical to your users or business. You can support browsers that don't support CSS3 yourself.
+I don't care much about catering to older browsers, especially Internet Explorer. My audience wouldn't be using them and I don't believe in supporting out of date software that is free to upgrade unless critical to your users or business. You can support browsers that don't support CSS3 yourself.
     
 Creating your own Child Theme
 =============================

@@ -37,6 +37,7 @@ get_header(); ?>
     <section class="posts">
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
+          <?php if ( ! use_summaries_on_homepage() ) { $more = 1; } ?>
           <?php get_template_part( 'content', get_post_format() ); ?>
         <?php endwhile; // end while ( have_posts() ) ?>
       <?php else : // have_posts()?>
@@ -47,9 +48,9 @@ get_header(); ?>
         <div class="previous"><?php previous_posts_link('Newer Entries &rarr;'); ?> &nbsp;</div>
       </nav>
     </section>
-    <?php if( use_home_page_sidebar() ) : ?>
+    <?php if ( use_home_page_sidebar() ) : ?>
       <?php get_sidebar(); ?>
-    <?php endif; //if(use_home_page_sidebar()) ?>
+    <?php endif; // if ( use_home_page_sidebar() ) ?>
   </div>
 </div>
 <?php get_footer(); ?>

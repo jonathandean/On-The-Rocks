@@ -9,7 +9,8 @@ $GLOBALS['otr_options'] = array(
   'collapse_to_single' => 'true',
   'collapse_to_single_label' => 'tweet',
   'collapse_to_single_label_plural' => 'tweets',
-  'home_page_sidebar' => 'true'
+  'home_page_sidebar' => 'true',
+  'summaries_on_homepage' => 'true',
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -99,6 +100,15 @@ function otr_theme_options_page() {
   </td>
   </tr>
 
+  <tr valign="top"><th scope="row">Use summaries on homepage</th>
+    <td>
+      <input type="radio" id="summaries_on_homepage_true" name="otr_options[summaries_on_homepage]" value="true" <?php checked( $settings['summaries_on_homepage'], 'true' ); ?> />
+      <label for="summaries_on_homepage_true">True <em>(Must still use the "more" tag separator when adding posts)</em></label><br />
+      <input type="radio" id="summaries_on_homepage_false" name="otr_options[summaries_on_homepage]" value="false" <?php checked( $settings['summaries_on_homepage'], 'false' ); ?> />
+      <label for="summaries_on_homepage_false">False</label><br />
+    </td>
+  </tr>
+
   <tr valign="top"><th scope="row">Use sidebar on homepage</th>
     <td>
       <input type="radio" id="home_page_sidebar_true" name="otr_options[home_page_sidebar]" value="true" <?php checked( $settings['home_page_sidebar'], 'true' ); ?> />
@@ -107,7 +117,7 @@ function otr_theme_options_page() {
       <label for="home_page_sidebar_false">False</label><br />
     </td>
   </tr>
-  
+
   <tr valign="top"><th scope="row">Hidden Category Method</th>
     <td>
     <?php foreach( $GLOBALS['otr_hidden_category_methods'] as $hidden_method ) : ?>
@@ -116,9 +126,9 @@ function otr_theme_options_page() {
     <?php endforeach; ?>
     </td>
   </tr>
-  
+
   <tr valign="top"><th colspan="2">Collapsed view options</th></tr>
-  
+
   <tr valign="top"><th scope="row">Collapsed to a single post (uses JavaScript)</th>
     <td>
     <input type="radio" id="single_true" name="otr_options[collapse_to_single]" value="true" <?php checked( $settings['collapse_to_single'], 'true' ); ?> />
@@ -127,7 +137,7 @@ function otr_theme_options_page() {
     <label for="single_true">False</label><br />
     </td>
   </tr>
-  
+
   <tr valign="top"><th scope="row">Collapse to single labels</th>
     <td>
     <label for="collapse_to_single_label" style="width: 60px; display: inline-block;">Singular</label> <input type="text" id="collapse_to_single_label" name="otr_options[collapse_to_single_label]" value="<?php echo $settings['collapse_to_single_label']; ?>" /> <em>Example: "tweet" displays as "Show 1 hidden tweet"</em><br />
