@@ -47,7 +47,7 @@ foreach( $otr_cats as $otr_cat ){
   ),
   'hide' => array(
     'value' => 'hide',
-    'label' => 'Load in the loop but hide via CSS (available for search engine indexing, pagination may seem odd as they will count toward the item count but not be visible)'
+    'label' => 'Load in the loop but hide via CSS (content is available in the markup to work with but pagination may seem odd as they will count toward the item count but not be visible)'
   ),
 );
 
@@ -82,22 +82,68 @@ function otr_theme_options_page() {
   including a nonce, a unique number used to ensure the form has been submitted from the admin page
   and not somewhere else, very important for security */ ?>
 
-  <table class="form-table"><!-- Grab a hot cup of coffee, yes we're using tables! -->
+  <style type="text/css">
+    table.otr-theme-options th{
+      font-weight: bold;
+    }
+    table.otr-theme-options table th{
+      border-left: 5px solid #eee;
+      padding-left: 30px;
+    }
+    table.otr-theme-options table table th{
+      font-weight: normal;
+    }
+    table.otr-theme-options th.method{
+      width: 60px;
+    }
+  </style>
+
+  <table class="form-table otr-theme-options">
 
   <tr valign="top"><th scope="row"><label for="hidden_category">Hidden Category</label></th>
-  <td>
-  <select id="hidden_category" name="otr_options[hidden_category]">
-  <?php
-    foreach ( $GLOBALS['otr_categories'] as $category ) :
-      $label = $category['label'];
-      $selected = '';
-      if ( $category['value'] == $settings['hidden_category'] )
-        $selected = 'selected="selected"';
-      echo '<option style="padding-right: 10px;" value="' . esc_attr( $category['value'] ) . '" ' . $selected . '>' . $label . '</option>';
-    endforeach;
-  ?>
-  </select>
-  </td>
+    <td>
+      <select id="hidden_category" name="otr_options[hidden_category]">
+      <?php
+        foreach ( $GLOBALS['otr_categories'] as $category ) :
+          $label = $category['label'];
+          $selected = '';
+          if ( $category['value'] == $settings['hidden_category'] )
+            $selected = 'selected="selected"';
+          echo '<option style="padding-right: 10px;" value="' . esc_attr( $category['value'] ) . '" ' . $selected . '>' . $label . '</option>';
+        endforeach;
+      ?>
+      </select>
+      <table>
+        <tr valign="top"><th scope="row" class="method">Method</th>
+          <td>
+            <?php foreach( $GLOBALS['otr_hidden_category_methods'] as $hidden_method ) : ?>
+            <input type="radio" id="<?php echo $hidden_method['value']; ?>" name="otr_options[hidden_category_method]" value="<?php esc_attr_e( $hidden_method['value'] ); ?>" <?php checked( $settings['hidden_category_method'], $hidden_method['value'] ); ?> />
+            <label for="<?php echo $hidden_method['value']; ?>"><?php echo $hidden_method['label']; ?></label><br />
+            <?php if($hidden_method['value'] === 'collapse') : ?>
+              <table>
+
+                <tr valign="top"><th scope="row">Collapsed to a single post (uses JavaScript)</th>
+                  <td>
+                    <input type="radio" id="single_true" name="otr_options[collapse_to_single]" value="true" <?php checked( $settings['collapse_to_single'], 'true' ); ?> />
+                    <label for="single_true">True</label><br />
+                    <input type="radio" id="single_false" name="otr_options[collapse_to_single]" value="false" <?php checked( $settings['collapse_to_single'], 'false' ); ?> />
+                    <label for="single_true">False</label><br />
+                  </td>
+                </tr>
+
+                <tr valign="top"><th scope="row">Collapse to single labels</th>
+                  <td>
+                    <label for="collapse_to_single_label" style="width: 60px; display: inline-block;">Singular</label> <input type="text" id="collapse_to_single_label" name="otr_options[collapse_to_single_label]" value="<?php echo $settings['collapse_to_single_label']; ?>" /> <em>Example: "tweet" displays as "Show 1 hidden tweet"</em><br />
+                    <label for="collapse_to_single_label_plural" style="width: 60px; display: inline-block;">Plural</label> <input type="text" id="collapse_to_single_label_plural" name="otr_options[collapse_to_single_label_plural]" value="<?php echo $settings['collapse_to_single_label_plural']; ?>" /> <em>Example: "tweets" displays as "Show 2 hidden tweets"</em>
+                  </td>
+                </tr>
+              </table>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </td>
+        </tr>
+      </table>
+    </td>
   </tr>
 
   <tr valign="top"><th scope="row">Use summaries on homepage</th>
@@ -115,33 +161,6 @@ function otr_theme_options_page() {
       <label for="home_page_sidebar_true">True</label><br />
       <input type="radio" id="home_page_sidebar_false" name="otr_options[home_page_sidebar]" value="false" <?php checked( $settings['home_page_sidebar'], 'false' ); ?> />
       <label for="home_page_sidebar_false">False</label><br />
-    </td>
-  </tr>
-
-  <tr valign="top"><th scope="row">Hidden Category Method</th>
-    <td>
-    <?php foreach( $GLOBALS['otr_hidden_category_methods'] as $hidden_method ) : ?>
-    <input type="radio" id="<?php echo $hidden_method['value']; ?>" name="otr_options[hidden_category_method]" value="<?php esc_attr_e( $hidden_method['value'] ); ?>" <?php checked( $settings['hidden_category_method'], $hidden_method['value'] ); ?> />
-    <label for="<?php echo $hidden_method['value']; ?>"><?php echo $hidden_method['label']; ?></label><br />
-    <?php endforeach; ?>
-    </td>
-  </tr>
-
-  <tr valign="top"><th colspan="2">Collapsed view options</th></tr>
-
-  <tr valign="top"><th scope="row">Collapsed to a single post (uses JavaScript)</th>
-    <td>
-    <input type="radio" id="single_true" name="otr_options[collapse_to_single]" value="true" <?php checked( $settings['collapse_to_single'], 'true' ); ?> />
-    <label for="single_true">True</label><br />
-    <input type="radio" id="single_false" name="otr_options[collapse_to_single]" value="false" <?php checked( $settings['collapse_to_single'], 'false' ); ?> />
-    <label for="single_true">False</label><br />
-    </td>
-  </tr>
-
-  <tr valign="top"><th scope="row">Collapse to single labels</th>
-    <td>
-    <label for="collapse_to_single_label" style="width: 60px; display: inline-block;">Singular</label> <input type="text" id="collapse_to_single_label" name="otr_options[collapse_to_single_label]" value="<?php echo $settings['collapse_to_single_label']; ?>" /> <em>Example: "tweet" displays as "Show 1 hidden tweet"</em><br />
-    <label for="collapse_to_single_label_plural" style="width: 60px; display: inline-block;">Plural</label> <input type="text" id="collapse_to_single_label_plural" name="otr_options[collapse_to_single_label_plural]" value="<?php echo $settings['collapse_to_single_label_plural']; ?>" /> <em>Example: "tweets" displays as "Show 2 hidden tweets"</em>
     </td>
   </tr>
 
