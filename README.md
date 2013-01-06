@@ -15,6 +15,9 @@ Features
 - Clean CSS source using SASS (http://sass-lang.com/) and Bourbon (http://thoughtbot.com/bourbon/), though for your purposes you are free to just edit the compiled CSS or just use normal CSS in your child theme. Pull requests must modify the SASS (.scss) files to accepted.
 - HTML5 and CSS3
 - Image free, CSS only
+- "Retina" screen helpers:
+    - SASS mixin for targeting retina screens
+    - JavaScript for using SVG images and falling back to a non-SVG version on unsupported browsers
 - Settings page in Appearance > Theme Options to hide or specially display a particluar category (I use this for posts created from my twitter updates, courtesty of the twitter tools plugin: http://wordpress.org/extend/plugins/twitter-tools/) You can hide a category from the main blog loop, "collapse" that category in a special smaller display format or keep in the page but hide via CSS. Check out the theme settings page in WordPress admin to see all options.
 - Threaded comments support when enabled in Settings > Discussions
 - Main nav supports WordPress Menus or will fall back to displaying all pages if none is created in your Appearance > Menus settings
