@@ -84,7 +84,38 @@ You can easily customize the logo area by making a file in your child theme call
 Using the retina-display SASS mixin
 ===================================
 
-TODO
+Also included a SASS mixin for targeting high density ("retina") screens. It's essentially the retina screen media query by Thomas Fuchs wrapped into a mixin: https://gist.github.com/4161897
+
+For this you will have to import the mixins file in your Child Theme as described above:
+
+    @import "../../on_the_rocks/scss/mixins";
+
+Use it like this:
+
+    body{
+      background: $page-background-color url("images/bg.jpg");
+      @include retina-display {
+        background: $page-background-color url("images/bg2x.jpg");
+        background-size: 171px 171px, auto;
+      }
+    }
+
+In this example, I have a 171x171 pixel background image called bg.jpg that is used for normal screen densities. I also created a "retina" version of the same image that is 342x342 pixels and use that specifically in high density screens. Then I scale it down to the original image size to make it look much better on retina screens. More on this technique in the retinafy.me book: http://retinafy.me/
+
+That code is equivalent to:
+
+    body{
+      background: $page-background-color url("images/bg.jpg");
+      @media (min--moz-device-pixel-ratio: 1.5),
+      (-o-min-device-pixel-ratio: 3/2),
+      (-webkit-min-device-pixel-ratio: 1.5),
+      (min-device-pixel-ratio: 1.5),
+      (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx) {
+        background: $page-background-color url("images/bg2x.jpg");
+        background-size: 171px 171px, auto;
+      }
+    }
 
 Using the SVG image fallback script
 ===================================
