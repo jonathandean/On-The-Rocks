@@ -206,10 +206,18 @@ Update bourbon (when needed)
     cd scss/
     bourbon update
     
-Install neat (git submodule)
+Install neat (first time)
 
-    cd [project root]
-    git submodule add git://github.com/thoughtbot/neat.git scss/neat
+    gem install neat
+    cd scss/
+    neat install
+
+Update neat (when needed)
+
+    gem update neat
+    cd scss/
+    rm -rf neat/
+    neat install
     
 Compile SCSS
 
