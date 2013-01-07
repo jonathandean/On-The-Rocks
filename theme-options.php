@@ -9,7 +9,7 @@ $GLOBALS['otr_options'] = array(
   'collapse_to_single' => 'true',
   'collapse_to_single_label' => 'tweet',
   'collapse_to_single_label_plural' => 'tweets',
-  'home_page_sidebar' => 'true',
+  'use_sidebar' => 'true',
   'summaries_on_homepage' => 'true',
 );
 
@@ -155,12 +155,12 @@ function otr_theme_options_page() {
     </td>
   </tr>
 
-  <tr valign="top"><th scope="row">Use sidebar on homepage</th>
+  <tr valign="top"><th scope="row">Use sidebar</th>
     <td>
-      <input type="radio" id="home_page_sidebar_true" name="otr_options[home_page_sidebar]" value="true" <?php checked( $settings['home_page_sidebar'], 'true' ); ?> />
-      <label for="home_page_sidebar_true">True</label><br />
-      <input type="radio" id="home_page_sidebar_false" name="otr_options[home_page_sidebar]" value="false" <?php checked( $settings['home_page_sidebar'], 'false' ); ?> />
-      <label for="home_page_sidebar_false">False</label><br />
+      <input type="radio" id="use_sidebar_true" name="otr_options[use_sidebar]" value="true" <?php checked( $settings['use_sidebar'], 'true' ); ?> />
+      <label for="use_sidebar_true">True</label><br />
+      <input type="radio" id="use_sidebar_false" name="otr_options[use_sidebar]" value="false" <?php checked( $settings['use_sidebar'], 'false' ); ?> />
+      <label for="use_sidebar_false">False</label><br />
     </td>
   </tr>
 

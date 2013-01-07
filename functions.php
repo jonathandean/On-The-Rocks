@@ -65,9 +65,9 @@ if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   }
 }
 
-if ( ! function_exists( 'use_home_page_sidebar' ) ) {
-  function use_home_page_sidebar(){
-    if(get_otr_option('home_page_sidebar') === true || get_otr_option('home_page_sidebar') === 'true'){
+if ( ! function_exists( 'use_sidebar' ) ) {
+  function use_sidebar(){
+    if(get_otr_option('use_sidebar') === true || get_otr_option('use_sidebar') === 'true'){
       return true;
     }else{
       return false;

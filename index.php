@@ -28,7 +28,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 */
 get_header(); ?>
 <div id="content" role="main">
-  <div class="container">
+  <div class="container <?php echo use_sidebar() ? 'with-sidebar' : 'no-sidebar'; ?>">
   <?php
   if(is_home() && get_otr_option('hidden_category_method') == 'filter'){
     query_posts($query_string . '&cat=-'.get_otr_option('hidden_category'));
@@ -48,9 +48,9 @@ get_header(); ?>
         <div class="previous"><?php previous_posts_link('Newer Entries &rarr;'); ?> &nbsp;</div>
       </nav>
     </section>
-    <?php if ( use_home_page_sidebar() ) : ?>
+    <?php if ( use_sidebar() ) : ?>
       <?php get_sidebar(); ?>
-    <?php endif; // if ( use_home_page_sidebar() ) ?>
+    <?php endif; // if ( use_sidebar() ) ?>
   </div>
 </div>
 <?php get_footer(); ?>

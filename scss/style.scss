@@ -117,18 +117,21 @@ header.main{
 #content{
   .container{
     @include outer-container;
-    section.posts{
-      @include span-columns(8);
+
+    &.with-sidebar{
+      section.posts{
+        @include span-columns(8);
+      }
+      aside.sidebar{
+        @include span-columns(4);
+        ul.sidebar{
+          @include unformatted-list;
+        }
+      }
     }
     article.post,
     aside.sidebar{
       margin: 20px 0;
-    }
-    aside.sidebar{
-      @include span-columns(4);
-      ul.sidebar{
-        @include unformatted-list;
-      }
     }
     article.post{
       @include border-radius($article-border-radius);

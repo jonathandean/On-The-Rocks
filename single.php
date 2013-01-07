@@ -28,14 +28,19 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 */
 get_header(); ?>
 <div id="content" role="main">
-  <div class="container">
-  <?php if ( have_posts() ) : ?>
-    <?php while ( have_posts() ) : the_post(); ?>
-      <?php get_template_part( 'content', get_post_format() ); ?>
-    <?php endwhile; // end while ( have_posts() ) ?>
-  <?php else : ?>
-    <p>No posts found.</p>
-  <?php endif; // end have_posts() ?>
+  <div class="container <?php echo use_sidebar() ? 'with-sidebar' : 'no-sidebar'; ?>">
+    <section class="posts">
+      <?php if ( have_posts() ) : ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+          <?php get_template_part( 'content', get_post_format() ); ?>
+        <?php endwhile; // end while ( have_posts() ) ?>
+      <?php else : ?>
+        <p>No posts found.</p>
+      <?php endif; // end have_posts() ?>
+    </section>
+    <?php if ( use_sidebar() ) : ?>
+      <?php get_sidebar(); ?>
+    <?php endif; // if ( use_sidebar() ) ?>
   </div>
 </div>
 <?php get_footer(); ?>
