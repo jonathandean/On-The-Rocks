@@ -340,6 +340,7 @@ table {
   border-spacing: 0; }
 
 /* $comments-background-color: lighten($page-background-color, 3%); */
+/* Neat Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -417,7 +418,6 @@ p.intro {
 small, footer.meta {
   font-size: 10px; }
 
-/* Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
 body {
   font: 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
@@ -453,7 +453,6 @@ header.main {
   header.main .container {
     zoom: 1;
     max-width: 75.99879em;
-    text-align: left;
     margin-left: auto;
     margin-right: auto; }
     header.main .container:before, header.main .container:after {
@@ -498,7 +497,6 @@ header.main {
 #content .container {
   zoom: 1;
   max-width: 75.99879em;
-  text-align: left;
   margin-left: auto;
   margin-right: auto; }
   #content .container:before, #content .container:after {
@@ -506,25 +504,35 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-  #content .container.with-sidebar section.posts {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 65.88078%; }
-    #content .container.with-sidebar section.posts:last-child {
-      margin-right: 0; }
+  #content .container.with-sidebar section.posts,
   #content .container.with-sidebar aside.sidebar {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 31.76157%; }
+    width: 100%; }
+    #content .container.with-sidebar section.posts:last-child,
     #content .container.with-sidebar aside.sidebar:last-child {
       margin-right: 0; }
-    #content .container.with-sidebar aside.sidebar ul.sidebar {
-      list-style: none; }
-      #content .container.with-sidebar aside.sidebar ul.sidebar, #content .container.with-sidebar aside.sidebar ul.sidebar li {
-        padding: 0;
-        margin: 0; }
+  @media screen and (min-width: 960px) {
+    #content .container.with-sidebar section.posts {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      #content .container.with-sidebar section.posts:last-child {
+        margin-right: 0; }
+    #content .container.with-sidebar aside.sidebar {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%; }
+      #content .container.with-sidebar aside.sidebar:last-child {
+        margin-right: 0; }
+      #content .container.with-sidebar aside.sidebar ul.sidebar {
+        list-style: none; }
+        #content .container.with-sidebar aside.sidebar ul.sidebar, #content .container.with-sidebar aside.sidebar ul.sidebar li {
+          padding: 0;
+          margin: 0; } }
   #content .container article.post,
   #content .container aside.sidebar {
     margin: 20px 0; }
@@ -573,7 +581,6 @@ header.main {
         list-style: none;
         zoom: 1;
         max-width: 75.99879em;
-        text-align: left;
         margin-left: auto;
         margin-right: auto; }
         #content .container article.comments ol ol, #content .container article.comments ol ol li {
@@ -596,7 +603,6 @@ header.main {
           list-style: none;
           zoom: 1;
           max-width: 75.99879em;
-          text-align: left;
           margin-left: auto;
           margin-right: auto; }
           #content .container article.comments ol ol ol, #content .container article.comments ol ol ol li {
@@ -619,7 +625,6 @@ header.main {
             list-style: none;
             zoom: 1;
             max-width: 75.99879em;
-            text-align: left;
             margin-left: auto;
             margin-right: auto; }
             #content .container article.comments ol ol ol ol, #content .container article.comments ol ol ol ol li {
@@ -642,7 +647,6 @@ header.main {
               list-style: none;
               zoom: 1;
               max-width: 75.99879em;
-              text-align: left;
               margin-left: auto;
               margin-right: auto; }
               #content .container article.comments ol ol ol ol ol, #content .container article.comments ol ol ol ol ol li {
@@ -665,7 +669,6 @@ header.main {
                 list-style: none;
                 zoom: 1;
                 max-width: 75.99879em;
-                text-align: left;
                 margin-left: auto;
                 margin-right: auto; }
                 #content .container article.comments ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol li {
@@ -688,7 +691,6 @@ header.main {
                   list-style: none;
                   zoom: 1;
                   max-width: 75.99879em;
-                  text-align: left;
                   margin-left: auto;
                   margin-right: auto; }
                   #content .container article.comments ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol li {
@@ -711,7 +713,6 @@ header.main {
                     list-style: none;
                     zoom: 1;
                     max-width: 75.99879em;
-                    text-align: left;
                     margin-left: auto;
                     margin-right: auto; }
                     #content .container article.comments ol ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol ol li {
@@ -734,7 +735,6 @@ header.main {
                       list-style: none;
                       zoom: 1;
                       max-width: 75.99879em;
-                      text-align: left;
                       margin-left: auto;
                       margin-right: auto; }
                       #content .container article.comments ol ol ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol ol ol li {
@@ -775,7 +775,6 @@ header.main {
   #content .container nav.pagination {
     zoom: 1;
     max-width: 75.99879em;
-    text-align: left;
     margin-left: auto;
     margin-right: auto; }
     #content .container nav.pagination:before, #content .container nav.pagination:after {

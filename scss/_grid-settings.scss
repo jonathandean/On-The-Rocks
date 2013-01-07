@@ -1,0 +1,9 @@
+@import "neat/neat-helpers";
+
+/* Neat Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
+
+// Define your breakpoints
+$desktop: new-breakpoint(min-width 960px);
+$tablet: new-breakpoint(min-width 768px max-width 959px);
+$mobile-landscape: new-breakpoint(min-width 480px max-width 767px);
+$mobile-portrait: new-breakpoint(max-width 767px);

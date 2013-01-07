@@ -34,25 +34,12 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 @import "variables";
 // Neat: Fluid grid framework
 // https://github.com/thoughtbot/neat
+@import "grid-settings";
 @import "neat/neat";
 // Custom mixins
 @import "mixins";
 // Typography
 @import "typography";
-
-/* Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
-
-// Tablet (Portrait), Design for a width of 768px
-// @include breakpoint(min-width 768px max-width 959px);
-// @media only screen and (min-width: 768px) and (max-width: 959px) 
-
-// Mobile (Portrait), Design for a width of 320px
-// @include breakpoint(max-width 767px);
-// @media only screen and (max-width: 767px)
-
-// Mobile (Landscape), Design for a width of 480px
-// @include breakpoint(min-width 480px max-width 767px);
-// @media only screen and (min-width: 480px) and (max-width: 767px)
 
 body{
   font: 14px/1 $font-family;
@@ -119,13 +106,19 @@ header.main{
     @include outer-container;
 
     &.with-sidebar{
-      section.posts{
-        @include span-columns(8);
-      }
+      section.posts,
       aside.sidebar{
-        @include span-columns(4);
-        ul.sidebar{
-          @include unformatted-list;
+        @include span-columns(12);
+      }
+      @include media($desktop) {
+        section.posts{
+          @include span-columns(8);
+        }
+        aside.sidebar{
+          @include span-columns(4);
+          ul.sidebar{
+            @include unformatted-list;
+          }
         }
       }
     }
