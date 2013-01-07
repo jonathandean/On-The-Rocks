@@ -513,6 +513,9 @@ header.main {
     width: 65.88078%; }
     #content .container section.posts:last-child {
       margin-right: 0; }
+  #content .container article.post,
+  #content .container aside.sidebar {
+    margin: 20px 0; }
   #content .container aside.sidebar {
     display: block;
     float: left;
@@ -520,6 +523,11 @@ header.main {
     width: 31.76157%; }
     #content .container aside.sidebar:last-child {
       margin-right: 0; }
+    #content .container aside.sidebar ul.sidebar {
+      list-style: none; }
+      #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li {
+        padding: 0;
+        margin: 0; }
   #content .container article.post {
     -webkit-border-radius: 4px;
     border-radius: 4px;
@@ -528,8 +536,7 @@ header.main {
     box-shadow: compact(0 0 14px 1px rgba(0, 0, 0, 0.1), false, false, false, false, false, false, false, false);
     background: #f9f9f9;
     border: 1px solid white;
-    padding: 30px 40px;
-    margin: 20px 0; }
+    padding: 30px 40px; }
     #content .container article.post h1 {
       margin: 0;
       padding: 5px 0;

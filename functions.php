@@ -1,4 +1,13 @@
 <?php
+// Register a sidebar
+
+register_sidebar(array(
+  'name' => __( 'Right Column' ),
+  'description' => __( 'Widgets in this area will be shown on the right-hand side.' ),
+  'before_title' => '<h2>',
+  'after_title' => '</h2>'
+));
+
 /* Use a menu for the primary navigation */
 if ( ! function_exists( 'otr_register_menu' ) ) :
 function otr_register_menu() {

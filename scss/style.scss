@@ -120,8 +120,15 @@ header.main{
     section.posts{
       @include span-columns(8);
     }
+    article.post,
+    aside.sidebar{
+      margin: 20px 0;
+    }
     aside.sidebar{
       @include span-columns(4);
+      ul.sidebar{
+        @include unformatted-list;
+      }
     }
     article.post{
       @include border-radius($article-border-radius);
@@ -130,7 +137,6 @@ header.main{
       background: $article-background-color;
       border: $article-border-size solid $article-border-color;
       padding: 30px $content-side-padding;
-      margin: 20px 0;
       h1{
         margin: 0;
         padding: 5px 0;
