@@ -106,19 +106,19 @@ header.main{
     @include outer-container;
 
     &.with-sidebar{
-      section.posts,
-      aside.sidebar{
-        @include span-columns(12);
+      section.posts{
+        @include span-columns(8);
       }
-      @include media($desktop) {
-        section.posts{
-          @include span-columns(8);
+      aside.sidebar{
+        @include span-columns(4);
+        ul.sidebar{
+          @include unformatted-list;
         }
+      }
+      @include media($small-devices) {
+        section.posts,
         aside.sidebar{
-          @include span-columns(4);
-          ul.sidebar{
-            @include unformatted-list;
-          }
+          @include span-columns(12);
         }
       }
     }

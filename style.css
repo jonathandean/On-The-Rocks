@@ -504,35 +504,35 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-  #content .container.with-sidebar section.posts,
+  #content .container.with-sidebar section.posts {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    #content .container.with-sidebar section.posts:last-child {
+      margin-right: 0; }
   #content .container.with-sidebar aside.sidebar {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 100%; }
-    #content .container.with-sidebar section.posts:last-child,
+    width: 31.76157%; }
     #content .container.with-sidebar aside.sidebar:last-child {
       margin-right: 0; }
-  @media screen and (min-width: 960px) {
-    #content .container.with-sidebar section.posts {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 65.88078%; }
-      #content .container.with-sidebar section.posts:last-child {
-        margin-right: 0; }
+    #content .container.with-sidebar aside.sidebar ul.sidebar {
+      list-style: none; }
+      #content .container.with-sidebar aside.sidebar ul.sidebar, #content .container.with-sidebar aside.sidebar ul.sidebar li {
+        padding: 0;
+        margin: 0; }
+  @media screen and (max-width: 959px) {
+    #content .container.with-sidebar section.posts,
     #content .container.with-sidebar aside.sidebar {
       display: block;
       float: left;
       margin-right: 2.35765%;
-      width: 31.76157%; }
+      width: 100%; }
+      #content .container.with-sidebar section.posts:last-child,
       #content .container.with-sidebar aside.sidebar:last-child {
-        margin-right: 0; }
-      #content .container.with-sidebar aside.sidebar ul.sidebar {
-        list-style: none; }
-        #content .container.with-sidebar aside.sidebar ul.sidebar, #content .container.with-sidebar aside.sidebar ul.sidebar li {
-          padding: 0;
-          margin: 0; } }
+        margin-right: 0; } }
   #content .container article.post,
   #content .container aside.sidebar {
     margin: 20px 0; }

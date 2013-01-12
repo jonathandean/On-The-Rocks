@@ -7,3 +7,4 @@ $desktop: new-breakpoint(min-width 960px);
 $tablet: new-breakpoint(min-width 768px max-width 959px);
 $mobile-landscape: new-breakpoint(min-width 480px max-width 767px);
 $mobile-portrait: new-breakpoint(max-width 767px);
+$small-devices: new-breakpoint(max-width 959px);
