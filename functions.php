@@ -85,6 +85,17 @@ if ( ! function_exists( 'use_summaries_on_homepage' ) ) {
   }
 }
 
+if ( ! function_exists( 'get_category_link_by_name' ) ) {
+  function get_category_link_by_name( $name ){
+    $cat_id = get_cat_ID( $name );
+    if ( $cat_id ) {
+      return esc_url( get_category_link( $cat_id ) );
+    } else {
+      return '';
+    }
+  }
+}
+
 if ( ! function_exists( 'otr_comment' ) ) :
 /**
  * Template for comments and pingbacks.
