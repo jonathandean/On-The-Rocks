@@ -80,12 +80,21 @@ To take advantage of the variables and mixins of On The Rocks, you can import th
 
 You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
 
-Adding your logo in the main navigation
-=======================================
+Adding your logo in header
+==========================
 
 You can easily customize the logo area by making a file in your child theme called logo.php. To use an image there, you can do something like this:
 
     <h1><a href="<?php echo site_url(); ?>" title="<?php bloginfo('name'); ?>"><img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/logo.svg" alt="<?php bloginfo('name'); ?>"/></a></h1>
+
+Customizing the main navigation
+===============================
+
+There are three options for the main navigation. You can create a menu via Appearance > Menus and select Primary Menu under the Theme Locations menu. (More on WordPress menus at http://codex.wordpress.org/Appearance_Menus_Screen)
+
+In the absence of a WordPress Menu, On The Rocks will automatically list all of your pages in the main navigation.
+
+You can also fully customize the navigation in any way you wish by making your own. Just create a file called navigation.php in your child theme and put anything you like in it.
 
 Using the retina-display SASS mixin
 ===================================
