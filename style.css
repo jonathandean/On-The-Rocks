@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Theme Name: On The Rocks
 Theme URI: http://jonathandean.com/
@@ -636,6 +637,10 @@ header.main {
             display: inline;
             margin-right: 10px;
             font-size: 12px; }
+          #content .container article.comments li.comment article footer .edit a, #content .container article.comments li.comment article footer .reply a {
+            font-weight: bold; }
+          #content .container article.comments li.comment article footer .reply a:after {
+            content: ' ↓'; }
     #content .container article.comments ol {
       list-style: none; }
       #content .container article.comments ol, #content .container article.comments ol li {

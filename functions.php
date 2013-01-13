@@ -165,7 +165,7 @@ function otr_comment( $comment, $args, $depth ) {
           <div class="actions">
             <?php edit_comment_link( __( 'Edit', 'framework' ), '<div class="edit">', '</div>' ); ?>
             <div class="reply">
-              <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'framework' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+              <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'framework' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
             </div>
             <div class="link">
               <?php

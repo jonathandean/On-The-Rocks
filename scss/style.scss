@@ -243,8 +243,11 @@ header.main{
               margin-right: 10px;
               font-size: 12px;
             }
-            a{
-
+            .edit a, .reply a{
+              font-weight: bold;
+            }
+            .reply a:after{
+              content: ' ↓';
             }
           }
         }
