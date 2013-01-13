@@ -199,6 +199,56 @@ header.main{
         border-bottom: 4px double $heading-border-color;
         padding: $heading-border-spacing 0;
       }
+      li.comment{
+        clear: left;
+        article{
+          padding: 0 0 40px 0;
+          div.avatar{
+            float: left;
+            width: 100px;
+            img{
+              height: 80px;
+              width: 80px;
+              display: block;
+              border: 1px solid #ccc;
+              padding: 2px;
+            }
+            .post-author{
+              display: block;
+              color: #ccc;
+              font-size: 11px;
+              padding: 4px 0 0 12px;
+            }
+          }
+          .content{
+            margin-left: 100px;
+          }
+          header{
+            .author-time{
+              cite{
+                font-style: normal;
+                font-weight: bold;
+              }
+              time, a.link{
+                font-size: 11px;
+                color: $subtle-font-color;
+                margin-left: 10px;
+              }
+            }
+          }
+          footer{
+            padding: 20px 0 0;
+            div{
+              display: inline;
+              margin-right: 10px;
+              font-size: 12px;
+            }
+            a{
+
+            }
+          }
+        }
+      }
       ol{
         @include unformatted-list;
         ol{

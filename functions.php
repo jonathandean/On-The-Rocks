@@ -133,36 +133,52 @@ function otr_comment( $comment, $args, $depth ) {
   ?>
   <li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>">
     <article id="comment-<?php comment_ID(); ?>" class="comment">
-      <header class="comment-meta comment-author vcard">
-        <?php
-          echo get_avatar( $comment, 44 );
-          printf( '<cite class="fn">%1$s %2$s</cite>',
-            get_comment_author_link(),
-            // If current post author is also comment author, make it known visually.
-            ( $comment->user_id === $post->post_author ) ? '<span class="post-author"> ' . __( 'Post author', 'framework' ) . '</span>' : ''
-          );
-          printf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-            esc_url( get_comment_link( $comment->comment_ID ) ),
-            get_comment_time( 'c' ),
-            /* translators: 1: date, 2: time */
-            sprintf( __( '%1$s at %2$s', 'framework' ), get_comment_date(), get_comment_time() )
-          );
-        ?>
-      </header><!-- .comment-meta -->
+      <div class="avatar">
+        <?php echo get_avatar( $comment, 160 ); ?>
+        <?php echo ( $comment->user_id === $post->post_author ) ? '<span class="post-author">' . __( 'Post author', 'framework' ) . '</span>' : ''; ?>
+      </div>
+      <div class="content">
+        <header class="comment-meta comment-author vcard">
+          <?php
+            echo '<div class="author-time">';
+            printf( '<cite class="fn">%1$s</cite>',
+              get_comment_author_link()
+            );
+            printf( '<time pubdate datetime="%1$s">%2$s</time></a>',
+              get_comment_time( 'c' ),
+              /* translators: 1: date, 2: time */
+              sprintf( __( '%1$s at %2$s', 'framework' ), get_comment_date(), get_comment_time() )
+            );
+            echo '</div>'; // .author-time
+          ?>
+        </header><?php /* .comment-meta */ ?>
 
-      <?php if ( '0' == $comment->comment_approved ) : ?>
-        <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'framework' ); ?></p>
-      <?php endif; ?>
+        <?php if ( '0' == $comment->comment_approved ) : ?>
+          <p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'framework' ); ?></p>
+        <?php endif; ?>
 
-      <section class="comment-content comment">
-        <?php comment_text(); ?>
-        <?php edit_comment_link( __( 'Edit', 'framework' ), '<p class="edit-link">', '</p>' ); ?>
-      </section><!-- .comment-content -->
+        <section class="comment-content comment">
+          <?php comment_text(); ?>
+        </section><?php /* .comment-content */ ?>
 
-      <div class="reply">
-        <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'framework' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-      </div><!-- .reply -->
-    </article><!-- #comment-## -->
+        <footer>
+          <div class="actions">
+            <?php edit_comment_link( __( 'Edit', 'framework' ), '<div class="edit">', '</div>' ); ?>
+            <div class="reply">
+              <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'framework' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+            </div>
+            <div class="link">
+              <?php
+                printf( '<a href="%1$s">Link to this comment</a>',
+                  esc_url( get_comment_link( $comment->comment_ID ) )
+                );
+              ?>
+            </div>
+          </div>
+        </footer>
+
+      </div><?php /* .content */ ?>
+    </article><?php /* #comment-## */ ?>
   <?php
     break;
   endswitch; // end comment_type check
