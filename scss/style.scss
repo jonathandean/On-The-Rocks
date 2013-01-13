@@ -97,6 +97,22 @@ header.main{
         }
       }
     }
+    @include media($small-devices){
+      h1, nav{
+        @include span-columns(12);
+      }
+      nav{
+        ul{
+          float: left;
+          padding-left: $content-side-padding;
+          padding-top: 0;
+          li a{
+            padding-top: 10px;
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
   }
   border-bottom: 10px solid rgba(0,0,0,0.1);
   -moz-background-clip: padding-box;     /* Firefox 3.6 */

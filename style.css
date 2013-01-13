@@ -506,6 +506,21 @@ header.main {
           padding-right: 1em; }
           header.main .container nav ul li:last-child {
             padding-right: 0; }
+    @media screen and (max-width: 959px) {
+      header.main .container h1, header.main .container nav {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 100%; }
+        header.main .container h1:last-child, header.main .container nav:last-child {
+          margin-right: 0; }
+      header.main .container nav ul {
+        float: left;
+        padding-left: 40px;
+        padding-top: 0; }
+        header.main .container nav ul li a {
+          padding-top: 10px;
+          padding-bottom: 10px; } }
 
 #content .container {
   zoom: 1;
