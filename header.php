@@ -56,7 +56,7 @@
     }
   ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(extra_body_classes()); ?>>
   <div id="page">
     <header class="main">
       <div class="container">

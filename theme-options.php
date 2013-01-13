@@ -11,6 +11,8 @@ $GLOBALS['otr_options'] = array(
   'collapse_to_single_label_plural' => 'tweets',
   'use_sidebar' => 'true',
   'summaries_on_homepage' => 'true',
+  'indent_paragraphs' => 'false',
+  'indent_paragraphs_except_first' => 'false',
 );
 
 if ( is_admin() ) : // Load only if we are viewing an admin page
@@ -161,6 +163,30 @@ function otr_theme_options_page() {
       <label for="use_sidebar_true">True</label><br />
       <input type="radio" id="use_sidebar_false" name="otr_options[use_sidebar]" value="false" <?php checked( $settings['use_sidebar'], 'false' ); ?> />
       <label for="use_sidebar_false">False</label><br />
+    </td>
+  </tr>
+
+
+  <tr valign="top"><th scope="row">Indent paragraphs</th>
+    <td>
+      <input type="radio" id="indent_paragraphs_true" name="otr_options[indent_paragraphs]" value="true" <?php checked( $settings['indent_paragraphs'], 'true' ); ?> />
+      <label for="indent_paragraphs_true">True</label><br />
+      <input type="radio" id="indent_paragraphs_false" name="otr_options[indent_paragraphs]" value="false" <?php checked( $settings['indent_paragraphs'], 'false' ); ?> />
+      <label for="indent_paragraphs_false">False</label><br />
+      <?php if(indent_paragraphs()) : ?>
+      <table>
+
+        <tr valign="top"><th scope="row">Don't indent the first paragraph of a group (uses JavaScript)</th>
+          <td>
+            <input type="radio" id="indent_paragraphs_except_first_true" name="otr_options[indent_paragraphs_except_first]" value="true" <?php checked( $settings['indent_paragraphs_except_first'], 'true' ); ?> />
+            <label for="indent_paragraphs_except_first_true">True</label><br />
+            <input type="radio" id="indent_paragraphs_except_first_false" name="otr_options[indent_paragraphs_except_first]" value="false" <?php checked( $settings['indent_paragraphs_except_first'], 'false' ); ?> />
+            <label for="indent_paragraphs_except_first_true">False</label><br />
+          </td>
+        </tr>
+
+      </table>
+      <?php endif; ?>
     </td>
   </tr>
 

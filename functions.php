@@ -55,16 +55,6 @@ if ( ! function_exists( 'load_svg_fallback_js' ) ) {
 // See the README for how to do this in your Child Theme
 // add_action( 'wp_footer', 'load_svg_fallback_js' );
 
-if ( ! function_exists( 'load_p_first_js' ) ) {
-  function load_p_first_js() {
-    ?>
-
-  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/p.first.js"></script>
-  <?php
-  }
-}
-add_action( 'wp_footer', 'load_p_first_js' );
-
 
 if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   function otr_collapse_to_single(){
@@ -96,6 +86,39 @@ if ( ! function_exists( 'use_summaries_on_homepage' ) ) {
   }
 }
 
+if ( ! function_exists( 'indent_paragraphs' ) ) {
+  function indent_paragraphs(){
+    if(get_otr_option('indent_paragraphs') === true || get_otr_option('indent_paragraphs') === 'true'){
+      return true;
+    }else{
+      return false;
+    }
+  }
+}
+
+if ( ! function_exists( 'indent_paragraphs_except_first' ) ) {
+  function indent_paragraphs_except_first(){
+    if(get_otr_option('indent_paragraphs_except_first') === true || get_otr_option('indent_paragraphs_except_first') === 'true'){
+      return true && indent_paragraphs();
+    }else{
+      return false;
+    }
+  }
+}
+
+if ( ! function_exists( 'load_p_first_js' ) ) {
+  function load_p_first_js() {
+    ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/p.first.js"></script>
+  <?php
+  }
+}
+// Only needed when the indent paragraphs and indent paragraphs except first theme options are on
+if (indent_paragraphs_except_first()) {
+  add_action( 'wp_footer', 'load_p_first_js' );
+}
+
 if ( ! function_exists( 'get_category_link_by_name' ) ) {
   function get_category_link_by_name( $name ){
     $cat_id = get_cat_ID( $name );
@@ -104,6 +127,19 @@ if ( ! function_exists( 'get_category_link_by_name' ) ) {
     } else {
       return '';
     }
+  }
+}
+
+if ( ! function_exists( 'extra_body_classes' ) ) {
+  function extra_body_classes(){
+    $classes = array();
+    if(indent_paragraphs()) {
+      array_push($classes, 'indent-paragraphs');
+    }
+    if(indent_paragraphs_except_first()) {
+      array_push($classes, 'indent-paragraphs-except-first');
+    }
+    return $classes;
   }
 }
 

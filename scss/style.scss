@@ -131,6 +131,7 @@ header.main{
   -webkit-background-clip: padding-box;  /* Safari 4? Chrome 6? */
   background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
 }
+
 #content{
   .container{
     @include outer-container;
@@ -180,12 +181,6 @@ header.main{
       }
       .content{
         line-height: 1.5;
-        & > p{
-          text-indent: 16px;
-        }
-        & > p.first, & > p:first-child {
-          text-indent: 0px;
-        }
       }
       footer.meta{
         margin-top: 20px;
@@ -341,5 +336,18 @@ header.main{
         text-align: right;
       }
     }
+  }
+}
+
+// For the indent paragraphs theme option
+.indent-paragraphs #content .container article.post .content{
+  & > p{
+    text-indent: 16px;
+  }
+}
+// For the indent paragraphs except first theme option
+.indent-paragraphs-except-first #content .container article.post .content{
+  & > p.first, & > p:first-child {
+    text-indent: 0px;
   }
 }
