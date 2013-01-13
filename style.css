@@ -369,8 +369,7 @@ h4, h5, h6 {
 
 h1 {
   font-size: 36px;
-  line-height: 48px;
-  margin-bottom: 10px; }
+  line-height: 48px; }
 
 h2 {
   font-size: 28px;
@@ -574,9 +573,9 @@ header.main {
     border: 1px solid white;
     padding: 30px 40px; }
     #content .container article.post h1 {
-      margin: 0;
+      margin: 0 0 10px;
       padding: 5px 0;
-      border-bottom: 4px double #ccc; }
+      border-bottom: 4px double #cccccc; }
       #content .container article.post h1 a {
         text-decoration: none;
         color: #333333; }
@@ -600,6 +599,10 @@ header.main {
       font-style: italic; }
   #content .container article.comments {
     background-color: none; }
+    #content .container article.comments h2.comments-title {
+      border-top: 4px double #cccccc;
+      border-bottom: 4px double #cccccc;
+      padding: 10px 0; }
     #content .container article.comments ol {
       list-style: none; }
       #content .container article.comments ol, #content .container article.comments ol li {

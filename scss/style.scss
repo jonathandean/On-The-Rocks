@@ -152,9 +152,9 @@ header.main{
       border: $article-border-size solid $article-border-color;
       padding: 30px $content-side-padding;
       h1{
-        margin: 0;
+        margin: 0 0 $heading-border-spacing;
         padding: 5px 0;
-        border-bottom: 4px double #ccc;
+        border-bottom: 4px double $heading-border-color;
         a{
           @include underline-on-hover;
           color: $title-font-color;
@@ -188,6 +188,11 @@ header.main{
     }
     article.comments{
       background-color: $comments-background-color;
+      h2.comments-title{
+        border-top: 4px double $heading-border-color;
+        border-bottom: 4px double $heading-border-color;
+        padding: $heading-border-spacing 0;
+      }
       ol{
         @include unformatted-list;
         ol{
