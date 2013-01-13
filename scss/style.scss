@@ -61,6 +61,18 @@ a:active{
   color: $active-link-color;
 }
 
+article.comment, article.post{
+  code, pre{
+    display: block;
+    background-color: #eee;
+    padding: 10px;
+  }
+  // If both are used and nested, don't double pad
+  code pre, pre code{
+    padding: 0;
+  }
+}
+
 header.main{
   background-color: $header-top-background-color;
   border-top: $header-top-border-size solid $header-top-border-color;
@@ -228,6 +240,7 @@ header.main{
               cite{
                 font-style: normal;
                 font-weight: bold;
+                font-size: 16px;
               }
               time, a.link{
                 font-size: 11px;

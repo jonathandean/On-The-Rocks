@@ -443,6 +443,13 @@ a:visited {
 a:active {
   color: #999999; }
 
+article.comment code, article.comment pre, article.post code, article.post pre {
+  display: block;
+  background-color: #eee;
+  padding: 10px; }
+article.comment code pre, article.comment pre code, article.post code pre, article.post pre code {
+  padding: 0; }
+
 header.main {
   background-color: #222627;
   border-top: 16px solid #141717;
@@ -626,7 +633,8 @@ header.main {
           margin-left: 100px; }
         #content .container article.comments li.comment article header .author-time cite {
           font-style: normal;
-          font-weight: bold; }
+          font-weight: bold;
+          font-size: 16px; }
         #content .container article.comments li.comment article header .author-time time, #content .container article.comments li.comment article header .author-time a.link {
           font-size: 11px;
           color: #999999;
