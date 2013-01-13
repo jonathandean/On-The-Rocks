@@ -12,6 +12,7 @@ blockquote {
 h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   font-style: normal;
+  margin: 24px 0;
 }
 h1, h2, h3 {
   font-weight: 400;
@@ -29,7 +30,6 @@ h1 {
 h2 {
   font-size: 28px;
   line-height: 24px;
-  margin-bottom: 25px;
 }
 
 h3 {
@@ -38,17 +38,17 @@ h3 {
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 20px;
   line-height: 24px;
 }
 
 h5 {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 18px;
 }
 
 h6 {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
 }
 
