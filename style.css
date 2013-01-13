@@ -607,7 +607,7 @@ header.main {
     #content .container article.comments li.comment {
       clear: left; }
       #content .container article.comments li.comment article {
-        padding: 0 0 40px 0; }
+        padding: 0 0 40px; }
         #content .container article.comments li.comment article div.avatar {
           float: left;
           width: 100px; }
@@ -641,6 +641,14 @@ header.main {
             font-weight: bold; }
           #content .container article.comments li.comment article footer .reply a:after {
             content: ' ↓'; }
+    #content .container article.comments li.pingback {
+      padding: 0 0 50px;
+      font-style: italic;
+      font-weight: bold; }
+      #content .container article.comments li.pingback, #content .container article.comments li.pingback a {
+        color: #999999; }
+      #content .container article.comments li.pingback a {
+        font-weight: normal; }
     #content .container article.comments ol {
       list-style: none; }
       #content .container article.comments ol, #content .container article.comments ol li {
