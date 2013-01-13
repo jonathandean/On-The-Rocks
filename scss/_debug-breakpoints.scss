@@ -1,0 +1,14 @@
+#wpadminbar #wp-admin-bar-site-name a.ab-item:after{
+  @include media($desktop){
+    content: ' at desktop';
+  }
+  @include media($tablet){
+    content: ' at tablet';
+  }
+  @include media($mobile-portrait){
+    content: ' at mobile-portrait';
+  }
+  @include media($mobile-landscape){
+    content: ' at mobile-landscape';
+  }
+}

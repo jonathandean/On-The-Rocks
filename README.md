@@ -148,6 +148,15 @@ functions.php (in your Child Theme)
 
 For more information in the scripts, see https://github.com/jonathandean/svg_fallback
 
+Debugging responsive breakpoints
+================================
+
+As described in this blog post, the WordPress admin bar indicates the currently active CSS breakpoint: http://www.jonathandean.com/2013/01/showing-the-current-breakpoint-name-when-testing-responsive-designs-using-only-css/
+
+See screen shots in that blog post to see what it looks like. Since this is only shown in the admin bar, it will not be visible to guests of the site and only to admins (and is unobtrustive to them as well.)
+
+The breakpoint name shown in the admin bar matches the breakpoint names defined in scss/_grid-settings.scss
+
 Clone the repository
 ====================
 

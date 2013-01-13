@@ -40,6 +40,8 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 @import "mixins";
 // Typography
 @import "typography";
+// Show the current CSS breakpoint in the WordPress admin bar
+@import "debug-breakpoints";
 
 body{
   font: 14px/1 $font-family;

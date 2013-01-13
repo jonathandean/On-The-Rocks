@@ -418,6 +418,19 @@ p.intro {
 small, footer.meta {
   font-size: 10px; }
 
+@media screen and (min-width: 960px) {
+  #wpadminbar #wp-admin-bar-site-name a.ab-item:after {
+    content: ' at desktop'; } }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  #wpadminbar #wp-admin-bar-site-name a.ab-item:after {
+    content: ' at tablet'; } }
+@media screen and (max-width: 767px) {
+  #wpadminbar #wp-admin-bar-site-name a.ab-item:after {
+    content: ' at mobile-portrait'; } }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #wpadminbar #wp-admin-bar-site-name a.ab-item:after {
+    content: ' at mobile-landscape'; } }
+
 body {
   font: 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
