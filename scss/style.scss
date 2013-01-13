@@ -188,7 +188,7 @@ header.main{
     }
     article.comments{
       background-color: $comments-background-color;
-      h2.comments-title{
+      .comments-title, #reply-title{
         border-top: 4px double $heading-border-color;
         border-bottom: 4px double $heading-border-color;
         padding: $heading-border-spacing 0;

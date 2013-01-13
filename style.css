@@ -599,7 +599,7 @@ header.main {
       font-style: italic; }
   #content .container article.comments {
     background-color: none; }
-    #content .container article.comments h2.comments-title {
+    #content .container article.comments .comments-title, #content .container article.comments #reply-title {
       border-top: 4px double #cccccc;
       border-bottom: 4px double #cccccc;
       padding: 10px 0; }
