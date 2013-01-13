@@ -66,6 +66,27 @@ if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   }
 }
 
+if ( ! function_exists( 'load_otr_collapse_to_single_js' ) ) {
+  function load_otr_collapse_to_single_js() {
+    ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/otr_collapse.js"></script>
+  <script type="text/javascript">
+    var otr_c = new OTR.Collapse({
+      otr_cts_label: "<?php echo get_otr_option('collapse_to_single_label'); ?>",
+      otr_cts_label_plural: "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>"
+    });
+    jQuery(function(){
+      otr_c.setup();
+    });
+  </script>
+  <?php
+  }
+}
+if(otr_collapse_to_single()){
+  add_action( 'wp_head', 'load_otr_collapse_to_single_js' );
+}
+
 if ( ! function_exists( 'use_sidebar' ) ) {
   function use_sidebar(){
     if(get_otr_option('use_sidebar') === true || get_otr_option('use_sidebar') === 'true'){

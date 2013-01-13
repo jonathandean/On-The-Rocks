@@ -39,21 +39,6 @@
       wp_enqueue_script( 'comment-reply' );
 
     wp_head();
-
-    if(otr_collapse_to_single()){
-      ?>
-      <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/otr_collapse.js"></script>
-      <script type="text/javascript">
-        var otr_c = new OTR.Collapse({
-          otr_cts_label: "<?php echo get_otr_option('collapse_to_single_label'); ?>",
-          otr_cts_label_plural: "<?php echo get_otr_option('collapse_to_single_label_plural'); ?>"
-        });
-        jQuery(function(){
-          otr_c.setup();
-        });
-      </script>
-      <?php
-    }
   ?>
 </head>
 <body <?php body_class(extra_body_classes()); ?>>
