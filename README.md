@@ -148,11 +148,6 @@ functions.php (in your Child Theme)
 
 For more information in the scripts, see https://github.com/jonathandean/svg_fallback
 
-Creating a menu to customize the pages in the main navigation
-=============================================================
-
-TODO
-
 Clone the repository
 ====================
 
