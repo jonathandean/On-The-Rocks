@@ -464,7 +464,7 @@ header.main {
     color: #eeeeee; }
   header.main a {
     text-decoration: none; }
-    header.main a a {
+    header.main a:hover {
       text-decoration: underline; }
   header.main .container {
     zoom: 1;
@@ -583,7 +583,7 @@ header.main {
       #content .container article.post h1 a {
         text-decoration: none;
         color: #333333; }
-        #content .container article.post h1 a a {
+        #content .container article.post h1 a:hover {
           text-decoration: underline; }
         #content .container article.post h1 a:visited {
           color: #666666; }
@@ -653,10 +653,15 @@ header.main {
       padding: 0 0 50px;
       font-style: italic;
       font-weight: bold; }
-      #content .container article.comments li.pingback, #content .container article.comments li.pingback a {
-        color: #999999; }
       #content .container article.comments li.pingback a {
+        text-decoration: none;
         font-weight: normal; }
+        #content .container article.comments li.pingback a:hover {
+          text-decoration: underline; }
+      #content .container article.comments li.pingback a.comment-edit-link {
+        font-size: 11px;
+        color: #999999;
+        margin-left: 6px; }
     #content .container article.comments ol {
       list-style: none; }
       #content .container article.comments ol, #content .container article.comments ol li {
