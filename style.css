@@ -392,8 +392,7 @@ h6 {
   line-height: 20px; }
 
 p {
-  margin-bottom: 0px;
-  text-indent: 16px; }
+  margin-bottom: 0px; }
 
 p.author {
   text-indent: 0px;
@@ -401,9 +400,6 @@ p.author {
   font-size: 14px;
   letter-spacing: 1px;
   color: #666464; }
-
-p.first, p:first-child {
-  text-indent: 0px; }
 
 p.intro {
   text-indent: 0px;
@@ -587,6 +583,10 @@ header.main {
           color: #999999; }
     #content .container article.post .content {
       line-height: 1.5; }
+      #content .container article.post .content > p {
+        text-indent: 16px; }
+      #content .container article.post .content > p.first, #content .container article.post .content > p:first-child {
+        text-indent: 0px; }
     #content .container article.post footer.meta {
       margin-top: 20px;
       color: #999999; }

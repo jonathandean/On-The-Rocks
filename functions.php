@@ -55,6 +55,17 @@ if ( ! function_exists( 'load_svg_fallback_js' ) ) {
 // See the README for how to do this in your Child Theme
 // add_action( 'wp_footer', 'load_svg_fallback_js' );
 
+if ( ! function_exists( 'load_p_first_js' ) ) {
+  function load_p_first_js() {
+    ?>
+
+  <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/p.first.js"></script>
+  <?php
+  }
+}
+add_action( 'wp_footer', 'load_p_first_js' );
+
+
 if ( ! function_exists( 'otr_collapse_to_single' ) ) {
   function otr_collapse_to_single(){
     if(get_otr_option('hidden_category_method') === 'collapse' && (get_otr_option('collapse_to_single') === true || get_otr_option('collapse_to_single') === 'true')){

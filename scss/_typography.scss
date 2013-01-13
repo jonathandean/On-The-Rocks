@@ -53,7 +53,6 @@ h6 {
 
 p {
   margin-bottom: 0px;
-  text-indent: 16px;
 }
 
 p.author {
@@ -62,10 +61,6 @@ p.author {
   font-size: 14px;
   letter-spacing: 1px;
   color: #666464;
-}
-
-p.first, p:first-child {
-  text-indent: 0px;
 }
 
 p.intro {

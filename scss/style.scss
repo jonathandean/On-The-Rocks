@@ -168,6 +168,12 @@ header.main{
       }
       .content{
         line-height: 1.5;
+        & > p{
+          text-indent: 16px;
+        }
+        & > p.first, & > p:first-child {
+          text-indent: 0px;
+        }
       }
       footer.meta{
         margin-top: 20px;
