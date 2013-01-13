@@ -37,7 +37,7 @@ $sprite_url: "images/sprite.png";
 
 @mixin underline-on-hover{
   text-decoration: none;
-  a{
+  &:hover{
     text-decoration: underline;
   }
 }
