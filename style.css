@@ -590,7 +590,8 @@ header.main {
         #content .container article.post h1 a:active {
           color: #999999; }
     #content .container article.post .content {
-      line-height: 1.5; }
+      line-height: 1.5;
+      overflow: auto; }
     #content .container article.post footer.meta {
       margin-top: 20px;
       color: #999999; }
@@ -627,6 +628,8 @@ header.main {
             padding: 4px 0 0 12px; }
         #content .container article.comments li.comment article .content {
           margin-left: 100px; }
+          #content .container article.comments li.comment article .content section.comment-content {
+            overflow: auto; }
         #content .container article.comments li.comment article header .author-time cite {
           font-style: normal;
           font-weight: bold;

@@ -181,6 +181,7 @@ header.main{
       }
       .content{
         line-height: 1.5;
+        overflow: auto;
       }
       footer.meta{
         margin-top: 20px;
@@ -229,6 +230,9 @@ header.main{
           }
           .content{
             margin-left: 100px;
+            section.comment-content{
+              overflow: auto;
+            }
           }
           header{
             .author-time{
