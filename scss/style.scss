@@ -40,6 +40,8 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 @import "mixins";
 // Typography
 @import "typography";
+// Forms and form elements
+@import "forms";
 // Show the current CSS breakpoint in the WordPress admin bar
 @import "debug-breakpoints";
 
@@ -88,7 +90,6 @@ header.main{
       @include span-columns($header-logo-columns);
       color: $logo-color;
       font-weight: normal;
-      //text-transform: lowercase; // TODO move to child
       padding-left: $content-side-padding;
       text-shadow: 3px 4px 6px rgba(0,0,0,.5);
       margin-top: 10px;
@@ -127,9 +128,7 @@ header.main{
     }
   }
   border-bottom: 10px solid rgba(0,0,0,0.1);
-  -moz-background-clip: padding-box;     /* Firefox 3.6 */
-  -webkit-background-clip: padding-box;  /* Safari 4? Chrome 6? */
-  background-clip: padding-box;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+  @include background-clip(padding-box);
 }
 
 #content{
@@ -158,8 +157,7 @@ header.main{
       margin: 20px 0;
     }
     article.post{
-      @include border-radius($article-border-radius);
-      box-shadow: 0 0 14px 1px rgba(0,0,0,0.1); // why is this necessary?
+      border-radius: $article-border-radius;
       @include box-shadow(0 0 14px 1px rgba(0,0,0,0.1));
       background: $article-background-color;
       border: $article-border-size solid $article-border-color;
@@ -314,7 +312,6 @@ header.main{
       }
       background: transparent;
       border: none;
-      box-shadow: none;
       @include box-shadow(none);
       p{
         margin-bottom: 0;

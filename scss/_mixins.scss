@@ -59,3 +59,9 @@ $sprite_url: "images/sprite.png";
     @content;
   }
 }
+
+@mixin background-clip($value){
+  -moz-background-clip: $value;     /* Firefox 3.6 */
+  -webkit-background-clip: $value;  /* Safari 4? Chrome 6? */
+  background-clip: $value;      /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}

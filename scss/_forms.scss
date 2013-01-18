@@ -1,0 +1,38 @@
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"]{
+  border-radius: 2px;
+}
+
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="email"]{
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 4px;
+}
+
+label{
+  display: block;
+  padding: 4px 0;
+}
+
+button,
+input[type="submit"]{
+  @include appearance(none);
+  @include box-shadow(-1px 1px 2px rgba(0, 0, 0, 0.05));
+  border: 1px solid #ddd;
+  border-bottom: 2px solid #ccc;
+  padding: 10px 20px;
+  background-color:#efefef;
+  border-radius: 4px;
+  &, &:hover{
+    @include transition(all 0.2s ease-in);
+  }
+  &:hover{
+    background-color: #f9f9f9;
+  }
+}
