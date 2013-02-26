@@ -340,79 +340,88 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* $comments-background-color: lighten($page-background-color, 3%); */
 /* Neat Breakpoints: https://github.com/thoughtbot/neat#breakpoints */
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-blockquote {
-  margin-bottom: 25px;
-  margin-top: 25px;
-  font-size: 26px;
-  line-height: 50px;
-  font-style: italic;
-  font-weight: 400;
-  text-align: left;
-  text-indent: 16px; }
-
-h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 1px;
+body {
+  font-size: 19px;
+  line-height: 25px;
   font-style: normal;
-  margin: 24px 0; }
-
-h1, h2, h3 {
   font-weight: 400; }
 
-h4, h5, h6 {
-  font-weight: 800; }
+blockquote {
+  margin-bottom: 25px;
+  margin-top: 25px; }
+  blockquote, blockquote p {
+    font-size: 32px;
+    line-height: 50px;
+    text-align: left;
+    text-indent: 16px;
+    color: #8c8a8a; }
+  blockquote p {
+    margin: 0; }
 
 h1 {
-  font-size: 36px;
-  line-height: 42px; }
+  font-size: 48px;
+  line-height: 62px;
+  margin-bottom: 25px;
+  font-weight: normal; }
+
+h2, h3, h4, h5, h6 {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase; }
 
 h2 {
-  font-size: 28px;
-  line-height: 36px; }
+  font-size: 30px;
+  line-height: 40px; }
 
 h3 {
-  font-size: 24px;
-  line-height: 30px; }
+  font-size: 28px;
+  line-height: 38px; }
 
 h4 {
-  font-size: 20px;
-  line-height: 26px; }
+  font-size: 26px;
+  line-height: 36px; }
 
 h5 {
-  font-size: 18px;
-  line-height: 22px; }
+  font-size: 24px;
+  line-height: 34px; }
 
 h6 {
-  font-size: 16px;
-  line-height: 20px; }
+  font-size: 22px;
+  line-height: 32px; }
 
 p {
-  margin-bottom: 0px; }
+  text-indent: 0em;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-bottom: 20px; }
 
-p.author {
+p.author, p.date {
   text-indent: 0px;
   margin-bottom: 25px;
   font-size: 14px;
   letter-spacing: 1px;
-  color: #666464; }
+  color: #666464;
+  text-transform: uppercase; }
+  p.author span, p.date span {
+    text-transform: none; }
+
+p.author span {
+  font-style: italic; }
 
 p.intro {
   text-indent: 0px;
-  margin-bottom: 25px;
-  line-height: 50px;
-  font-size: 23px;
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0px; }
-
-small, footer.meta {
-  font-size: 10px; }
+  margin: 0 0 25px;
+  line-height: 42px;
+  font-size: 28px;
+  letter-spacing: 0px;
+  color: #8c8a8a; }
 
 textarea,
 input[type="text"],
@@ -473,11 +482,11 @@ input[type="submit"] {
     content: ' at mobile-landscape'; } }
 
 body {
-  font: 14px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
   -webkit-text-size-adjust: 100%;
   position: relative;
-  background-color: #eeeeeb; }
+  background-color: white; }
 
 a {
   color: #333333; }
@@ -527,7 +536,6 @@ header.main {
       margin-right: 2.35765%;
       width: 31.76157%;
       color: #eeeeee;
-      font-weight: normal;
       padding-left: 40px;
       text-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5);
       margin-top: 10px;
@@ -613,44 +621,33 @@ header.main {
   #content .container aside.sidebar {
     margin: 20px 0; }
   #content .container article.post {
-    border-radius: 4px;
-    -webkit-box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 14px 1px rgba(0, 0, 0, 0.1);
-    background: #f9f9f9;
-    border: 1px solid white;
+    border-radius: 0px;
+    background: white;
+    border: 0px solid white;
     padding: 30px 40px; }
     #content .container article.post h1 {
-      margin: 0 0 10px;
-      padding: 5px 0;
-      border-bottom: 4px double #cccccc; }
+      margin-top: 0; }
       #content .container article.post h1 a {
-        text-decoration: none;
-        color: #333333; }
+        text-decoration: none; }
         #content .container article.post h1 a:hover {
           text-decoration: underline; }
-        #content .container article.post h1 a:visited {
-          color: #666666; }
+        #content .container article.post h1 a, #content .container article.post h1 a:visited {
+          color: #333333; }
         #content .container article.post h1 a:active {
           color: #999999; }
     #content .container article.post .content {
-      line-height: 1.5;
       overflow: auto; }
     #content .container article.post footer.meta {
       margin-top: 20px;
-      color: #999999; }
+      color: #8c8a8a; }
       #content .container article.post footer.meta .date span {
         display: none; }
       #content .container article.post footer.meta .author {
         display: none; }
     #content .container article.post .more-link {
-      color: #999999;
-      font-style: italic; }
+      color: #8c8a8a; }
   #content .container article.comments {
     background-color: none; }
-    #content .container article.comments .comments-title, #content .container article.comments #reply-title {
-      border-top: 4px double #cccccc;
-      border-bottom: 4px double #cccccc;
-      padding: 10px 0; }
     #content .container article.comments li.comment {
       clear: left; }
       #content .container article.comments li.comment article {
@@ -667,42 +664,29 @@ header.main {
           #content .container article.comments li.comment article div.avatar .post-author {
             display: block;
             color: #ccc;
-            font-size: 11px;
             padding: 4px 0 0 12px; }
         #content .container article.comments li.comment article .content {
           margin-left: 100px; }
           #content .container article.comments li.comment article .content section.comment-content {
             overflow: auto; }
-        #content .container article.comments li.comment article header .author-time cite {
-          font-style: normal;
-          font-weight: bold;
-          font-size: 16px; }
         #content .container article.comments li.comment article header .author-time time, #content .container article.comments li.comment article header .author-time a.link {
-          font-size: 11px;
-          color: #999999;
+          color: #8c8a8a;
           margin-left: 10px; }
         #content .container article.comments li.comment article footer {
           padding: 20px 0 0; }
           #content .container article.comments li.comment article footer div {
             display: inline;
-            margin-right: 10px;
-            font-size: 12px; }
-          #content .container article.comments li.comment article footer .edit a, #content .container article.comments li.comment article footer .reply a {
-            font-weight: bold; }
+            margin-right: 10px; }
           #content .container article.comments li.comment article footer .reply a:after {
             content: ' ↓'; }
     #content .container article.comments li.pingback {
-      padding: 0 0 50px;
-      font-style: italic;
-      font-weight: bold; }
+      padding: 0 0 50px; }
       #content .container article.comments li.pingback a {
-        text-decoration: none;
-        font-weight: normal; }
+        text-decoration: none; }
         #content .container article.comments li.pingback a:hover {
           text-decoration: underline; }
       #content .container article.comments li.pingback a.comment-edit-link {
-        font-size: 11px;
-        color: #999999;
+        color: #8c8a8a;
         margin-left: 6px; }
     #content .container article.comments ol {
       list-style: none; }

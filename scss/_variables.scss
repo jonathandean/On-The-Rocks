@@ -6,11 +6,12 @@ $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $dark-font-color: #333 !default;
 $title-font-color: $dark-font-color !default;
 $light-font-color: #eee !default;
-$subtle-font-color: #999 !default;
+$subtle-font-color: #8c8a8a !default;
+$meta-font-color: #666464 !default;
 $visited-link-color: #666 !default;
 $active-link-color: #999 !default;
 
-$page-background-color: #eeeeeb !default;
+$page-background-color: #fff !default;
 
 $content-side-padding: 40px !default;
 
@@ -22,13 +23,9 @@ $header-nav-columns: 8 !default;
 
 $logo-color: $light-font-color !default;
 
-$article-background-color: #f9f9f9 !default;
-$article-border-radius: 4px !default;
+$article-background-color: #fff !default;
+$article-border-radius: 0px !default;
 $article-border-color: #fff !default;
-$article-border-size: 1px !default;
+$article-border-size: 0px !default;
 
-/* $comments-background-color: lighten($page-background-color, 3%); */
 $comments-background-color: none !default;
-
-$heading-border-color: #ccc !default;
-$heading-border-spacing: 10px !default;

@@ -45,8 +45,8 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 // Show the current CSS breakpoint in the WordPress admin bar
 @import "debug-breakpoints";
 
-body{
-  font: 14px/1 $font-family;
+body {
+  font: 16px/1 $font-family;
   color: $dark-font-color;
   -webkit-text-size-adjust: 100%;
   position:relative;
@@ -89,7 +89,7 @@ header.main{
     h1{
       @include span-columns($header-logo-columns);
       color: $logo-color;
-      font-weight: normal;
+      //font-weight: normal;
       padding-left: $content-side-padding;
       text-shadow: 3px 4px 6px rgba(0,0,0,.5);
       margin-top: 10px;
@@ -158,19 +158,15 @@ header.main{
     }
     article.post{
       border-radius: $article-border-radius;
-      @include box-shadow(0 0 14px 1px rgba(0,0,0,0.1));
       background: $article-background-color;
       border: $article-border-size solid $article-border-color;
       padding: 30px $content-side-padding;
       h1{
-        margin: 0 0 $heading-border-spacing;
-        padding: 5px 0;
-        border-bottom: 4px double $heading-border-color;
+        margin-top: 0;
         a{
           @include underline-on-hover;
-          color: $title-font-color;
-          &:visited{
-            color: $visited-link-color;
+          &, &:visited{
+            color: $title-font-color;
           }
           &:active{
             color: $active-link-color;
@@ -178,7 +174,6 @@ header.main{
         }
       }
       .content{
-        line-height: 1.5;
         overflow: auto;
       }
       footer.meta{
@@ -195,16 +190,11 @@ header.main{
       }
       .more-link{
         color: $subtle-font-color;
-        font-style: italic;
+        //font-style: italic;
       }
     }
     article.comments{
       background-color: $comments-background-color;
-      .comments-title, #reply-title{
-        border-top: 4px double $heading-border-color;
-        border-bottom: 4px double $heading-border-color;
-        padding: $heading-border-spacing 0;
-      }
       li.comment{
         clear: left;
         article{
@@ -222,7 +212,6 @@ header.main{
             .post-author{
               display: block;
               color: #ccc;
-              font-size: 11px;
               padding: 4px 0 0 12px;
             }
           }
@@ -235,12 +224,8 @@ header.main{
           header{
             .author-time{
               cite{
-                font-style: normal;
-                font-weight: bold;
-                font-size: 16px;
               }
               time, a.link{
-                font-size: 11px;
                 color: $subtle-font-color;
                 margin-left: 10px;
               }
@@ -251,10 +236,6 @@ header.main{
             div{
               display: inline;
               margin-right: 10px;
-              font-size: 12px;
-            }
-            .edit a, .reply a{
-              font-weight: bold;
             }
             .reply a:after{
               content: ' ↓';
@@ -264,14 +245,10 @@ header.main{
       }
       li.pingback{
         padding: 0 0 50px;
-        font-style: italic;
-        font-weight: bold;
         a{
           @include underline-on-hover;
-          font-weight: normal;
         }
         a.comment-edit-link{
-          font-size: 11px;
           color: $subtle-font-color;
           margin-left: 6px;
         }
