@@ -13,6 +13,7 @@ $active-link-color: #999 !default;
 
 $page-background-color: #fff !default;
 
+$content-top-padding: 44px !default;
 $content-side-padding: 40px !default;
 
 $header-top-border-color: #141717 !default;
@@ -34,6 +35,10 @@ $main-content-background: transparent !default;
 $middle-column-background: #f2f2f2 !default;
 $right-column-background: transparent !default;
 
-$main-content-column-span: 7;
-$middle-column-span: 3;
-$right-column-span: 2;
+$middle-column-text-color: #455761 !default;
+$middle-column-header-color: $middle-column-text-color !default;
+$middle-column-link-color: $middle-column-text-color !default;
+
+$main-content-column-span: 7 !default;
+$middle-column-span: 3 !default;
+$right-column-span: 2 !default;

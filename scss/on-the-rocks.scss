@@ -154,13 +154,30 @@ header.main{
     }
     aside.sidebar{
       ul.sidebar{
-        @include unformatted-list;
+        // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
+        &,
+        & .widget_recent_entries > ul,
+        & .widget_archive > ul{
+          @include unformatted-list;
+        }
+      }
+      h2{
+        font-size: 24px;
       }
     }
     // TODO consistently name these everywhere as either sidebars or columns
     aside#sidebar-one{
       @include span-columns($middle-column-span);
       background: $middle-column-background;
+      text-align: right;
+      padding: 0 30px;
+      color: $middle-column-text-color;
+      h1, h2, h3, h4, h5, h6{
+        color: $middle-column-header-color;
+      }
+      a{
+        color: $middle-column-link-color;
+      }
     }
     aside#sidebar-two{
       @include span-columns($right-column-span);
@@ -178,7 +195,7 @@ header.main{
       border-radius: $article-border-radius;
       background: $article-background-color;
       border: $article-border-size solid $article-border-color;
-      padding: 30px $content-side-padding;
+      padding: $content-top-padding $content-side-padding;
       h1{
         margin-top: 0;
         a{
