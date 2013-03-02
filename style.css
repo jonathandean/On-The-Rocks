@@ -591,13 +591,50 @@ header.main {
       margin-right: 0; }
   #content .container aside.sidebar {
     padding-bottom: 44px; }
-    #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul {
+    #content .container aside.sidebar ul.sidebar,
+    #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul,
+    #content .container aside.sidebar ul.sidebar .widget_archive > ul,
+    #content .container aside.sidebar ul.sidebar .wp_rp_content > ul {
       list-style: none; }
-      #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul li, #content .container aside.sidebar ul.sidebar .widget_archive > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul li {
+      #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li,
+      #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul,
+      #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul li,
+      #content .container aside.sidebar ul.sidebar .widget_archive > ul,
+      #content .container aside.sidebar ul.sidebar .widget_archive > ul li,
+      #content .container aside.sidebar ul.sidebar .wp_rp_content > ul,
+      #content .container aside.sidebar ul.sidebar .wp_rp_content > ul li {
         padding: 0;
         margin: 0; }
     #content .container aside.sidebar h2 {
       font-size: 24px; }
+    #content .container aside.sidebar .widget_recent_entries > ul li,
+    #content .container aside.sidebar .wp_rp_content > ul li,
+    #content .container aside.sidebar .widget_archive > ul li {
+      padding-bottom: 30px !important;
+      line-height: 1.2; }
+      #content .container aside.sidebar .widget_recent_entries > ul li a,
+      #content .container aside.sidebar .wp_rp_content > ul li a,
+      #content .container aside.sidebar .widget_archive > ul li a {
+        text-decoration: none; }
+        #content .container aside.sidebar .widget_recent_entries > ul li a:hover,
+        #content .container aside.sidebar .wp_rp_content > ul li a:hover,
+        #content .container aside.sidebar .widget_archive > ul li a:hover {
+          text-decoration: underline; }
+      #content .container aside.sidebar .widget_recent_entries > ul li .post-date,
+      #content .container aside.sidebar .wp_rp_content > ul li .post-date,
+      #content .container aside.sidebar .widget_archive > ul li .post-date {
+        display: block;
+        font-size: 10px;
+        color: #99a3a8;
+        padding: 8px 0 0; }
+    #content .container aside.sidebar .widget_archive > ul li {
+      padding-bottom: 10px !important;
+      color: #99a3a8;
+      font-size: 10px; }
+      #content .container aside.sidebar .widget_archive > ul li a {
+        font-size: 14px;
+        color: #455761;
+        margin-right: 4px; }
     #content .container aside.sidebar .widget_instagrm_widget #instagram_widget_title {
       margin: 0 0 10px;
       font-weight: bold;

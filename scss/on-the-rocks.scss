@@ -133,6 +133,7 @@ header.main{
   //@include background-clip(padding-box);
 }
 
+// TODO probably don't need #content .container nesting, it's just adding weight to the output CSS
 #content{
   .container{
     @include outer-container;
@@ -157,13 +158,47 @@ header.main{
       ul.sidebar{
         // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
         &,
-        & .widget_recent_entries > ul,
-        & .widget_archive > ul{
+        .widget_recent_entries > ul,
+        .widget_archive > ul,
+        .wp_rp_content > ul{
           @include unformatted-list;
         }
       }
       h2{
         font-size: 24px;
+      }
+      .widget_recent_entries,
+      .wp_rp_content,
+      .widget_archive{
+        & > ul{
+          li{
+            padding-bottom: 30px !important;
+            line-height: 1.2;
+            a{
+              @include underline-on-hover;
+            }
+            .post-date{
+              display: block;
+              font-size: 10px;
+              color: $middle-column-subtle-text-color;
+              padding: 8px 0 0;
+            }
+          }
+        }
+      }
+      .widget_archive{
+        & > ul{
+          li{
+            padding-bottom: 10px !important;
+            color: $middle-column-subtle-text-color;
+            font-size: 10px;
+            a{
+              font-size: 14px;
+              color: $middle-column-text-color;
+              margin-right: 4px;
+            }
+          }
+        }
       }
       // TODO add to README which plugin to use for instagram feed display and how to configure
       .widget_instagrm_widget{
