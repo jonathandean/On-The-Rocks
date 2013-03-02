@@ -218,8 +218,8 @@ header.main{
               display: block;
             }
             a{
-              width: 150px;
-              height: 150px;
+              width: $instagram-image-size;
+              height: $instagram-image-size;
             }
             a img{
               width: 100%;
@@ -239,7 +239,7 @@ header.main{
               position: absolute;
               left: 0;
               bottom: 18px;
-              width: 150px;
+              width: $instagram-image-size;
               padding: 10px;
               background-color: #fff;
               z-index: 10;
@@ -271,7 +271,7 @@ header.main{
     }
     aside#sidebar-two{
       @include span-columns($right-column-span);
-      @include pad(($content-top-padding + 8px) default $content-top-padding);
+      padding-top: $content-top-padding + 6px;
       background: $right-column-background;
     }
 
