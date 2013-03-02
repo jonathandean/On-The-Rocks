@@ -182,6 +182,57 @@ header.main{
     aside#sidebar-two{
       @include span-columns($right-column-span);
       background: $right-column-background;
+      // TODO add to README which plugin to use for instagram feed display and how to configure
+      .widget_instagrm_widget{
+        #instagram_widget_title{
+          margin: 0 0 10px;
+        }
+        ul{
+          @include unformatted-list;
+          @include floated-list;
+          li{
+            position: relative;
+            padding: 0 18px 18px 0;
+            &, a, a img{
+              display: block;
+            }
+            a{
+              width: 150px;
+              height: 150px;
+            }
+            a img{
+              width: 100%;
+              height: 100%;
+              @include box-shadow(-1px 1px 10px 1px rgba(0, 0, 0, 0.3));
+              @include background-clip(padding-box);
+              border: 2px solid rgba(255, 255, 255, 0.1);
+              @include transition(all 0.2s ease-in-out);
+              &:hover{
+                border-color: #fff;
+              }
+            }
+            p.instagram_likes{
+              display: none;
+            }
+            p.instagram_caption{
+              position: absolute;
+              left: 0;
+              bottom: 18px;
+              width: 150px;
+              padding: 10px;
+              background-color: #fff;
+              z-index: 10;
+              font-size: 11px;
+              line-height: 13px;
+              opacity: 0;
+              @include transition(all 0.5s ease-in-out);
+            }
+            &:hover p.instagram_caption{
+              opacity: 0.8;
+            }
+          }
+        }
+      }
     }
     @include media($small-devices) {
       section.posts{
