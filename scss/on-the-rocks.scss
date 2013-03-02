@@ -138,6 +138,7 @@ header.main{
   .container{
     @include outer-container;
 
+    // TODO try the Table grid example at http://neat.bourbon.io/examples/ for equal height columns
     // For equal height columns
     //@include display-box;
     //@include box-align(start);
@@ -154,7 +155,7 @@ header.main{
       background: $main-content-background;
     }
     aside.sidebar{
-      padding-bottom: $content-top-padding;
+      @include pad($content-top-padding default);
       ul.sidebar{
         // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
         &,
@@ -257,10 +258,9 @@ header.main{
     // TODO consistently name these everywhere as either sidebars or columns
     aside#sidebar-one{
       @include span-columns($middle-column-span);
+      @include pad(0 $middle-column-side-padding  $content-top-padding);
       background: $middle-column-background;
       text-align: right;
-      padding-right: $middle-column-side-padding;
-      padding-left: $middle-column-side-padding;
       color: $middle-column-text-color;
       h1, h2, h3, h4, h5, h6{
         color: $middle-column-header-color;
@@ -270,16 +270,43 @@ header.main{
       }
     }
     aside#sidebar-two{
-      padding-top: $content-top-padding + 8px;
       @include span-columns($right-column-span);
+      @include pad(($content-top-padding + 8px) default $content-top-padding);
       background: $right-column-background;
     }
-    @include media($small-devices) {
+
+    @include media($tablet){
+      section.posts{
+        @include span-columns(8);
+      }
+      aside#sidebar-one{
+        @include span-columns(4);
+        margin-right: 0;
+      }
+      aside#sidebar-two{
+        @include span-columns(12);
+      }
+    }
+    @include media($mobile-landscape) {
       section.posts{
         @include span-columns(12);
       }
-      aside.sidebar{
-        @include span-columns(6);
+      aside#sidebar-one{
+        @include span-columns(12);
+      }
+      aside#sidebar-two{
+        @include span-columns(12);
+      }
+    }
+    @include media($mobile-portrait) {
+      section.posts{
+        @include span-columns(12);
+      }
+      aside#sidebar-one{
+        @include span-columns(12);
+      }
+      aside#sidebar-two{
+        @include span-columns(12);
       }
     }
     article.post{

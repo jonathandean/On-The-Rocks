@@ -590,7 +590,7 @@ header.main {
     #content .container section.posts:last-child {
       margin-right: 0; }
   #content .container aside.sidebar {
-    padding-bottom: 44px; }
+    padding: 44px default; }
     #content .container aside.sidebar ul.sidebar,
     #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul,
     #content .container aside.sidebar ul.sidebar .widget_archive > ul,
@@ -701,10 +701,9 @@ header.main {
     float: left;
     margin-right: 2.35765%;
     width: 23.23176%;
+    padding: 0 30px 44px;
     background: #f2f2f2;
     text-align: right;
-    padding-right: 30px;
-    padding-left: 30px;
     color: #455761; }
     #content .container aside#sidebar-one:last-child {
       margin-right: 0; }
@@ -713,15 +712,38 @@ header.main {
     #content .container aside#sidebar-one a {
       color: #455761; }
   #content .container aside#sidebar-two {
-    padding-top: 52px;
     display: block;
     float: left;
     margin-right: 2.35765%;
     width: 14.70196%;
+    padding: 52px default 44px;
     background: transparent; }
     #content .container aside#sidebar-two:last-child {
       margin-right: 0; }
-  @media screen and (max-width: 959px) {
+  @media screen and (min-width: 768px) and (max-width: 959px) {
+    #content .container section.posts {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 65.88078%; }
+      #content .container section.posts:last-child {
+        margin-right: 0; }
+    #content .container aside#sidebar-one {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      margin-right: 0; }
+      #content .container aside#sidebar-one:last-child {
+        margin-right: 0; }
+    #content .container aside#sidebar-two {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #content .container aside#sidebar-two:last-child {
+        margin-right: 0; } }
+  @media screen and (min-width: 480px) and (max-width: 767px) {
     #content .container section.posts {
       display: block;
       float: left;
@@ -729,12 +751,41 @@ header.main {
       width: 100%; }
       #content .container section.posts:last-child {
         margin-right: 0; }
-    #content .container aside.sidebar {
+    #content .container aside#sidebar-one {
       display: block;
       float: left;
       margin-right: 2.35765%;
-      width: 48.82117%; }
-      #content .container aside.sidebar:last-child {
+      width: 100%; }
+      #content .container aside#sidebar-one:last-child {
+        margin-right: 0; }
+    #content .container aside#sidebar-two {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #content .container aside#sidebar-two:last-child {
+        margin-right: 0; } }
+  @media screen and (max-width: 767px) {
+    #content .container section.posts {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #content .container section.posts:last-child {
+        margin-right: 0; }
+    #content .container aside#sidebar-one {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #content .container aside#sidebar-one:last-child {
+        margin-right: 0; }
+    #content .container aside#sidebar-two {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 100%; }
+      #content .container aside#sidebar-two:last-child {
         margin-right: 0; } }
   #content .container article.post {
     border-radius: 0px;
