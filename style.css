@@ -620,7 +620,9 @@ header.main {
     #content .container aside#sidebar-two:last-child {
       margin-right: 0; }
     #content .container aside#sidebar-two .widget_instagrm_widget #instagram_widget_title {
-      margin: 0 0 10px; }
+      margin: 0 0 10px;
+      font-weight: bold;
+      font-size: 24px; }
     #content .container aside#sidebar-two .widget_instagrm_widget ul {
       list-style: none;
       list-style: none; }
