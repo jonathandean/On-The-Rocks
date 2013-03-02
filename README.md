@@ -96,6 +96,11 @@ If you happen to want to work on On The Rocks and your Child Theme at the same t
  * Try to use the same version of SASS for both: http://feedback.livereload.com/knowledgebase/articles/86281-using-custom-compiler-versions
  * If you use the JavaScript snippet instead of the browser plugin, do not commit that!
 
+Customizing via variables
+=========================
+
+If you are using SASS in your Child Theme (as described above) you can customize a lot of the display of On The Rocks simply by defining your own values for the variables in scss/_variables.scss. They all use !default to make it easy to define your own values. The advantage to customizing here instead of providing your own complete CSS rules is to better ensure compatibility with future updates.
+
 Adding your logo in header
 ==========================
 
