@@ -9,7 +9,6 @@ $GLOBALS['otr_options'] = array(
   'collapse_to_single' => 'true',
   'collapse_to_single_label' => 'tweet',
   'collapse_to_single_label_plural' => 'tweets',
-  'use_sidebar' => 'true',
   'summaries_on_homepage' => 'true',
   'indent_paragraphs' => 'false',
   'indent_paragraphs_except_first' => 'false',
@@ -156,16 +155,6 @@ function otr_theme_options_page() {
       <label for="summaries_on_homepage_false">False</label><br />
     </td>
   </tr>
-
-  <tr valign="top"><th scope="row">Use sidebar</th>
-    <td>
-      <input type="radio" id="use_sidebar_true" name="otr_options[use_sidebar]" value="true" <?php checked( $settings['use_sidebar'], 'true' ); ?> />
-      <label for="use_sidebar_true">True</label><br />
-      <input type="radio" id="use_sidebar_false" name="otr_options[use_sidebar]" value="false" <?php checked( $settings['use_sidebar'], 'false' ); ?> />
-      <label for="use_sidebar_false">False</label><br />
-    </td>
-  </tr>
-
 
   <tr valign="top"><th scope="row">Indent paragraphs</th>
     <td>

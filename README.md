@@ -21,7 +21,6 @@ Features
 - Settings page in Appearance > Theme Options
     - Hide or specially display a particular category (I use this for posts created from my twitter updates, courtesy of the twitter tools plugin: http://wordpress.org/extend/plugins/twitter-tools/) You can hide a category from the main blog loop, "collapse" that category in a special smaller display format or keep in the page but hide via CSS. Check out the theme settings page in WordPress admin to see all options.
     - Show summaries on the home page (when supplied for the post) or always show the full post
-    - Show a sidebar or not
     - Whether or not to indent paragraphs, also with the option of whether or not the first paragraph is also indented
 - Threaded comments support when enabled in Settings > Discussions
 - Main nav supports WordPress Menus or will fall back to displaying all pages if none is created in your Appearance > Menus settings

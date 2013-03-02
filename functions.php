@@ -2,8 +2,17 @@
 // Register a sidebar
 
 register_sidebar(array(
-  'name' => __( 'Right Column' ),
-  'description' => __( 'Widgets in this area will be shown on the right-hand side.' ),
+  'name' => 'One',
+  'id' => 'one',
+  'description' => __( 'Widgets in this area will be shown on the right-hand side in the first (middle) column.' ),
+  'before_title' => '<h2>',
+  'after_title' => '</h2>'
+));
+
+register_sidebar(array(
+  'name' => 'Two',
+  'id' => 'two',
+  'description' => __( 'Widgets in this area will be shown on the right-hand side in the last column.' ),
   'before_title' => '<h2>',
   'after_title' => '</h2>'
 ));
@@ -85,16 +94,6 @@ if ( ! function_exists( 'load_otr_collapse_to_single_js' ) ) {
 }
 if(otr_collapse_to_single()){
   add_action( 'wp_head', 'load_otr_collapse_to_single_js' );
-}
-
-if ( ! function_exists( 'use_sidebar' ) ) {
-  function use_sidebar(){
-    if(get_otr_option('use_sidebar') === true || get_otr_option('use_sidebar') === 'true'){
-      return true;
-    }else{
-      return false;
-    }
-  }
 }
 
 if ( ! function_exists( 'use_summaries_on_homepage' ) ) {

@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*
 Theme Name: On The Rocks
 Theme URI: http://jonathandean.com/
@@ -127,34 +129,50 @@ header.main{
       }
     }
   }
-  border-bottom: 10px solid rgba(0,0,0,0.1);
-  @include background-clip(padding-box);
+  //border-bottom: 10px solid rgba(0,0,0,0.1);
+  //@include background-clip(padding-box);
 }
 
 #content{
   .container{
     @include outer-container;
 
-    &.with-sidebar{
-      section.posts{
-        @include span-columns(8);
-      }
-      aside.sidebar{
-        @include span-columns(4);
-        ul.sidebar{
-          @include unformatted-list;
-        }
-      }
-      @include media($small-devices) {
-        section.posts,
-        aside.sidebar{
-          @include span-columns(12);
-        }
+    // For equal height columns
+    //@include display-box;
+    //@include box-align(start);
+    //@include box-orient(horizontal);
+    //@include box-pack(start);
+
+    //& > section.posts, & > aside.sidebar{
+    //  @include box-flex(1);
+    //  float: none;
+    //}
+
+    section.posts{
+      @include span-columns($main-content-column-span);
+      background: $main-content-background;
+    }
+    aside.sidebar{
+      ul.sidebar{
+        @include unformatted-list;
       }
     }
-    article.post,
-    aside.sidebar{
-      margin: 20px 0;
+    // TODO consistently name these everywhere as either sidebars or columns
+    aside#sidebar-one{
+      @include span-columns($middle-column-span);
+      background: $middle-column-background;
+    }
+    aside#sidebar-two{
+      @include span-columns($right-column-span);
+      background: $right-column-background;
+    }
+    @include media($small-devices) {
+      section.posts{
+        @include span-columns(12);
+      }
+      aside.sidebar{
+        @include span-columns(6);
+      }
     }
     article.post{
       border-radius: $article-border-radius;

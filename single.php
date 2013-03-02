@@ -28,7 +28,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 */
 get_header(); ?>
 <div id="content" role="main">
-  <div class="container <?php echo use_sidebar() ? 'with-sidebar' : 'no-sidebar'; ?>">
+  <div class="container">
     <section class="posts">
       <?php if ( have_posts() ) : ?>
         <?php while ( have_posts() ) : the_post(); ?>
@@ -38,9 +38,8 @@ get_header(); ?>
         <p>No posts found.</p>
       <?php endif; // end have_posts() ?>
     </section>
-    <?php if ( use_sidebar() ) : ?>
-      <?php get_sidebar(); ?>
-    <?php endif; // if ( use_sidebar() ) ?>
+    <?php get_sidebar('one'); ?>
+    <?php get_sidebar('two'); ?>
   </div>
 </div>
 <?php get_footer(); ?>

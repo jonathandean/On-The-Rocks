@@ -506,14 +506,7 @@ article.comment code pre, article.comment pre code, article.post code pre, artic
 
 header.main {
   background-color: #222627;
-  border-top: 16px solid #141717;
-  border-bottom: 10px solid rgba(0, 0, 0, 0.1);
-  -moz-background-clip: padding-box;
-  /* Firefox 3.6 */
-  -webkit-background-clip: padding-box;
-  /* Safari 4? Chrome 6? */
-  background-clip: padding-box;
-  /* Firefox 4, Safari 5, Opera 10, IE 9 */ }
+  border-top: 16px solid #141717; }
   header.main, header.main a {
     color: #eeeeee; }
   header.main a {
@@ -588,38 +581,50 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-  #content .container.with-sidebar section.posts {
+  #content .container section.posts {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 65.88078%; }
-    #content .container.with-sidebar section.posts:last-child {
+    width: 48.82117%;
+    background: transparent; }
+    #content .container section.posts:last-child {
       margin-right: 0; }
-  #content .container.with-sidebar aside.sidebar {
+  #content .container aside.sidebar ul.sidebar {
+    list-style: none; }
+    #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li {
+      padding: 0;
+      margin: 0; }
+  #content .container aside#sidebar-one {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 31.76157%; }
-    #content .container.with-sidebar aside.sidebar:last-child {
+    width: 31.76157%;
+    background: #f2f2f2; }
+    #content .container aside#sidebar-one:last-child {
       margin-right: 0; }
-    #content .container.with-sidebar aside.sidebar ul.sidebar {
-      list-style: none; }
-      #content .container.with-sidebar aside.sidebar ul.sidebar, #content .container.with-sidebar aside.sidebar ul.sidebar li {
-        padding: 0;
-        margin: 0; }
+  #content .container aside#sidebar-two {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    background: transparent; }
+    #content .container aside#sidebar-two:last-child {
+      margin-right: 0; }
   @media screen and (max-width: 959px) {
-    #content .container.with-sidebar section.posts,
-    #content .container.with-sidebar aside.sidebar {
+    #content .container section.posts {
       display: block;
       float: left;
       margin-right: 2.35765%;
       width: 100%; }
-      #content .container.with-sidebar section.posts:last-child,
-      #content .container.with-sidebar aside.sidebar:last-child {
+      #content .container section.posts:last-child {
+        margin-right: 0; }
+    #content .container aside.sidebar {
+      display: block;
+      float: left;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      #content .container aside.sidebar:last-child {
         margin-right: 0; } }
-  #content .container article.post,
-  #content .container aside.sidebar {
-    margin: 20px 0; }
   #content .container article.post {
     border-radius: 0px;
     background: white;
