@@ -57,7 +57,7 @@ If you are using SCSS then you can also make the import statement compile the On
     Template: on_the_rocks
     */
     
-    @import "../../on_the_rocks/scss/style.scss";
+    @import "../../on_the_rocks/scss/on-the-rocks.scss";
     
     // Custom SCSS goes here
 
@@ -74,11 +74,27 @@ To take advantage of the variables and mixins of On The Rocks, you can import th
 
     @import "../../on_the_rocks/scss/variables";
     @import "../../on_the_rocks/scss/mixins";
-    @import "../../on_the_rocks/scss/style.scss";
+    @import "../../on_the_rocks/scss/on-the-rocks.scss";
 
     // Custom SCSS goes here
 
 You can also modify markup, add functionaliy, etc. by adding template files and other functionality. See http://codex.wordpress.org/Child_Themes for more information.
+
+Some tips on using LiveReload
+-----------------------------
+
+If you use the highly convenient LiveReload app (http://livereload.com/) here are some tips/random comments.
+
+I renamed the main SCSS from scss/style.scss to scss/on-the-rocks.scss because if you are using a child theme that is importing the On The Rocks SCSS file as outlined above, LiveReload's compile options were seeing an import with style.scss and not enabling it as a compile option. Renaming removed the ambiguity between your style.scss (or whatever you name it) and On The Rocks's main SCSS file. You're welcome.
+
+If you happen to want to work on On The Rocks and your Child Theme at the same time (as in you are going to submit pull requests to On The Rocks as well as creating your Child Theme) I found this to be the best setup:
+
+ * In your local WordPress install, install both themes
+ * In LiveReload add either your site root or themes directory
+ * In LiveReload, select your Child Theme's main SCSS file as the Source and the Output as your Child Theme's style.css. (So the source would be something like themes/my_theme/scss/my_theme.scss and the output themes/my_theme/style.css
+ * In a terminal window, go into the on_the_rocks/ theme directory and use this command to also compile the style.css for On The Rocks: sass --watch --style nested scss/on-the-rocks.scss:style.css  (Please be sure to use the nested output for pull requests to be accepted! This is not because I prefer this format, but because it preserves the required comments at the top of the file that WordPress needs for the theme to be valid.)
+ * Try to use the same version of SASS for both: http://feedback.livereload.com/knowledgebase/articles/86281-using-custom-compiler-versions
+ * If you use the JavaScript snippet instead of the browser plugin, do not commit that!
 
 Adding your logo in header
 ==========================
@@ -184,8 +200,10 @@ Compiling the SCSS
 First you must install SASS if you don't already have it. I would recommend at least version 3.2.1
 
     gem install sass
-    sass --watch scss/style.scss:style.css
-    
+    sass --watch --style nested scss/on-the-rocks.scss:style.css
+
+The nested style is important because it preserves the comments at the top that WordPress needs in order for it to be a valid theme. If you know how to use compressed and also preserve these, please let me know!
+
 More information at http://sass-lang.com/
 
 Use as a git submodule
@@ -236,5 +254,5 @@ Compile SCSS
 
     gem install sass
     cd [project root]
-    sass --watch scss/style.scss:style.css
+    sass --watch --style nested scss/on-the-rocks.scss:style.css
 
