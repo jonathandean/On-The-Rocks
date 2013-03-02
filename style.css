@@ -598,6 +598,67 @@ header.main {
         margin: 0; }
     #content .container aside.sidebar h2 {
       font-size: 24px; }
+    #content .container aside.sidebar .widget_instagrm_widget #instagram_widget_title {
+      margin: 0 0 10px;
+      font-weight: bold;
+      font-size: 24px; }
+    #content .container aside.sidebar .widget_instagrm_widget ul {
+      list-style: none;
+      list-style: none; }
+      #content .container aside.sidebar .widget_instagrm_widget ul, #content .container aside.sidebar .widget_instagrm_widget ul li {
+        padding: 0;
+        margin: 0; }
+      #content .container aside.sidebar .widget_instagrm_widget ul, #content .container aside.sidebar .widget_instagrm_widget ul li {
+        display: block; }
+      #content .container aside.sidebar .widget_instagrm_widget ul li {
+        float: left; }
+      #content .container aside.sidebar .widget_instagrm_widget ul li {
+        position: relative;
+        padding: 0 18px 18px 0; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li, #content .container aside.sidebar .widget_instagrm_widget ul li a, #content .container aside.sidebar .widget_instagrm_widget ul li a img {
+          display: block; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li a {
+          width: 150px;
+          height: 150px; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li a img {
+          width: 100%;
+          height: 100%;
+          -webkit-box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+          box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+          -moz-background-clip: padding-box;
+          /* Firefox 3.6 */
+          -webkit-background-clip: padding-box;
+          /* Safari 4? Chrome 6? */
+          background-clip: padding-box;
+          /* Firefox 4, Safari 5, Opera 10, IE 9 */
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          -webkit-transition: all 0.2s ease-in-out;
+          -moz-transition: all 0.2s ease-in-out;
+          -ms-transition: all 0.2s ease-in-out;
+          -o-transition: all 0.2s ease-in-out;
+          transition: all 0.2s ease-in-out; }
+          #content .container aside.sidebar .widget_instagrm_widget ul li a img:hover {
+            border-color: #fff; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li p.instagram_likes {
+          display: none; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li p.instagram_caption {
+          position: absolute;
+          left: 0;
+          bottom: 18px;
+          width: 150px;
+          padding: 10px;
+          background-color: #fff;
+          z-index: 10;
+          font-size: 11px;
+          line-height: 13px;
+          opacity: 0;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -ms-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
+          transition: all 0.5s ease-in-out; }
+        #content .container aside.sidebar .widget_instagrm_widget ul li:hover p.instagram_caption {
+          opacity: 0.8; }
   #content .container aside#sidebar-one {
     display: block;
     float: left;
@@ -623,67 +684,6 @@ header.main {
     background: transparent; }
     #content .container aside#sidebar-two:last-child {
       margin-right: 0; }
-    #content .container aside#sidebar-two .widget_instagrm_widget #instagram_widget_title {
-      margin: 0 0 10px;
-      font-weight: bold;
-      font-size: 24px; }
-    #content .container aside#sidebar-two .widget_instagrm_widget ul {
-      list-style: none;
-      list-style: none; }
-      #content .container aside#sidebar-two .widget_instagrm_widget ul, #content .container aside#sidebar-two .widget_instagrm_widget ul li {
-        padding: 0;
-        margin: 0; }
-      #content .container aside#sidebar-two .widget_instagrm_widget ul, #content .container aside#sidebar-two .widget_instagrm_widget ul li {
-        display: block; }
-      #content .container aside#sidebar-two .widget_instagrm_widget ul li {
-        float: left; }
-      #content .container aside#sidebar-two .widget_instagrm_widget ul li {
-        position: relative;
-        padding: 0 18px 18px 0; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li, #content .container aside#sidebar-two .widget_instagrm_widget ul li a, #content .container aside#sidebar-two .widget_instagrm_widget ul li a img {
-          display: block; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li a {
-          width: 150px;
-          height: 150px; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li a img {
-          width: 100%;
-          height: 100%;
-          -webkit-box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-          -moz-background-clip: padding-box;
-          /* Firefox 3.6 */
-          -webkit-background-clip: padding-box;
-          /* Safari 4? Chrome 6? */
-          background-clip: padding-box;
-          /* Firefox 4, Safari 5, Opera 10, IE 9 */
-          border: 2px solid rgba(255, 255, 255, 0.1);
-          -webkit-transition: all 0.2s ease-in-out;
-          -moz-transition: all 0.2s ease-in-out;
-          -ms-transition: all 0.2s ease-in-out;
-          -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out; }
-          #content .container aside#sidebar-two .widget_instagrm_widget ul li a img:hover {
-            border-color: #fff; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li p.instagram_likes {
-          display: none; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li p.instagram_caption {
-          position: absolute;
-          left: 0;
-          bottom: 18px;
-          width: 150px;
-          padding: 10px;
-          background-color: #fff;
-          z-index: 10;
-          font-size: 11px;
-          line-height: 13px;
-          opacity: 0;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -ms-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out; }
-        #content .container aside#sidebar-two .widget_instagrm_widget ul li:hover p.instagram_caption {
-          opacity: 0.8; }
   @media screen and (max-width: 959px) {
     #content .container section.posts {
       display: block;

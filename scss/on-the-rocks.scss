@@ -165,26 +165,6 @@ header.main{
       h2{
         font-size: 24px;
       }
-    }
-    // TODO consistently name these everywhere as either sidebars or columns
-    aside#sidebar-one{
-      @include span-columns($middle-column-span);
-      background: $middle-column-background;
-      text-align: right;
-      padding-right: $middle-column-side-padding;
-      padding-left: $middle-column-side-padding;
-      color: $middle-column-text-color;
-      h1, h2, h3, h4, h5, h6{
-        color: $middle-column-header-color;
-      }
-      a{
-        color: $middle-column-link-color;
-      }
-    }
-    aside#sidebar-two{
-      padding-top: $content-top-padding + 8px;
-      @include span-columns($right-column-span);
-      background: $right-column-background;
       // TODO add to README which plugin to use for instagram feed display and how to configure
       .widget_instagrm_widget{
         #instagram_widget_title{
@@ -238,6 +218,26 @@ header.main{
           }
         }
       }
+    }
+    // TODO consistently name these everywhere as either sidebars or columns
+    aside#sidebar-one{
+      @include span-columns($middle-column-span);
+      background: $middle-column-background;
+      text-align: right;
+      padding-right: $middle-column-side-padding;
+      padding-left: $middle-column-side-padding;
+      color: $middle-column-text-color;
+      h1, h2, h3, h4, h5, h6{
+        color: $middle-column-header-color;
+      }
+      a{
+        color: $middle-column-link-color;
+      }
+    }
+    aside#sidebar-two{
+      padding-top: $content-top-padding + 8px;
+      @include span-columns($right-column-span);
+      background: $right-column-background;
     }
     @include media($small-devices) {
       section.posts{
