@@ -180,6 +180,7 @@ header.main{
       }
     }
     aside#sidebar-two{
+      padding-top: $content-top-padding + 8px;
       @include span-columns($right-column-span);
       background: $right-column-background;
       // TODO add to README which plugin to use for instagram feed display and how to configure

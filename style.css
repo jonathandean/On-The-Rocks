@@ -612,6 +612,7 @@ header.main {
     #content .container aside#sidebar-one a {
       color: #455761; }
   #content .container aside#sidebar-two {
+    padding-top: 52px;
     display: block;
     float: left;
     margin-right: 2.35765%;
