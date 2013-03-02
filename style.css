@@ -589,13 +589,15 @@ header.main {
     background: transparent; }
     #content .container section.posts:last-child {
       margin-right: 0; }
-  #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul {
-    list-style: none; }
-    #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul li, #content .container aside.sidebar ul.sidebar .widget_archive > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul li {
-      padding: 0;
-      margin: 0; }
-  #content .container aside.sidebar h2 {
-    font-size: 24px; }
+  #content .container aside.sidebar {
+    padding-bottom: 44px; }
+    #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul {
+      list-style: none; }
+      #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul, #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul li, #content .container aside.sidebar ul.sidebar .widget_archive > ul, #content .container aside.sidebar ul.sidebar .widget_archive > ul li {
+        padding: 0;
+        margin: 0; }
+    #content .container aside.sidebar h2 {
+      font-size: 24px; }
   #content .container aside#sidebar-one {
     display: block;
     float: left;
@@ -603,7 +605,8 @@ header.main {
     width: 23.23176%;
     background: #f2f2f2;
     text-align: right;
-    padding: 0 30px;
+    padding-right: 30px;
+    padding-left: 30px;
     color: #455761; }
     #content .container aside#sidebar-one:last-child {
       margin-right: 0; }

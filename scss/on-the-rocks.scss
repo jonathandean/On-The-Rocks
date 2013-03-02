@@ -153,6 +153,7 @@ header.main{
       background: $main-content-background;
     }
     aside.sidebar{
+      padding-bottom: $content-top-padding;
       ul.sidebar{
         // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
         &,
@@ -170,7 +171,8 @@ header.main{
       @include span-columns($middle-column-span);
       background: $middle-column-background;
       text-align: right;
-      padding: 0 $middle-column-side-padding;
+      padding-right: $middle-column-side-padding;
+      padding-left: $middle-column-side-padding;
       color: $middle-column-text-color;
       h1, h2, h3, h4, h5, h6{
         color: $middle-column-header-color;
