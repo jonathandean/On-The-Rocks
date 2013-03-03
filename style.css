@@ -862,7 +862,9 @@ article.comments {
           display: inline;
           margin-right: 10px; }
         article.comments li.comment article footer .reply a:after {
-          content: ' ↓'; }
+          content: ' ↩'; }
+        article.comments li.comment article footer .reply .ss-reply {
+          display: none; }
   article.comments li.pingback {
     padding: 0 0 50px; }
     article.comments li.pingback a {
@@ -1053,6 +1055,11 @@ article.comments {
                       margin-left: 68.23843%; }
                       article.comments ol ol ol ol ol ol ol ol ol article:last-child {
                         margin-right: 0; }
+
+article.post article.comments #respond p.form-allowed-tags code {
+  font-size: 12px;
+  background-color: #efefef;
+  line-height: 1.5; }
 
 article.collapse {
   padding: 0 40px;

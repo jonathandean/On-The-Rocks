@@ -391,8 +391,13 @@ article.comments{
           display: inline;
           margin-right: 10px;
         }
-        .reply a:after{
-          content: ' ↓';
+        .reply{
+          a:after{
+            content: ' ↩';
+          }
+          .ss-reply{
+            display: none;
+          }
         }
       }
     }
@@ -431,6 +436,17 @@ article.comments{
             }
           }
         }
+      }
+    }
+  }
+}
+article.post article.comments{
+  #respond{
+    p.form-allowed-tags{
+      code{
+        font-size: 12px;
+        background-color: #efefef;
+        line-height: 1.5;
       }
     }
   }
