@@ -821,12 +821,8 @@ article.post {
       article.post h1 a:active {
         color: #999999; }
   article.post footer.meta {
-    margin-top: 20px;
+    margin-top: 40px;
     color: #8c8a8a; }
-    article.post footer.meta .date span {
-      display: none; }
-    article.post footer.meta .author {
-      display: none; }
   article.post .more-link {
     color: #8c8a8a; }
   article.post .wp_rp_wrap {

@@ -25,7 +25,12 @@
     </div>
   <?php endif; ?>
   <footer class="meta">
-    <span class="author"><span>by</span> <?php the_author(); ?></span> <span class="date"><span>on</span> <?php the_time( get_option('date_format') ); ?></span> <span class="category"><span>in</span> <?php the_category(', ') ?></span> <span class="comments"><span>with</span>  <?php comments_popup_link(__('No comments', 'framework'), __('1 Comment', 'framework'), __('% Comments', 'framework')); ?></span> <?php edit_post_link( __('edit', 'framework'), '<span class="edit-post">[', ']</span>' ); ?><!--<a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php bloginfo('name'); ?>: <?php the_title(); ?>," data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>-->
+    <cite class="author"><span>by</span> <?php the_author(); ?></cite>
+    <time datetime="<?php the_time('c'); ?>" class="date"><span>on</span> <?php the_time( get_option('date_format') ); ?></time>
+    <span class="category"><span>in</span> <?php the_category(', ') ?></span>
+    <span class="comments"><span>with</span>  <?php comments_popup_link(__('No comments', 'framework'), __('1 Comment', 'framework'), __('% Comments', 'framework')); ?></span>
+    <?php edit_post_link( __('edit', 'framework'), '<span class="edit-post">[', ']</span>' ); ?>
+    <?php /* <a href="http://twitter.com/share" class="twitter-share-button" data-url="<?php the_permalink(); ?>" data-text="<?php bloginfo('name'); ?>: <?php the_title(); ?>," data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> */ ?>
   </footer>
   <section class="comments">
     <article class="comments">
