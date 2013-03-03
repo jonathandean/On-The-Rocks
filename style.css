@@ -809,8 +809,6 @@ header.main {
           color: #333333; }
         #content .container article.post h1 a:active {
           color: #999999; }
-    #content .container article.post .content {
-      overflow: auto; }
     #content .container article.post footer.meta {
       margin-top: 20px;
       color: #8c8a8a; }
@@ -839,12 +837,14 @@ header.main {
             padding: 2px; }
           #content .container article.comments li.comment article div.avatar .post-author {
             display: block;
-            color: #ccc;
-            padding: 4px 0 0 12px; }
+            color: #bfbdbd;
+            padding: 6px 0 0 10px;
+            font-size: 12px; }
         #content .container article.comments li.comment article .content {
           margin-left: 100px; }
-          #content .container article.comments li.comment article .content section.comment-content {
-            overflow: auto; }
+        #content .container article.comments li.comment article header .author-time cite {
+          font-style: normal;
+          font-weight: bold; }
         #content .container article.comments li.comment article header .author-time time, #content .container article.comments li.comment article header .author-time a.link {
           color: #8c8a8a;
           margin-left: 10px; }

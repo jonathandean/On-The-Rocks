@@ -333,9 +333,6 @@ header.main{
           }
         }
       }
-      .content{
-        overflow: auto;
-      }
       footer.meta{
         margin-top: 20px;
         color: $subtle-font-color;
@@ -374,19 +371,19 @@ header.main{
             }
             .post-author{
               display: block;
-              color: #ccc;
-              padding: 4px 0 0 12px;
+              color: lighten($subtle-font-color, 20%);
+              padding: 6px 0 0 10px;
+              font-size: 12px;
             }
           }
           .content{
             margin-left: 100px;
-            section.comment-content{
-              overflow: auto;
-            }
           }
           header{
             .author-time{
               cite{
+                font-style: normal;
+                font-weight: bold;
               }
               time, a.link{
                 color: $subtle-font-color;
