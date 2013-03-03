@@ -859,7 +859,7 @@ article.comments {
       article.comments li.comment article footer {
         padding: 20px 0 0;
         font-size: 14px; }
-        article.comments li.comment article footer div {
+        article.comments li.comment article footer > div, article.comments li.comment article footer .actions > div {
           display: inline;
           margin-right: 10px; }
         article.comments li.comment article footer .reply a:after {
