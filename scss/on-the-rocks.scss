@@ -336,7 +336,13 @@ article.post{
     }
   }
   footer.meta{
-    margin-top: 40px;
+    margin: 40px 0 0;
+    padding: 14px 0;
+    border-color: $article-meta-border-color;
+    border-width: $article-meta-border-size;
+    border-style: solid;
+    border-right-width: 0px;
+    border-left-width: 0px;
     color: $subtle-font-color;
   }
   .more-link{
