@@ -352,6 +352,9 @@ header.main{
         color: $subtle-font-color;
         //font-style: italic;
       }
+      .wp_rp_wrap{
+        display: none;
+      }
     }
     article.comments{
       background-color: $comments-background-color;

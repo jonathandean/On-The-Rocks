@@ -820,6 +820,8 @@ header.main {
         display: none; }
     #content .container article.post .more-link {
       color: #8c8a8a; }
+    #content .container article.post .wp_rp_wrap {
+      display: none; }
   #content .container article.comments {
     background-color: none; }
     #content .container article.comments li.comment {
