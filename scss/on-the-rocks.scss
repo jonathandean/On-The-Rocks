@@ -285,6 +285,7 @@ header.main{
       }
       aside#sidebar-two{
         @include span-columns(12);
+        @include pad($content-side-padding);
       }
     }
     @include media($mobile-landscape) {
@@ -293,9 +294,12 @@ header.main{
       }
       aside#sidebar-one{
         @include span-columns(12);
+        text-align: left;
+        @include pad($content-side-padding);
       }
       aside#sidebar-two{
         @include span-columns(12);
+        @include pad($content-side-padding);
       }
     }
     @include media($mobile-portrait) {
@@ -304,9 +308,12 @@ header.main{
       }
       aside#sidebar-one{
         @include span-columns(12);
+        text-align: left;
+        @include pad($content-side-padding);
       }
       aside#sidebar-two{
         @include span-columns(12);
+        @include pad(16px);
       }
     }
     article.post{
