@@ -857,7 +857,8 @@ article.comments {
         color: #8c8a8a;
         margin-left: 10px; }
       article.comments li.comment article footer {
-        padding: 20px 0 0; }
+        padding: 20px 0 0;
+        font-size: 14px; }
         article.comments li.comment article footer div {
           display: inline;
           margin-right: 10px; }
