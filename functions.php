@@ -219,12 +219,13 @@ function otr_comment( $comment, $args, $depth ) {
 
         <footer>
           <div class="actions">
-            <?php edit_comment_link( __( 'Edit', 'framework' ), '<div class="edit">', '</div>' ); ?>
+            <?php edit_comment_link( __( 'Edit', 'framework' ), '<div class="edit"><span class="ss-icon ss-standard ss-write"></span>', '</div>' ); ?>
             <div class="reply">
+              <span class="ss-icon ss-standard ss-reply"></span>
               <?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply', 'framework' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
-              <span class="ss-icon ss-reply">reply</span>
             </div>
             <div class="link">
+              <span class="ss-icon ss-standard ss-link"></span>
               <?php
                 printf( '<a href="%1$s">Link to this comment</a>',
                   esc_url( get_comment_link( $comment->comment_ID ) )
