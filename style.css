@@ -581,507 +581,522 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-  #content .container section.posts {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 57.35098%;
-    background: transparent; }
-    #content .container section.posts:last-child {
-      margin-right: 0; }
-  #content .container aside.sidebar {
-    padding: 44px default; }
-    #content .container aside.sidebar ul.sidebar,
-    #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul,
-    #content .container aside.sidebar ul.sidebar .widget_archive > ul,
-    #content .container aside.sidebar ul.sidebar .wp_rp_content > ul {
-      list-style: none; }
-      #content .container aside.sidebar ul.sidebar, #content .container aside.sidebar ul.sidebar li,
-      #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul,
-      #content .container aside.sidebar ul.sidebar .widget_recent_entries > ul li,
-      #content .container aside.sidebar ul.sidebar .widget_archive > ul,
-      #content .container aside.sidebar ul.sidebar .widget_archive > ul li,
-      #content .container aside.sidebar ul.sidebar .wp_rp_content > ul,
-      #content .container aside.sidebar ul.sidebar .wp_rp_content > ul li {
-        padding: 0;
-        margin: 0; }
-    #content .container aside.sidebar h2 {
-      font-size: 24px; }
-    #content .container aside.sidebar .widget_recent_entries > ul li,
-    #content .container aside.sidebar .wp_rp_content > ul li,
-    #content .container aside.sidebar .widget_archive > ul li {
-      padding-bottom: 30px !important;
-      line-height: 1.2; }
-      #content .container aside.sidebar .widget_recent_entries > ul li a,
-      #content .container aside.sidebar .wp_rp_content > ul li a,
-      #content .container aside.sidebar .widget_archive > ul li a {
-        text-decoration: none; }
-        #content .container aside.sidebar .widget_recent_entries > ul li a:hover,
-        #content .container aside.sidebar .wp_rp_content > ul li a:hover,
-        #content .container aside.sidebar .widget_archive > ul li a:hover {
-          text-decoration: underline; }
-      #content .container aside.sidebar .widget_recent_entries > ul li .post-date,
-      #content .container aside.sidebar .wp_rp_content > ul li .post-date,
-      #content .container aside.sidebar .widget_archive > ul li .post-date {
-        display: block;
-        font-size: 10px;
-        color: #99a3a8;
-        padding: 8px 0 0; }
-    #content .container aside.sidebar .widget_archive > ul li {
-      padding-bottom: 10px !important;
+
+section.posts {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 57.35098%;
+  background: transparent; }
+  section.posts:last-child {
+    margin-right: 0; }
+
+aside.sidebar {
+  padding: 44px default; }
+  aside.sidebar ul.sidebar,
+  aside.sidebar ul.sidebar .widget_recent_entries > ul,
+  aside.sidebar ul.sidebar .widget_archive > ul,
+  aside.sidebar ul.sidebar .wp_rp_content > ul {
+    list-style: none; }
+    aside.sidebar ul.sidebar, aside.sidebar ul.sidebar li,
+    aside.sidebar ul.sidebar .widget_recent_entries > ul,
+    aside.sidebar ul.sidebar .widget_recent_entries > ul li,
+    aside.sidebar ul.sidebar .widget_archive > ul,
+    aside.sidebar ul.sidebar .widget_archive > ul li,
+    aside.sidebar ul.sidebar .wp_rp_content > ul,
+    aside.sidebar ul.sidebar .wp_rp_content > ul li {
+      padding: 0;
+      margin: 0; }
+  aside.sidebar h2 {
+    font-size: 24px; }
+  aside.sidebar .widget_recent_entries > ul li,
+  aside.sidebar .wp_rp_content > ul li,
+  aside.sidebar .widget_archive > ul li {
+    padding-bottom: 30px !important;
+    line-height: 1.2; }
+    aside.sidebar .widget_recent_entries > ul li a,
+    aside.sidebar .wp_rp_content > ul li a,
+    aside.sidebar .widget_archive > ul li a {
+      text-decoration: none; }
+      aside.sidebar .widget_recent_entries > ul li a:hover,
+      aside.sidebar .wp_rp_content > ul li a:hover,
+      aside.sidebar .widget_archive > ul li a:hover {
+        text-decoration: underline; }
+    aside.sidebar .widget_recent_entries > ul li .post-date,
+    aside.sidebar .wp_rp_content > ul li .post-date,
+    aside.sidebar .widget_archive > ul li .post-date {
+      display: block;
+      font-size: 10px;
       color: #99a3a8;
-      font-size: 10px; }
-      #content .container aside.sidebar .widget_archive > ul li a {
-        font-size: 14px;
-        color: #455761;
-        margin-right: 4px; }
-    #content .container aside.sidebar .widget_instagrm_widget #instagram_widget_title {
-      margin: 0 0 10px;
-      font-weight: bold;
-      font-size: 24px; }
-    #content .container aside.sidebar .widget_instagrm_widget ul {
-      list-style: none;
-      list-style: none; }
-      #content .container aside.sidebar .widget_instagrm_widget ul, #content .container aside.sidebar .widget_instagrm_widget ul li {
-        padding: 0;
-        margin: 0; }
-      #content .container aside.sidebar .widget_instagrm_widget ul, #content .container aside.sidebar .widget_instagrm_widget ul li {
+      padding: 8px 0 0; }
+  aside.sidebar .widget_archive > ul li {
+    padding-bottom: 10px !important;
+    color: #99a3a8;
+    font-size: 10px; }
+    aside.sidebar .widget_archive > ul li a {
+      font-size: 14px;
+      color: #455761;
+      margin-right: 4px; }
+  aside.sidebar .widget_instagrm_widget #instagram_widget_title {
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-size: 24px; }
+  aside.sidebar .widget_instagrm_widget ul {
+    list-style: none;
+    list-style: none; }
+    aside.sidebar .widget_instagrm_widget ul, aside.sidebar .widget_instagrm_widget ul li {
+      padding: 0;
+      margin: 0; }
+    aside.sidebar .widget_instagrm_widget ul, aside.sidebar .widget_instagrm_widget ul li {
+      display: block; }
+    aside.sidebar .widget_instagrm_widget ul li {
+      float: left; }
+    aside.sidebar .widget_instagrm_widget ul li {
+      position: relative;
+      padding: 0 18px 18px 0; }
+      aside.sidebar .widget_instagrm_widget ul li, aside.sidebar .widget_instagrm_widget ul li a, aside.sidebar .widget_instagrm_widget ul li a img {
         display: block; }
-      #content .container aside.sidebar .widget_instagrm_widget ul li {
-        float: left; }
-      #content .container aside.sidebar .widget_instagrm_widget ul li {
-        position: relative;
-        padding: 0 18px 18px 0; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li, #content .container aside.sidebar .widget_instagrm_widget ul li a, #content .container aside.sidebar .widget_instagrm_widget ul li a img {
-          display: block; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li a {
-          width: 130px;
-          height: 130px; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li a img {
-          width: 100%;
-          height: 100%;
-          -webkit-box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
-          -moz-background-clip: padding-box;
-          /* Firefox 3.6 */
-          -webkit-background-clip: padding-box;
-          /* Safari 4? Chrome 6? */
-          background-clip: padding-box;
-          /* Firefox 4, Safari 5, Opera 10, IE 9 */
-          border: 2px solid rgba(255, 255, 255, 0.1);
-          -webkit-transition: all 0.2s ease-in-out;
-          -moz-transition: all 0.2s ease-in-out;
-          -ms-transition: all 0.2s ease-in-out;
-          -o-transition: all 0.2s ease-in-out;
-          transition: all 0.2s ease-in-out; }
-          #content .container aside.sidebar .widget_instagrm_widget ul li a img:hover {
-            border-color: #fff; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li p.instagram_likes {
-          display: none; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li p.instagram_caption {
-          position: absolute;
-          left: 0;
-          bottom: 18px;
-          width: 130px;
-          padding: 10px;
-          background-color: #fff;
-          z-index: 10;
-          font-size: 11px;
-          line-height: 13px;
-          opacity: 0;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -ms-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out; }
-        #content .container aside.sidebar .widget_instagrm_widget ul li:hover p.instagram_caption {
-          opacity: 0.8; }
-  #content .container aside#sidebar-one {
-    display: block;
-    float: left;
-    margin-right: 2.35765%;
-    width: 23.23176%;
-    padding: 0 30px 44px;
-    background: #f2f2f2;
-    text-align: right;
+      aside.sidebar .widget_instagrm_widget ul li a {
+        width: 130px;
+        height: 130px; }
+      aside.sidebar .widget_instagrm_widget ul li a img {
+        width: 100%;
+        height: 100%;
+        -webkit-box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+        box-shadow: -1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+        -moz-background-clip: padding-box;
+        /* Firefox 3.6 */
+        -webkit-background-clip: padding-box;
+        /* Safari 4? Chrome 6? */
+        background-clip: padding-box;
+        /* Firefox 4, Safari 5, Opera 10, IE 9 */
+        border: 2px solid rgba(255, 255, 255, 0.1);
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -ms-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out; }
+        aside.sidebar .widget_instagrm_widget ul li a img:hover {
+          border-color: #fff; }
+      aside.sidebar .widget_instagrm_widget ul li p.instagram_likes {
+        display: none; }
+      aside.sidebar .widget_instagrm_widget ul li p.instagram_caption {
+        position: absolute;
+        left: 0;
+        bottom: 18px;
+        width: 130px;
+        padding: 10px;
+        background-color: #fff;
+        z-index: 10;
+        font-size: 11px;
+        line-height: 13px;
+        opacity: 0;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out; }
+      aside.sidebar .widget_instagrm_widget ul li:hover p.instagram_caption {
+        opacity: 0.8; }
+
+aside#sidebar-one {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 23.23176%;
+  padding: 0 30px 44px;
+  background: #f2f2f2;
+  text-align: right;
+  color: #455761; }
+  aside#sidebar-one:last-child {
+    margin-right: 0; }
+  aside#sidebar-one h1, aside#sidebar-one h2, aside#sidebar-one h3, aside#sidebar-one h4, aside#sidebar-one h5, aside#sidebar-one h6 {
     color: #455761; }
-    #content .container aside#sidebar-one:last-child {
-      margin-right: 0; }
-    #content .container aside#sidebar-one h1, #content .container aside#sidebar-one h2, #content .container aside#sidebar-one h3, #content .container aside#sidebar-one h4, #content .container aside#sidebar-one h5, #content .container aside#sidebar-one h6 {
-      color: #455761; }
-    #content .container aside#sidebar-one a {
-      color: #455761; }
-  #content .container aside#sidebar-two {
+  aside#sidebar-one a {
+    color: #455761; }
+
+aside#sidebar-two {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 14.70196%;
+  padding-top: 50px;
+  background: transparent; }
+  aside#sidebar-two:last-child {
+    margin-right: 0; }
+
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  section.posts {
     display: block;
     float: left;
     margin-right: 2.35765%;
-    width: 14.70196%;
-    padding-top: 50px;
-    background: transparent; }
-    #content .container aside#sidebar-two:last-child {
+    width: 65.88078%; }
+    section.posts:last-child {
       margin-right: 0; }
-  @media screen and (min-width: 768px) and (max-width: 959px) {
-    #content .container section.posts {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 65.88078%; }
-      #content .container section.posts:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-one {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 31.76157%;
+
+  aside#sidebar-one {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 31.76157%;
+    margin-right: 0; }
+    aside#sidebar-one:last-child {
       margin-right: 0; }
-      #content .container aside#sidebar-one:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-two {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      padding: 40px; }
-      #content .container aside#sidebar-two:last-child {
-        margin-right: 0; } }
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    #content .container section.posts {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      #content .container section.posts:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-one {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      text-align: left;
-      padding: 40px; }
-      #content .container aside#sidebar-one:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-two {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      padding: 40px; }
-      #content .container aside#sidebar-two:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 767px) {
-    #content .container section.posts {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%; }
-      #content .container section.posts:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-one {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      text-align: left;
-      padding: 40px; }
-      #content .container aside#sidebar-one:last-child {
-        margin-right: 0; }
-    #content .container aside#sidebar-two {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 100%;
-      padding: 16px; }
-      #content .container aside#sidebar-two:last-child {
-        margin-right: 0; } }
-  #content .container article.post {
-    border-radius: 0px;
-    background: white;
-    border: 0px solid white;
-    padding: 44px 40px; }
-    #content .container article.post h1 {
-      margin-top: 0; }
-      #content .container article.post h1 a {
-        text-decoration: none; }
-        #content .container article.post h1 a:hover {
-          text-decoration: underline; }
-        #content .container article.post h1 a, #content .container article.post h1 a:visited {
-          color: #333333; }
-        #content .container article.post h1 a:active {
-          color: #999999; }
-    #content .container article.post footer.meta {
-      margin-top: 20px;
-      color: #8c8a8a; }
-      #content .container article.post footer.meta .date span {
-        display: none; }
-      #content .container article.post footer.meta .author {
-        display: none; }
-    #content .container article.post .more-link {
-      color: #8c8a8a; }
-    #content .container article.post .wp_rp_wrap {
+
+  aside#sidebar-two {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 40px; }
+    aside#sidebar-two:last-child {
+      margin-right: 0; } }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  section.posts {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%; }
+    section.posts:last-child {
+      margin-right: 0; }
+
+  aside#sidebar-one {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: left;
+    padding: 40px; }
+    aside#sidebar-one:last-child {
+      margin-right: 0; }
+
+  aside#sidebar-two {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 40px; }
+    aside#sidebar-two:last-child {
+      margin-right: 0; } }
+@media screen and (max-width: 767px) {
+  section.posts {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%; }
+    section.posts:last-child {
+      margin-right: 0; }
+
+  aside#sidebar-one {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    text-align: left;
+    padding: 40px; }
+    aside#sidebar-one:last-child {
+      margin-right: 0; }
+
+  aside#sidebar-two {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 16px; }
+    aside#sidebar-two:last-child {
+      margin-right: 0; } }
+article.post {
+  border-radius: 0px;
+  background: white;
+  border: 0px solid white;
+  padding: 44px 40px; }
+  article.post h1 {
+    margin-top: 0; }
+    article.post h1 a {
+      text-decoration: none; }
+      article.post h1 a:hover {
+        text-decoration: underline; }
+      article.post h1 a, article.post h1 a:visited {
+        color: #333333; }
+      article.post h1 a:active {
+        color: #999999; }
+  article.post footer.meta {
+    margin-top: 20px;
+    color: #8c8a8a; }
+    article.post footer.meta .date span {
       display: none; }
-  #content .container article.comments {
-    background-color: none; }
-    #content .container article.comments li.comment {
-      clear: left; }
-      #content .container article.comments li.comment article {
-        padding: 0 0 40px; }
-        #content .container article.comments li.comment article div.avatar {
-          float: left;
-          width: 100px; }
-          #content .container article.comments li.comment article div.avatar img {
-            height: 80px;
-            width: 80px;
-            display: block;
-            border: 1px solid #ccc;
-            padding: 2px; }
-          #content .container article.comments li.comment article div.avatar .post-author {
-            display: block;
-            color: #bfbdbd;
-            padding: 6px 0 0 10px;
-            font-size: 12px; }
-        #content .container article.comments li.comment article .content {
-          margin-left: 100px; }
-        #content .container article.comments li.comment article header .author-time cite {
-          font-style: normal;
-          font-weight: bold; }
-        #content .container article.comments li.comment article header .author-time time, #content .container article.comments li.comment article header .author-time a.link {
-          color: #8c8a8a;
-          margin-left: 10px; }
-        #content .container article.comments li.comment article footer {
-          padding: 20px 0 0; }
-          #content .container article.comments li.comment article footer div {
-            display: inline;
-            margin-right: 10px; }
-          #content .container article.comments li.comment article footer .reply a:after {
-            content: ' ↓'; }
-    #content .container article.comments li.pingback {
-      padding: 0 0 50px; }
-      #content .container article.comments li.pingback a {
-        text-decoration: none; }
-        #content .container article.comments li.pingback a:hover {
-          text-decoration: underline; }
-      #content .container article.comments li.pingback a.comment-edit-link {
+    article.post footer.meta .author {
+      display: none; }
+  article.post .more-link {
+    color: #8c8a8a; }
+  article.post .wp_rp_wrap {
+    display: none; }
+
+article.comments {
+  background-color: none; }
+  article.comments li.comment {
+    clear: left; }
+    article.comments li.comment article {
+      padding: 0 0 40px; }
+      article.comments li.comment article div.avatar {
+        float: left;
+        width: 100px; }
+        article.comments li.comment article div.avatar img {
+          height: 80px;
+          width: 80px;
+          display: block;
+          border: 1px solid #ccc;
+          padding: 2px; }
+        article.comments li.comment article div.avatar .post-author {
+          display: block;
+          color: #bfbdbd;
+          padding: 6px 0 0 10px;
+          font-size: 12px; }
+      article.comments li.comment article .content {
+        margin-left: 100px; }
+      article.comments li.comment article header .author-time cite {
+        font-style: normal;
+        font-weight: bold; }
+      article.comments li.comment article header .author-time time, article.comments li.comment article header .author-time a.link {
         color: #8c8a8a;
-        margin-left: 6px; }
-    #content .container article.comments ol {
-      list-style: none; }
-      #content .container article.comments ol, #content .container article.comments ol li {
+        margin-left: 10px; }
+      article.comments li.comment article footer {
+        padding: 20px 0 0; }
+        article.comments li.comment article footer div {
+          display: inline;
+          margin-right: 10px; }
+        article.comments li.comment article footer .reply a:after {
+          content: ' ↓'; }
+  article.comments li.pingback {
+    padding: 0 0 50px; }
+    article.comments li.pingback a {
+      text-decoration: none; }
+      article.comments li.pingback a:hover {
+        text-decoration: underline; }
+    article.comments li.pingback a.comment-edit-link {
+      color: #8c8a8a;
+      margin-left: 6px; }
+  article.comments ol {
+    list-style: none; }
+    article.comments ol, article.comments ol li {
+      padding: 0;
+      margin: 0; }
+    article.comments ol ol {
+      list-style: none;
+      *zoom: 1;
+      max-width: 75.99879em;
+      margin-left: auto;
+      margin-right: auto; }
+      article.comments ol ol, article.comments ol ol li {
         padding: 0;
         margin: 0; }
-      #content .container article.comments ol ol {
+      article.comments ol ol:before, article.comments ol ol:after {
+        content: " ";
+        display: table; }
+      article.comments ol ol:after {
+        clear: both; }
+      article.comments ol ol article {
+        display: block;
+        float: left;
+        margin-right: 2.35765%;
+        width: 91.4702%;
+        margin-left: 8.5298%; }
+        article.comments ol ol article:last-child {
+          margin-right: 0; }
+      article.comments ol ol ol {
         list-style: none;
         *zoom: 1;
         max-width: 75.99879em;
         margin-left: auto;
         margin-right: auto; }
-        #content .container article.comments ol ol, #content .container article.comments ol ol li {
+        article.comments ol ol ol, article.comments ol ol ol li {
           padding: 0;
           margin: 0; }
-        #content .container article.comments ol ol:before, #content .container article.comments ol ol:after {
+        article.comments ol ol ol:before, article.comments ol ol ol:after {
           content: " ";
           display: table; }
-        #content .container article.comments ol ol:after {
+        article.comments ol ol ol:after {
           clear: both; }
-        #content .container article.comments ol ol article {
+        article.comments ol ol ol article {
           display: block;
           float: left;
           margin-right: 2.35765%;
-          width: 91.4702%;
-          margin-left: 8.5298%; }
-          #content .container article.comments ol ol article:last-child {
+          width: 82.94039%;
+          margin-left: 17.05961%; }
+          article.comments ol ol ol article:last-child {
             margin-right: 0; }
-        #content .container article.comments ol ol ol {
+        article.comments ol ol ol ol {
           list-style: none;
           *zoom: 1;
           max-width: 75.99879em;
           margin-left: auto;
           margin-right: auto; }
-          #content .container article.comments ol ol ol, #content .container article.comments ol ol ol li {
+          article.comments ol ol ol ol, article.comments ol ol ol ol li {
             padding: 0;
             margin: 0; }
-          #content .container article.comments ol ol ol:before, #content .container article.comments ol ol ol:after {
+          article.comments ol ol ol ol:before, article.comments ol ol ol ol:after {
             content: " ";
             display: table; }
-          #content .container article.comments ol ol ol:after {
+          article.comments ol ol ol ol:after {
             clear: both; }
-          #content .container article.comments ol ol ol article {
+          article.comments ol ol ol ol article {
             display: block;
             float: left;
             margin-right: 2.35765%;
-            width: 82.94039%;
-            margin-left: 17.05961%; }
-            #content .container article.comments ol ol ol article:last-child {
+            width: 74.41059%;
+            margin-left: 25.58941%; }
+            article.comments ol ol ol ol article:last-child {
               margin-right: 0; }
-          #content .container article.comments ol ol ol ol {
+          article.comments ol ol ol ol ol {
             list-style: none;
             *zoom: 1;
             max-width: 75.99879em;
             margin-left: auto;
             margin-right: auto; }
-            #content .container article.comments ol ol ol ol, #content .container article.comments ol ol ol ol li {
+            article.comments ol ol ol ol ol, article.comments ol ol ol ol ol li {
               padding: 0;
               margin: 0; }
-            #content .container article.comments ol ol ol ol:before, #content .container article.comments ol ol ol ol:after {
+            article.comments ol ol ol ol ol:before, article.comments ol ol ol ol ol:after {
               content: " ";
               display: table; }
-            #content .container article.comments ol ol ol ol:after {
+            article.comments ol ol ol ol ol:after {
               clear: both; }
-            #content .container article.comments ol ol ol ol article {
+            article.comments ol ol ol ol ol article {
               display: block;
               float: left;
               margin-right: 2.35765%;
-              width: 74.41059%;
-              margin-left: 25.58941%; }
-              #content .container article.comments ol ol ol ol article:last-child {
+              width: 65.88078%;
+              margin-left: 34.11922%; }
+              article.comments ol ol ol ol ol article:last-child {
                 margin-right: 0; }
-            #content .container article.comments ol ol ol ol ol {
+            article.comments ol ol ol ol ol ol {
               list-style: none;
               *zoom: 1;
               max-width: 75.99879em;
               margin-left: auto;
               margin-right: auto; }
-              #content .container article.comments ol ol ol ol ol, #content .container article.comments ol ol ol ol ol li {
+              article.comments ol ol ol ol ol ol, article.comments ol ol ol ol ol ol li {
                 padding: 0;
                 margin: 0; }
-              #content .container article.comments ol ol ol ol ol:before, #content .container article.comments ol ol ol ol ol:after {
+              article.comments ol ol ol ol ol ol:before, article.comments ol ol ol ol ol ol:after {
                 content: " ";
                 display: table; }
-              #content .container article.comments ol ol ol ol ol:after {
+              article.comments ol ol ol ol ol ol:after {
                 clear: both; }
-              #content .container article.comments ol ol ol ol ol article {
+              article.comments ol ol ol ol ol ol article {
                 display: block;
                 float: left;
                 margin-right: 2.35765%;
-                width: 65.88078%;
-                margin-left: 34.11922%; }
-                #content .container article.comments ol ol ol ol ol article:last-child {
+                width: 57.35098%;
+                margin-left: 42.64902%; }
+                article.comments ol ol ol ol ol ol article:last-child {
                   margin-right: 0; }
-              #content .container article.comments ol ol ol ol ol ol {
+              article.comments ol ol ol ol ol ol ol {
                 list-style: none;
                 *zoom: 1;
                 max-width: 75.99879em;
                 margin-left: auto;
                 margin-right: auto; }
-                #content .container article.comments ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol li {
+                article.comments ol ol ol ol ol ol ol, article.comments ol ol ol ol ol ol ol li {
                   padding: 0;
                   margin: 0; }
-                #content .container article.comments ol ol ol ol ol ol:before, #content .container article.comments ol ol ol ol ol ol:after {
+                article.comments ol ol ol ol ol ol ol:before, article.comments ol ol ol ol ol ol ol:after {
                   content: " ";
                   display: table; }
-                #content .container article.comments ol ol ol ol ol ol:after {
+                article.comments ol ol ol ol ol ol ol:after {
                   clear: both; }
-                #content .container article.comments ol ol ol ol ol ol article {
+                article.comments ol ol ol ol ol ol ol article {
                   display: block;
                   float: left;
                   margin-right: 2.35765%;
-                  width: 57.35098%;
-                  margin-left: 42.64902%; }
-                  #content .container article.comments ol ol ol ol ol ol article:last-child {
+                  width: 48.82117%;
+                  margin-left: 51.17883%; }
+                  article.comments ol ol ol ol ol ol ol article:last-child {
                     margin-right: 0; }
-                #content .container article.comments ol ol ol ol ol ol ol {
+                article.comments ol ol ol ol ol ol ol ol {
                   list-style: none;
                   *zoom: 1;
                   max-width: 75.99879em;
                   margin-left: auto;
                   margin-right: auto; }
-                  #content .container article.comments ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol li {
+                  article.comments ol ol ol ol ol ol ol ol, article.comments ol ol ol ol ol ol ol ol li {
                     padding: 0;
                     margin: 0; }
-                  #content .container article.comments ol ol ol ol ol ol ol:before, #content .container article.comments ol ol ol ol ol ol ol:after {
+                  article.comments ol ol ol ol ol ol ol ol:before, article.comments ol ol ol ol ol ol ol ol:after {
                     content: " ";
                     display: table; }
-                  #content .container article.comments ol ol ol ol ol ol ol:after {
+                  article.comments ol ol ol ol ol ol ol ol:after {
                     clear: both; }
-                  #content .container article.comments ol ol ol ol ol ol ol article {
+                  article.comments ol ol ol ol ol ol ol ol article {
                     display: block;
                     float: left;
                     margin-right: 2.35765%;
-                    width: 48.82117%;
-                    margin-left: 51.17883%; }
-                    #content .container article.comments ol ol ol ol ol ol ol article:last-child {
+                    width: 40.29137%;
+                    margin-left: 59.70863%; }
+                    article.comments ol ol ol ol ol ol ol ol article:last-child {
                       margin-right: 0; }
-                  #content .container article.comments ol ol ol ol ol ol ol ol {
+                  article.comments ol ol ol ol ol ol ol ol ol {
                     list-style: none;
                     *zoom: 1;
                     max-width: 75.99879em;
                     margin-left: auto;
                     margin-right: auto; }
-                    #content .container article.comments ol ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol ol li {
+                    article.comments ol ol ol ol ol ol ol ol ol, article.comments ol ol ol ol ol ol ol ol ol li {
                       padding: 0;
                       margin: 0; }
-                    #content .container article.comments ol ol ol ol ol ol ol ol:before, #content .container article.comments ol ol ol ol ol ol ol ol:after {
+                    article.comments ol ol ol ol ol ol ol ol ol:before, article.comments ol ol ol ol ol ol ol ol ol:after {
                       content: " ";
                       display: table; }
-                    #content .container article.comments ol ol ol ol ol ol ol ol:after {
+                    article.comments ol ol ol ol ol ol ol ol ol:after {
                       clear: both; }
-                    #content .container article.comments ol ol ol ol ol ol ol ol article {
+                    article.comments ol ol ol ol ol ol ol ol ol article {
                       display: block;
                       float: left;
                       margin-right: 2.35765%;
-                      width: 40.29137%;
-                      margin-left: 59.70863%; }
-                      #content .container article.comments ol ol ol ol ol ol ol ol article:last-child {
+                      width: 31.76157%;
+                      margin-left: 68.23843%; }
+                      article.comments ol ol ol ol ol ol ol ol ol article:last-child {
                         margin-right: 0; }
-                    #content .container article.comments ol ol ol ol ol ol ol ol ol {
-                      list-style: none;
-                      *zoom: 1;
-                      max-width: 75.99879em;
-                      margin-left: auto;
-                      margin-right: auto; }
-                      #content .container article.comments ol ol ol ol ol ol ol ol ol, #content .container article.comments ol ol ol ol ol ol ol ol ol li {
-                        padding: 0;
-                        margin: 0; }
-                      #content .container article.comments ol ol ol ol ol ol ol ol ol:before, #content .container article.comments ol ol ol ol ol ol ol ol ol:after {
-                        content: " ";
-                        display: table; }
-                      #content .container article.comments ol ol ol ol ol ol ol ol ol:after {
-                        clear: both; }
-                      #content .container article.comments ol ol ol ol ol ol ol ol ol article {
-                        display: block;
-                        float: left;
-                        margin-right: 2.35765%;
-                        width: 31.76157%;
-                        margin-left: 68.23843%; }
-                        #content .container article.comments ol ol ol ol ol ol ol ol ol article:last-child {
-                          margin-right: 0; }
-  #content .container article.collapse {
-    padding: 0 40px;
-    margin: 10px 0;
-    background: transparent;
-    border: none;
-    -webkit-box-shadow: none;
-    box-shadow: none; }
-    #content .container article.collapse header {
-      display: none; }
-    #content .container article.collapse p {
-      margin-bottom: 0; }
-    #content .container article.collapse footer.meta .author,
-    #content .container article.collapse footer.meta .category,
-    #content .container article.collapse footer.meta .comments,
-    #content .container article.collapse footer.meta .edit-post {
-      display: none; }
-  #content .container article.hidden {
+
+article.collapse {
+  padding: 0 40px;
+  margin: 10px 0;
+  background: transparent;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  article.collapse header {
     display: none; }
-  #content .container nav.pagination {
-    *zoom: 1;
-    max-width: 75.99879em;
-    margin-left: auto;
-    margin-right: auto; }
-    #content .container nav.pagination:before, #content .container nav.pagination:after {
-      content: " ";
-      display: table; }
-    #content .container nav.pagination:after {
-      clear: both; }
-    #content .container nav.pagination .previous, #content .container nav.pagination .next {
-      display: block;
-      float: left;
-      margin-right: 2.35765%;
-      width: 48.82117%; }
-      #content .container nav.pagination .previous:last-child, #content .container nav.pagination .next:last-child {
-        margin-right: 0; }
-    #content .container nav.pagination .previous {
-      text-align: right; }
+  article.collapse p {
+    margin-bottom: 0; }
+  article.collapse footer.meta .author,
+  article.collapse footer.meta .category,
+  article.collapse footer.meta .comments,
+  article.collapse footer.meta .edit-post {
+    display: none; }
+
+article.hidden {
+  display: none; }
+
+nav.pagination {
+  *zoom: 1;
+  max-width: 75.99879em;
+  margin-left: auto;
+  margin-right: auto; }
+  nav.pagination:before, nav.pagination:after {
+    content: " ";
+    display: table; }
+  nav.pagination:after {
+    clear: both; }
+  nav.pagination .previous, nav.pagination .next {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 48.82117%; }
+    nav.pagination .previous:last-child, nav.pagination .next:last-child {
+      margin-right: 0; }
+  nav.pagination .previous {
+    text-align: right; }
 
 .indent-paragraphs #content .container article.post .content > p {
   text-indent: 16px; }

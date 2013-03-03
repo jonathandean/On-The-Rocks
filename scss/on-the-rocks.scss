@@ -137,302 +137,302 @@ header.main{
 #content{
   .container{
     @include outer-container;
+  }
+}
 
-    // TODO try the Table grid example at http://neat.bourbon.io/examples/ for equal height columns
-    // For equal height columns
-    //@include display-box;
-    //@include box-align(start);
-    //@include box-orient(horizontal);
-    //@include box-pack(start);
+// TODO try the Table grid example at http://neat.bourbon.io/examples/ for equal height columns
+// For equal height columns
+//@include display-box;
+//@include box-align(start);
+//@include box-orient(horizontal);
+//@include box-pack(start);
 
-    //& > section.posts, & > aside.sidebar{
-    //  @include box-flex(1);
-    //  float: none;
-    //}
+//& > section.posts, & > aside.sidebar{
+//  @include box-flex(1);
+//  float: none;
+//}
 
-    section.posts{
-      @include span-columns($main-content-column-span);
-      background: $main-content-background;
+section.posts{
+  @include span-columns($main-content-column-span);
+  background: $main-content-background;
+}
+aside.sidebar{
+  @include pad($content-top-padding default);
+  ul.sidebar{
+    // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
+    &,
+    .widget_recent_entries > ul,
+    .widget_archive > ul,
+    .wp_rp_content > ul{
+      @include unformatted-list;
     }
-    aside.sidebar{
-      @include pad($content-top-padding default);
-      ul.sidebar{
-        // TODO add to README which plugin to use for recent entries and archives display and/or how to configure
-        &,
-        .widget_recent_entries > ul,
-        .widget_archive > ul,
-        .wp_rp_content > ul{
-          @include unformatted-list;
-        }
-      }
-      h2{
-        font-size: 24px;
-      }
-      .widget_recent_entries,
-      .wp_rp_content,
-      .widget_archive{
-        & > ul{
-          li{
-            padding-bottom: 30px !important;
-            line-height: 1.2;
-            a{
-              @include underline-on-hover;
-            }
-            .post-date{
-              display: block;
-              font-size: 10px;
-              color: $middle-column-subtle-text-color;
-              padding: 8px 0 0;
-            }
-          }
-        }
-      }
-      .widget_archive{
-        & > ul{
-          li{
-            padding-bottom: 10px !important;
-            color: $middle-column-subtle-text-color;
-            font-size: 10px;
-            a{
-              font-size: 14px;
-              color: $middle-column-text-color;
-              margin-right: 4px;
-            }
-          }
-        }
-      }
-      // TODO add to README which plugin to use for instagram feed display and how to configure
-      .widget_instagrm_widget{
-        #instagram_widget_title{
-          margin: 0 0 10px;
-          font-weight: bold;
-          font-size: 24px;
-        }
-        ul{
-          @include unformatted-list;
-          @include floated-list;
-          li{
-            position: relative;
-            padding: 0 18px 18px 0;
-            &, a, a img{
-              display: block;
-            }
-            a{
-              width: $instagram-image-size;
-              height: $instagram-image-size;
-            }
-            a img{
-              width: 100%;
-              height: 100%;
-              @include box-shadow(-1px 1px 10px 1px rgba(0, 0, 0, 0.3));
-              @include background-clip(padding-box);
-              border: 2px solid rgba(255, 255, 255, 0.1);
-              @include transition(all 0.2s ease-in-out);
-              &:hover{
-                border-color: #fff;
-              }
-            }
-            p.instagram_likes{
-              display: none;
-            }
-            p.instagram_caption{
-              position: absolute;
-              left: 0;
-              bottom: 18px;
-              width: $instagram-image-size;
-              padding: 10px;
-              background-color: #fff;
-              z-index: 10;
-              font-size: 11px;
-              line-height: 13px;
-              opacity: 0;
-              @include transition(all 0.5s ease-in-out);
-            }
-            &:hover p.instagram_caption{
-              opacity: 0.8;
-            }
-          }
-        }
-      }
-    }
-    // TODO consistently name these everywhere as either sidebars or columns
-    aside#sidebar-one{
-      @include span-columns($middle-column-span);
-      @include pad(0 $middle-column-side-padding  $content-top-padding);
-      background: $middle-column-background;
-      text-align: right;
-      color: $middle-column-text-color;
-      h1, h2, h3, h4, h5, h6{
-        color: $middle-column-header-color;
-      }
-      a{
-        color: $middle-column-link-color;
-      }
-    }
-    aside#sidebar-two{
-      @include span-columns($right-column-span);
-      padding-top: $content-top-padding + 6px;
-      background: $right-column-background;
-    }
-
-    @include media($tablet){
-      section.posts{
-        @include span-columns(8);
-      }
-      aside#sidebar-one{
-        @include span-columns(4);
-        margin-right: 0;
-      }
-      aside#sidebar-two{
-        @include span-columns(12);
-        @include pad($content-side-padding);
-      }
-    }
-    @include media($mobile-landscape) {
-      section.posts{
-        @include span-columns(12);
-      }
-      aside#sidebar-one{
-        @include span-columns(12);
-        text-align: left;
-        @include pad($content-side-padding);
-      }
-      aside#sidebar-two{
-        @include span-columns(12);
-        @include pad($content-side-padding);
-      }
-    }
-    @include media($mobile-portrait) {
-      section.posts{
-        @include span-columns(12);
-      }
-      aside#sidebar-one{
-        @include span-columns(12);
-        text-align: left;
-        @include pad($content-side-padding);
-      }
-      aside#sidebar-two{
-        @include span-columns(12);
-        @include pad(16px);
-      }
-    }
-    article.post{
-      border-radius: $article-border-radius;
-      background: $article-background-color;
-      border: $article-border-size solid $article-border-color;
-      padding: $content-top-padding $content-side-padding;
-      h1{
-        margin-top: 0;
+  }
+  h2{
+    font-size: 24px;
+  }
+  .widget_recent_entries,
+  .wp_rp_content,
+  .widget_archive{
+    & > ul{
+      li{
+        padding-bottom: 30px !important;
+        line-height: 1.2;
         a{
           @include underline-on-hover;
-          &, &:visited{
-            color: $title-font-color;
-          }
-          &:active{
-            color: $active-link-color;
-          }
+        }
+        .post-date{
+          display: block;
+          font-size: 10px;
+          color: $middle-column-subtle-text-color;
+          padding: 8px 0 0;
         }
       }
-      footer.meta{
-        margin-top: 20px;
-        color: $subtle-font-color;
-        .date{
-          span{
-            display: none;
+    }
+  }
+  .widget_archive{
+    & > ul{
+      li{
+        padding-bottom: 10px !important;
+        color: $middle-column-subtle-text-color;
+        font-size: 10px;
+        a{
+          font-size: 14px;
+          color: $middle-column-text-color;
+          margin-right: 4px;
+        }
+      }
+    }
+  }
+  // TODO add to README which plugin to use for instagram feed display and how to configure
+  .widget_instagrm_widget{
+    #instagram_widget_title{
+      margin: 0 0 10px;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    ul{
+      @include unformatted-list;
+      @include floated-list;
+      li{
+        position: relative;
+        padding: 0 18px 18px 0;
+        &, a, a img{
+          display: block;
+        }
+        a{
+          width: $instagram-image-size;
+          height: $instagram-image-size;
+        }
+        a img{
+          width: 100%;
+          height: 100%;
+          @include box-shadow(-1px 1px 10px 1px rgba(0, 0, 0, 0.3));
+          @include background-clip(padding-box);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          @include transition(all 0.2s ease-in-out);
+          &:hover{
+            border-color: #fff;
           }
         }
-        .author{
+        p.instagram_likes{
           display: none;
         }
+        p.instagram_caption{
+          position: absolute;
+          left: 0;
+          bottom: 18px;
+          width: $instagram-image-size;
+          padding: 10px;
+          background-color: #fff;
+          z-index: 10;
+          font-size: 11px;
+          line-height: 13px;
+          opacity: 0;
+          @include transition(all 0.5s ease-in-out);
+        }
+        &:hover p.instagram_caption{
+          opacity: 0.8;
+        }
       }
-      .more-link{
-        color: $subtle-font-color;
-        //font-style: italic;
+    }
+  }
+}
+// TODO consistently name these everywhere as either sidebars or columns
+aside#sidebar-one{
+  @include span-columns($middle-column-span);
+  @include pad(0 $middle-column-side-padding  $content-top-padding);
+  background: $middle-column-background;
+  text-align: right;
+  color: $middle-column-text-color;
+  h1, h2, h3, h4, h5, h6{
+    color: $middle-column-header-color;
+  }
+  a{
+    color: $middle-column-link-color;
+  }
+}
+aside#sidebar-two{
+  @include span-columns($right-column-span);
+  padding-top: $content-top-padding + 6px;
+  background: $right-column-background;
+}
+
+@include media($tablet){
+  section.posts{
+    @include span-columns(8);
+  }
+  aside#sidebar-one{
+    @include span-columns(4);
+    margin-right: 0;
+  }
+  aside#sidebar-two{
+    @include span-columns(12);
+    @include pad($content-side-padding);
+  }
+}
+@include media($mobile-landscape) {
+  section.posts{
+    @include span-columns(12);
+  }
+  aside#sidebar-one{
+    @include span-columns(12);
+    text-align: left;
+    @include pad($content-side-padding);
+  }
+  aside#sidebar-two{
+    @include span-columns(12);
+    @include pad($content-side-padding);
+  }
+}
+@include media($mobile-portrait) {
+  section.posts{
+    @include span-columns(12);
+  }
+  aside#sidebar-one{
+    @include span-columns(12);
+    text-align: left;
+    @include pad($content-side-padding);
+  }
+  aside#sidebar-two{
+    @include span-columns(12);
+    @include pad(16px);
+  }
+}
+article.post{
+  border-radius: $article-border-radius;
+  background: $article-background-color;
+  border: $article-border-size solid $article-border-color;
+  padding: $content-top-padding $content-side-padding;
+  h1{
+    margin-top: 0;
+    a{
+      @include underline-on-hover;
+      &, &:visited{
+        color: $title-font-color;
       }
-      .wp_rp_wrap{
+      &:active{
+        color: $active-link-color;
+      }
+    }
+  }
+  footer.meta{
+    margin-top: 20px;
+    color: $subtle-font-color;
+    .date{
+      span{
         display: none;
       }
     }
-    article.comments{
-      background-color: $comments-background-color;
-      li.comment{
-        clear: left;
-        article{
-          padding: 0 0 40px;
-          div.avatar{
-            float: left;
-            width: 100px;
-            img{
-              height: 80px;
-              width: 80px;
-              display: block;
-              border: 1px solid #ccc;
-              padding: 2px;
-            }
-            .post-author{
-              display: block;
-              color: lighten($subtle-font-color, 20%);
-              padding: 6px 0 0 10px;
-              font-size: 12px;
-            }
+    .author{
+      display: none;
+    }
+  }
+  .more-link{
+    color: $subtle-font-color;
+    //font-style: italic;
+  }
+  .wp_rp_wrap{
+    display: none;
+  }
+}
+article.comments{
+  background-color: $comments-background-color;
+  li.comment{
+    clear: left;
+    article{
+      padding: 0 0 40px;
+      div.avatar{
+        float: left;
+        width: 100px;
+        img{
+          height: 80px;
+          width: 80px;
+          display: block;
+          border: 1px solid #ccc;
+          padding: 2px;
+        }
+        .post-author{
+          display: block;
+          color: lighten($subtle-font-color, 20%);
+          padding: 6px 0 0 10px;
+          font-size: 12px;
+        }
+      }
+      .content{
+        margin-left: 100px;
+      }
+      header{
+        .author-time{
+          cite{
+            font-style: normal;
+            font-weight: bold;
           }
-          .content{
-            margin-left: 100px;
-          }
-          header{
-            .author-time{
-              cite{
-                font-style: normal;
-                font-weight: bold;
-              }
-              time, a.link{
-                color: $subtle-font-color;
-                margin-left: 10px;
-              }
-            }
-          }
-          footer{
-            padding: 20px 0 0;
-            div{
-              display: inline;
-              margin-right: 10px;
-            }
-            .reply a:after{
-              content: ' ↓';
-            }
+          time, a.link{
+            color: $subtle-font-color;
+            margin-left: 10px;
           }
         }
       }
-      li.pingback{
-        padding: 0 0 50px;
-        a{
-          @include underline-on-hover;
+      footer{
+        padding: 20px 0 0;
+        div{
+          display: inline;
+          margin-right: 10px;
         }
-        a.comment-edit-link{
-          color: $subtle-font-color;
-          margin-left: 6px;
+        .reply a:after{
+          content: ' ↓';
         }
       }
+    }
+  }
+  li.pingback{
+    padding: 0 0 50px;
+    a{
+      @include underline-on-hover;
+    }
+    a.comment-edit-link{
+      color: $subtle-font-color;
+      margin-left: 6px;
+    }
+  }
+  ol{
+    @include unformatted-list;
+    ol{
+      @include nested-comment(1);
       ol{
-        @include unformatted-list;
+        @include nested-comment(2);
         ol{
-          @include nested-comment(1);
+          @include nested-comment(3);
           ol{
-            @include nested-comment(2);
+            @include nested-comment(4);
             ol{
-              @include nested-comment(3);
+              @include nested-comment(5);
               ol{
-                @include nested-comment(4);
+                @include nested-comment(6);
                 ol{
-                  @include nested-comment(5);
+                  @include nested-comment(7);
                   ol{
-                    @include nested-comment(6);
-                    ol{
-                      @include nested-comment(7);
-                      ol{
-                        @include nested-comment(8);
-                      }
-                    }
+                    @include nested-comment(8);
                   }
                 }
               }
@@ -441,39 +441,39 @@ header.main{
         }
       }
     }
-    article.collapse{
-      padding: 0 $content-side-padding;
-      margin: 10px 0;
-      header{
-        display: none;
-      }
-      background: transparent;
-      border: none;
-      @include box-shadow(none);
-      p{
-        margin-bottom: 0;
-      }
-      footer.meta{
-        .author,
-        .category,
-        .comments,
-        .edit-post{
-          display: none;
-        }
-      }
-    }
-    article.hidden{
+  }
+}
+article.collapse{
+  padding: 0 $content-side-padding;
+  margin: 10px 0;
+  header{
+    display: none;
+  }
+  background: transparent;
+  border: none;
+  @include box-shadow(none);
+  p{
+    margin-bottom: 0;
+  }
+  footer.meta{
+    .author,
+    .category,
+    .comments,
+    .edit-post{
       display: none;
     }
-    nav.pagination{
-      @include outer-container;
-      .previous, .next{
-        @include span-columns(6);
-      }
-      .previous{
-        text-align: right;
-      }
-    }
+  }
+}
+article.hidden{
+  display: none;
+}
+nav.pagination{
+  @include outer-container;
+  .previous, .next{
+    @include span-columns(6);
+  }
+  .previous{
+    text-align: right;
   }
 }
 
