@@ -182,7 +182,7 @@ aside.sidebar{
         }
         .post-date{
           display: block;
-          font-size: $base-font-size - 6;
+          font-size: $base-font-size - 4;
           color: $middle-column-subtle-text-color;
           padding: 8px 0 0;
         }
@@ -194,7 +194,7 @@ aside.sidebar{
       li{
         padding-bottom: 10px !important;
         color: $middle-column-subtle-text-color;
-        font-size: $base-font-size - 6;
+        font-size: $base-font-size - 4;
         a{
           font-size: $base-font-size - 2;
           color: $middle-column-text-color;
