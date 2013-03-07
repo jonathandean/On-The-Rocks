@@ -48,7 +48,7 @@ License URI: http://www.apache.org/licenses/LICENSE-2.0
 @import "debug-breakpoints";
 
 body {
-  font: 16px/1 $font-family;
+  font: $base-font-size/1 $font-family;
   color: $dark-font-color;
   -webkit-text-size-adjust: 100%;
   position:relative;
@@ -168,7 +168,7 @@ aside.sidebar{
     }
   }
   h2{
-    font-size: 24px;
+    font-size: $base-font-size + 8;
   }
   .widget_recent_entries,
   .wp_rp_content,
@@ -182,7 +182,7 @@ aside.sidebar{
         }
         .post-date{
           display: block;
-          font-size: 10px;
+          font-size: $base-font-size - 6;
           color: $middle-column-subtle-text-color;
           padding: 8px 0 0;
         }
@@ -194,9 +194,9 @@ aside.sidebar{
       li{
         padding-bottom: 10px !important;
         color: $middle-column-subtle-text-color;
-        font-size: 10px;
+        font-size: $base-font-size - 6;
         a{
-          font-size: 14px;
+          font-size: $base-font-size - 2;
           color: $middle-column-text-color;
           margin-right: 4px;
         }
@@ -208,7 +208,7 @@ aside.sidebar{
     #instagram_widget_title{
       margin: 0 0 10px;
       font-weight: bold;
-      font-size: 24px;
+      font-size: $base-font-size + 8;
     }
     ul{
       @include unformatted-list;
@@ -245,7 +245,7 @@ aside.sidebar{
           padding: 10px;
           background-color: #fff;
           z-index: 10;
-          font-size: 11px;
+          font-size: $base-font-size - 5;
           line-height: 13px;
           opacity: 0;
           @include transition(all 0.5s ease-in-out);
@@ -373,7 +373,7 @@ article.comments{
           display: block;
           color: lighten($subtle-font-color, 20%);
           padding: 6px 0 0 10px;
-          font-size: 12px;
+          font-size: $base-font-size - 4;
         }
       }
       .content{
@@ -393,7 +393,7 @@ article.comments{
       }
       footer{
         padding: 20px 0 0;
-        font-size: 14px;
+        font-size: $base-font-size - 2;
         & > div, .actions > div{
           display: inline;
           margin-right: 10px;
@@ -451,7 +451,7 @@ article.post article.comments{
   #respond{
     p.form-allowed-tags{
       code{
-        font-size: 12px;
+        font-size: $base-font-size - 4;
         background-color: #efefef;
         line-height: 1.5;
       }
