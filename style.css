@@ -347,8 +347,6 @@ table {
   box-sizing: border-box; }
 
 body {
-  font-size: 19px;
-  line-height: 25px;
   font-style: normal;
   font-weight: 400; }
 
@@ -444,29 +442,49 @@ label {
 
 button,
 input[type="submit"] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
-  appearance: none;
-  -webkit-box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.05);
-  box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.05);
-  border: 1px solid #ddd;
-  border-bottom: 2px solid #ccc;
-  padding: 10px 20px;
+  border: 1px solid #cbcbcb;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 white;
+  box-shadow: inset 0 1px 0 0 white;
+  color: #333333;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: bold;
   background-color: #efefef;
-  border-radius: 4px; }
-  button, button:hover,
-  input[type="submit"],
-  input[type="submit"]:hover {
-    -webkit-transition: all 0.2s ease-in;
-    -moz-transition: all 0.2s ease-in;
-    -ms-transition: all 0.2s ease-in;
-    -o-transition: all 0.2s ease-in;
-    transition: all 0.2s ease-in; }
-  button:hover,
-  input[type="submit"]:hover {
-    background-color: #f9f9f9; }
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #efefef), color-stop(100%, lightgrey));
+  background-image: -webkit-linear-gradient(top, #efefef, lightgrey);
+  background-image: -moz-linear-gradient(top, #efefef, lightgrey);
+  background-image: -ms-linear-gradient(top, #efefef, lightgrey);
+  background-image: -o-linear-gradient(top, #efefef, lightgrey);
+  background-image: linear-gradient(top, #efefef, lightgrey);
+  padding: 7px 18px;
+  text-decoration: none;
+  text-shadow: 0 1px 0 #f9f9f9;
+  -webkit-background-clip: padding-box;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal; }
+  button:hover:not(:disabled),
+  input[type="submit"]:hover:not(:disabled) {
+    -webkit-box-shadow: inset 0 1px 0 0 #fcfcfc;
+    box-shadow: inset 0 1px 0 0 #fcfcfc;
+    cursor: pointer;
+    background-color: #e2e2e2;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e2e2e2), color-stop(100%, #cbcbcb));
+    background-image: -webkit-linear-gradient(top, #e2e2e2, #cbcbcb);
+    background-image: -moz-linear-gradient(top, #e2e2e2, #cbcbcb);
+    background-image: -ms-linear-gradient(top, #e2e2e2, #cbcbcb);
+    background-image: -o-linear-gradient(top, #e2e2e2, #cbcbcb);
+    background-image: linear-gradient(top, #e2e2e2, #cbcbcb); }
+  button:active:not(:disabled),
+  input[type="submit"]:active:not(:disabled) {
+    border: 1px solid #cbcbcb;
+    -webkit-box-shadow: inset 0 0 8px 4px #c4c4c4, inset 0 0 8px 4px #c4c4c4, 0 1px 1px 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #c4c4c4, inset 0 0 8px 4px #c4c4c4, 0 1px 1px 0 #eeeeee; }
+  button:disabled,
+  input[type="submit"]:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
 
 @media screen and (min-width: 960px) {
   #wpadminbar #wp-admin-bar-site-name a.ab-item:after {
@@ -482,7 +500,7 @@ input[type="submit"] {
     content: ' at mobile-landscape'; } }
 
 body {
-  font: 16px/1 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font: 16px "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
   -webkit-text-size-adjust: 100%;
   position: relative;
@@ -626,13 +644,13 @@ aside.sidebar {
     aside.sidebar .wp_rp_content > ul li .post-date,
     aside.sidebar .widget_archive > ul li .post-date {
       display: block;
-      font-size: 10px;
+      font-size: 12px;
       color: #99a3a8;
       padding: 8px 0 0; }
   aside.sidebar .widget_archive > ul li {
     padding-bottom: 10px !important;
     color: #99a3a8;
-    font-size: 10px; }
+    font-size: 12px; }
     aside.sidebar .widget_archive > ul li a {
       font-size: 14px;
       color: #455761;
