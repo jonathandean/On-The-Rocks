@@ -599,15 +599,6 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
-@media screen and (min-width: 768px) and (max-width: 959px) {
-  #content {
-    border: none; } }
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  #content {
-    border: none; } }
-@media screen and (max-width: 767px) {
-  #content {
-    border: none; } }
 
 section.posts {
   display: block;
