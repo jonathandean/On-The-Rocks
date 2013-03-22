@@ -515,11 +515,11 @@ a:visited {
 a:active {
   color: #999999; }
 
-article.comment code, article.comment pre, article.post code, article.post pre {
+article.comment code, article.comment pre, article.post code, article.post pre, article.page code, article.page pre {
   display: block;
   background-color: #eee;
   padding: 10px; }
-article.comment code pre, article.comment pre code, article.post code pre, article.post pre code {
+article.comment code pre, article.comment pre code, article.post code pre, article.post pre code, article.page code pre, article.page pre code {
   padding: 0; }
 
 header.main {
@@ -823,22 +823,22 @@ aside#sidebar-two {
     padding: 16px; }
     aside#sidebar-two:last-child {
       margin-right: 0; } }
-article.post {
+article.post, article.page {
   border-radius: 0px;
   background: white;
   border: 0px solid white;
   padding: 44px 40px; }
-  article.post h1 {
+  article.post h1, article.page h1 {
     margin-top: 0; }
-    article.post h1 a {
+    article.post h1 a, article.page h1 a {
       text-decoration: none; }
-      article.post h1 a:hover {
+      article.post h1 a:hover, article.page h1 a:hover {
         text-decoration: underline; }
-      article.post h1 a, article.post h1 a:visited {
+      article.post h1 a, article.post h1 a:visited, article.page h1 a, article.page h1 a:visited {
         color: #333333; }
-      article.post h1 a:active {
+      article.post h1 a:active, article.page h1 a:active {
         color: #999999; }
-  article.post footer.meta {
+  article.post footer.meta, article.page footer.meta {
     margin: 40px 0 0;
     padding: 14px 0;
     border-color: #cccccc;
@@ -847,7 +847,7 @@ article.post {
     border-right-width: 0px;
     border-left-width: 0px;
     color: #8c8a8a; }
-  article.post .wp_rp_wrap {
+  article.post .wp_rp_wrap, article.page .wp_rp_wrap {
     display: none; }
 
 article.comments {
@@ -1079,7 +1079,8 @@ article.comments {
                       article.comments ol ol ol ol ol ol ol ol ol article:last-child {
                         margin-right: 0; }
 
-article.post article.comments #respond p.form-allowed-tags code {
+article.post article.comments #respond p.form-allowed-tags code,
+article.page article.comments #respond p.form-allowed-tags code {
   font-size: 12px;
   background-color: #efefef;
   line-height: 1.5; }
@@ -1129,8 +1130,11 @@ nav.pagination {
     text-align: right;
     padding-right: 40px; }
 
-.indent-paragraphs #content .container article.post .content > p {
+.indent-paragraphs #content .container article.post .content > p,
+.indent-paragraphs #content .container article.page .content > p {
   text-indent: 16px; }
 
-.indent-paragraphs-except-first #content .container article.post .content > p.first, .indent-paragraphs-except-first #content .container article.post .content > p:first-child {
+.indent-paragraphs-except-first #content .container article.post .content > p.first, .indent-paragraphs-except-first #content .container article.post .content > p:first-child,
+.indent-paragraphs-except-first #content .container article.page .content > p.first,
+.indent-paragraphs-except-first #content .container article.page .content > p:first-child {
   text-indent: 0px; }

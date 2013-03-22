@@ -65,7 +65,7 @@ a:active{
   color: $active-link-color;
 }
 
-article.comment, article.post{
+article.comment, article.post, article.page{
   code, pre{
     display: block;
     background-color: #eee;
@@ -318,7 +318,7 @@ aside#sidebar-two{
     @include pad(16px);
   }
 }
-article.post{
+article.post, article.page{
   border-radius: $article-border-radius;
   background: $article-background-color;
   border: $article-border-size solid $article-border-color;
@@ -443,7 +443,8 @@ article.comments{
     }
   }
 }
-article.post article.comments{
+article.post article.comments,
+article.page article.comments{
   #respond{
     p.form-allowed-tags{
       code{
@@ -495,13 +496,15 @@ nav.pagination{
 }
 
 // For the indent paragraphs theme option
-.indent-paragraphs #content .container article.post .content{
+.indent-paragraphs #content .container article.post .content,
+.indent-paragraphs #content .container article.page .content{
   & > p{
     text-indent: 16px;
   }
 }
 // For the indent paragraphs except first theme option
-.indent-paragraphs-except-first #content .container article.post .content{
+.indent-paragraphs-except-first #content .container article.post .content,
+.indent-paragraphs-except-first #content .container article.page .content{
   & > p.first, & > p:first-child {
     text-indent: 0px;
   }
