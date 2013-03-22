@@ -1,16 +1,4 @@
-<?php
-  $hidden = false;
-  $article_class_extra = 'post ';
-  if(in_category(get_otr_option('hidden_category'))){
-    $hidden = true;
-    if(get_otr_option('hidden_category_method') == 'hide'){
-      $article_class_extra = 'hidden';
-    }else if(get_otr_option('hidden_category_method') == 'collapse'){
-      $article_class_extra = 'collapse';
-    }
-  }
-?>
-<article id="post-<?php the_ID(); ?>" <?php post_class($article_class_extra); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class(extra_article_classes()); ?>>
   <header class="article">
     <h1><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
     <?php if(!is_page()) : ?>

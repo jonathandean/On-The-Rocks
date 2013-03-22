@@ -162,6 +162,19 @@ if ( ! function_exists( 'extra_body_classes' ) ) {
     return $classes;
   }
 }
+if ( ! function_exists( 'extra_article_classes' ) ) {
+  function extra_article_classes(){
+    $classes = '';
+    if(in_category(get_otr_option('hidden_category'))){
+      if(get_otr_option('hidden_category_method') == 'hide'){
+        $classes = 'hidden';
+      }else if(get_otr_option('hidden_category_method') == 'collapse'){
+        $classes = 'collapse';
+      }
+    }
+    return $classes;
+  }
+}
 
 if ( ! function_exists( 'otr_comment' ) ) :
 /**
