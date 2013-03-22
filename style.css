@@ -599,6 +599,15 @@ header.main {
     display: table; }
   #content .container:after {
     clear: both; }
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  #content {
+    border: none; } }
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  #content {
+    border: none; } }
+@media screen and (max-width: 767px) {
+  #content {
+    border: none; } }
 
 section.posts {
   display: block;
@@ -846,8 +855,6 @@ article.post {
     border-style: solid;
     border-right-width: 0px;
     border-left-width: 0px;
-    color: #8c8a8a; }
-  article.post .more-link {
     color: #8c8a8a; }
   article.post .wp_rp_wrap {
     display: none; }
