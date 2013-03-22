@@ -457,7 +457,7 @@ article.page article.comments{
 }
 article.collapse{
   padding: 0 $content-side-padding;
-  margin: 10px 0;
+  margin: 60px 0;
   header{
     display: none;
   }
@@ -466,14 +466,12 @@ article.collapse{
   @include box-shadow(none);
   p{
     margin-bottom: 0;
+    font-size: $base-font-size + 4;
   }
   footer.meta{
-    .author,
-    .category,
-    .comments,
-    .edit-post{
-      display: none;
-    }
+    margin-top: 20px;
+    font-size: $base-font-size - 4;
+    padding: 6px 0;
   }
 }
 article.hidden{

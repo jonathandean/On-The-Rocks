@@ -1087,7 +1087,7 @@ article.page article.comments #respond p.form-allowed-tags code {
 
 article.collapse {
   padding: 0 40px;
-  margin: 10px 0;
+  margin: 60px 0;
   background: transparent;
   border: none;
   -webkit-box-shadow: none;
@@ -1095,12 +1095,12 @@ article.collapse {
   article.collapse header {
     display: none; }
   article.collapse p {
-    margin-bottom: 0; }
-  article.collapse footer.meta .author,
-  article.collapse footer.meta .category,
-  article.collapse footer.meta .comments,
-  article.collapse footer.meta .edit-post {
-    display: none; }
+    margin-bottom: 0;
+    font-size: 20px; }
+  article.collapse footer.meta {
+    margin-top: 20px;
+    font-size: 12px;
+    padding: 6px 0; }
 
 article.hidden {
   display: none; }
