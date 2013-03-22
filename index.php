@@ -30,9 +30,7 @@ get_header(); ?>
 <div id="content" role="main">
   <div class="container">
   <?php
-  if(is_home() && get_otr_option('hidden_category_method') == 'filter'){
-    query_posts($query_string . '&cat=-'.get_otr_option('hidden_category'));
-  }
+    otr_query_posts($query_string);
   ?>
     <section class="posts">
       <?php if ( have_posts() ) : ?>

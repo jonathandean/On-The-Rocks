@@ -162,6 +162,7 @@ if ( ! function_exists( 'extra_body_classes' ) ) {
     return $classes;
   }
 }
+
 if ( ! function_exists( 'extra_article_classes' ) ) {
   function extra_article_classes(){
     $classes = '';
@@ -173,6 +174,14 @@ if ( ! function_exists( 'extra_article_classes' ) ) {
       }
     }
     return $classes;
+  }
+}
+
+if ( ! function_exists( 'otr_query_posts' ) ) {
+  function otr_query_posts($query_string){
+    if(is_home() && get_otr_option('hidden_category_method') == 'filter'){
+      query_posts($query_string . '&cat=-'.get_otr_option('hidden_category'));
+    }
   }
 }
 
