@@ -1108,7 +1108,9 @@ nav.pagination {
   *zoom: 1;
   max-width: 75.99879em;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-bottom: 40px;
+  font-weight: bold; }
   nav.pagination:before, nav.pagination:after {
     content: " ";
     display: table; }
@@ -1121,8 +1123,11 @@ nav.pagination {
     width: 48.82117%; }
     nav.pagination .previous:last-child, nav.pagination .next:last-child {
       margin-right: 0; }
+  nav.pagination .next {
+    padding-left: 40px; }
   nav.pagination .previous {
-    text-align: right; }
+    text-align: right;
+    padding-right: 40px; }
 
 .indent-paragraphs #content .container article.post .content > p {
   text-indent: 16px; }

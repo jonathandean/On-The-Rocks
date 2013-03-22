@@ -483,9 +483,15 @@ nav.pagination{
   .previous, .next{
     @include span-columns(6);
   }
+  .next{
+    padding-left: $content-side-padding;
+  }
   .previous{
     text-align: right;
+    padding-right: $content-side-padding;
   }
+  padding-bottom: 40px;
+  font-weight: bold;
 }
 
 // For the indent paragraphs theme option
