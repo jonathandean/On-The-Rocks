@@ -91,11 +91,12 @@ header.main{
     h1{
       @include span-columns($header-logo-columns);
       color: $logo-color;
-      //font-weight: normal;
+      font-weight: normal;
       padding-left: $content-side-padding;
       text-shadow: 3px 4px 6px rgba(0,0,0,.5);
       margin-top: 10px;
       margin-bottom: 10px;
+      font-size: $logo-font-size;
     }
     nav{
       @include span-columns($header-nav-columns);
