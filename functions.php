@@ -50,7 +50,8 @@ if ( ! function_exists( 'load_svg_fallback_jquery' ) ) {
   <?php
   }
 }
-add_action( 'wp_head', 'load_svg_fallback_jquery' );
+// See the README for how to use this in your Child Theme
+// add_action( 'wp_head', 'load_svg_fallback_jquery' );
 
 if ( ! function_exists( 'load_svg_fallback_js' ) ) {
   function load_svg_fallback_js() {
@@ -60,8 +61,7 @@ if ( ! function_exists( 'load_svg_fallback_js' ) ) {
   <?php
   }
 }
-// Not using this version, using the jQuery version defined above. Left here in case you prefer to un-register that action and register this one instead in your Child Theme
-// See the README for how to do this in your Child Theme
+// See the README for how to use this in your Child Theme
 // add_action( 'wp_footer', 'load_svg_fallback_js' );
 
 
