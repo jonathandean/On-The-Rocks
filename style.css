@@ -854,41 +854,41 @@ article.post, article.page {
 
 article.comments {
   background-color: none; }
-  article.comments li.comment {
+  article.comments li.comment, article.comments li.social-twitter {
     clear: left; }
-    article.comments li.comment article {
+    article.comments li.comment article, article.comments li.social-twitter article {
       padding: 0 0 40px; }
-      article.comments li.comment article div.avatar {
+      article.comments li.comment article div.avatar, article.comments li.social-twitter article div.avatar {
         float: left;
         width: 100px; }
-        article.comments li.comment article div.avatar img {
+        article.comments li.comment article div.avatar img, article.comments li.social-twitter article div.avatar img {
           height: 80px;
           width: 80px;
           display: block;
           border: 1px solid #ccc;
           padding: 2px; }
-        article.comments li.comment article div.avatar .post-author {
+        article.comments li.comment article div.avatar .post-author, article.comments li.social-twitter article div.avatar .post-author {
           display: block;
           color: #bfbdbd;
           padding: 6px 0 0 10px;
           font-size: 12px; }
-      article.comments li.comment article .content {
+      article.comments li.comment article .content, article.comments li.social-twitter article .content {
         margin-left: 100px; }
-      article.comments li.comment article header .author-time cite {
+      article.comments li.comment article header .author-time cite, article.comments li.social-twitter article header .author-time cite {
         font-style: normal;
         font-weight: bold; }
-      article.comments li.comment article header .author-time time, article.comments li.comment article header .author-time a.link {
+      article.comments li.comment article header .author-time time, article.comments li.comment article header .author-time a.link, article.comments li.social-twitter article header .author-time time, article.comments li.social-twitter article header .author-time a.link {
         color: #8c8a8a;
         margin-left: 10px; }
-      article.comments li.comment article footer {
+      article.comments li.comment article footer, article.comments li.social-twitter article footer {
         padding: 20px 0 0;
         font-size: 14px; }
-        article.comments li.comment article footer > div, article.comments li.comment article footer .actions > div {
+        article.comments li.comment article footer > div, article.comments li.comment article footer .actions > div, article.comments li.social-twitter article footer > div, article.comments li.social-twitter article footer .actions > div {
           display: inline;
           margin-right: 10px; }
-        article.comments li.comment article footer .reply a:after {
+        article.comments li.comment article footer .reply a:after, article.comments li.social-twitter article footer .reply a:after {
           content: ' ↩'; }
-        article.comments li.comment article footer .reply .ss-reply {
+        article.comments li.comment article footer .reply .ss-reply, article.comments li.social-twitter article footer .reply .ss-reply {
           display: none; }
   article.comments li.pingback {
     padding: 0 0 50px; }

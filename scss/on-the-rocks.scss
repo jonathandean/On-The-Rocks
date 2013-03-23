@@ -352,7 +352,7 @@ article.post, article.page{
 }
 article.comments{
   background-color: $comments-background-color;
-  li.comment{
+  li.comment, li.social-twitter{
     clear: left;
     article{
       padding: 0 0 40px;
