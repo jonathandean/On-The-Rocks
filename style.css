@@ -1130,6 +1130,29 @@ nav.pagination {
     text-align: right;
     padding-right: 40px; }
 
+footer.main {
+  *zoom: 1;
+  max-width: 75.99879em;
+  margin-left: auto;
+  margin-right: auto; }
+  footer.main:before, footer.main:after {
+    content: " ";
+    display: table; }
+  footer.main:after {
+    clear: both; }
+  footer.main p {
+    display: block;
+    float: left;
+    margin-right: 2.35765%;
+    width: 100%;
+    padding: 0 40px;
+    font-size: 12px;
+    text-align: center; }
+    footer.main p:last-child {
+      margin-right: 0; }
+    footer.main p, footer.main p a {
+      color: #8c8a8a; }
+
 .indent-paragraphs #content .container article.post .content > p,
 .indent-paragraphs #content .container article.page .content > p {
   text-indent: 16px; }

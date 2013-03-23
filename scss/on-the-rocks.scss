@@ -493,6 +493,19 @@ nav.pagination{
   font-weight: bold;
 }
 
+footer.main{
+  @include outer-container;
+  p{
+    @include span-columns(12);
+    padding: 0 $content-side-padding;
+    font-size: $base-font-size - 4;
+    text-align: center;
+    &, a{
+      color: $subtle-font-color;
+    }
+  }
+}
+
 // For the indent paragraphs theme option
 .indent-paragraphs #content .container article.post .content,
 .indent-paragraphs #content .container article.page .content{
