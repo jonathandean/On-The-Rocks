@@ -5,7 +5,7 @@ Theme URI: http://jonathandean.com/
 Description: Lightweight WordPress theme using SASS, Bourbon and Neat
 Author: Jonathan E. Dean
 Author URI: http://jonathandean.com/
-Version: 0.2.0
+Version: 0.2.2
 
 License: 
 
@@ -514,6 +514,9 @@ a:visited {
 
 a:active {
   color: #999999; }
+
+img {
+  max-width: 100%; }
 
 article.comment code, article.comment pre, article.post code, article.post pre, article.page code, article.page pre {
   display: block;

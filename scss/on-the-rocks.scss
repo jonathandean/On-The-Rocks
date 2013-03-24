@@ -65,6 +65,10 @@ a:active{
   color: $active-link-color;
 }
 
+img{
+  max-width: 100%;
+}
+
 article.comment, article.post, article.page{
   code, pre{
     display: block;
