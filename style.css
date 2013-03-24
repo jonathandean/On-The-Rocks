@@ -368,6 +368,10 @@ h1 {
   margin-bottom: 25px;
   font-weight: normal; }
 
+@media screen and (max-width: 767px) {
+  h1 {
+    font-size: 32px;
+    line-height: 44px; } }
 h2, h3, h4, h5, h6 {
   margin-top: 50px;
   margin-bottom: 25px;
@@ -421,6 +425,10 @@ p.intro {
   letter-spacing: 0px;
   color: #8c8a8a; }
 
+@media screen and (max-width: 767px) {
+  blockquote, blockquote p, p.intro {
+    font-size: 24px;
+    line-height: 34px; } }
 textarea,
 input[type="text"],
 input[type="password"],
@@ -558,6 +566,10 @@ header.main {
       font-size: 36px; }
       header.main .container h1:last-child {
         margin-right: 0; }
+    @media screen and (max-width: 767px) {
+      header.main .container h1 {
+        padding-left: 10px;
+        padding-right: 10px; } }
     header.main .container nav {
       display: block;
       float: left;
@@ -578,6 +590,10 @@ header.main {
           padding-right: 1em; }
           header.main .container nav ul li:last-child {
             padding-right: 0; }
+      @media screen and (max-width: 767px) {
+        header.main .container nav ul {
+          padding-left: 10px;
+          padding-right: 10px; } }
     @media screen and (max-width: 959px) {
       header.main .container h1, header.main .container nav {
         display: block;
@@ -789,7 +805,7 @@ aside#sidebar-two {
     margin-right: 2.35765%;
     width: 100%;
     text-align: left;
-    padding: 40px; }
+    padding: 10px; }
     aside#sidebar-one:last-child {
       margin-right: 0; }
 
@@ -798,7 +814,7 @@ aside#sidebar-two {
     float: left;
     margin-right: 2.35765%;
     width: 100%;
-    padding: 40px; }
+    padding: 10px; }
     aside#sidebar-two:last-child {
       margin-right: 0; } }
 @media screen and (max-width: 767px) {
@@ -816,7 +832,7 @@ aside#sidebar-two {
     margin-right: 2.35765%;
     width: 100%;
     text-align: left;
-    padding: 40px; }
+    padding: 10px; }
     aside#sidebar-one:last-child {
       margin-right: 0; }
 
@@ -855,6 +871,10 @@ article.post, article.page {
   article.post .wp_rp_wrap, article.page .wp_rp_wrap {
     display: none; }
 
+@media screen and (max-width: 767px) {
+  article.post, article.page {
+    padding-left: 10px;
+    padding-right: 10px; } }
 article.comments {
   background-color: none; }
   article.comments li.comment, article.comments li.social-twitter {
@@ -1107,6 +1127,10 @@ article.collapse {
     font-size: 12px;
     padding: 6px 0; }
 
+@media screen and (max-width: 767px) {
+  article.collapse {
+    padding-left: 10px;
+    padding-right: 10px; } }
 article.hidden {
   display: none; }
 
@@ -1135,6 +1159,11 @@ nav.pagination {
     text-align: right;
     padding-right: 40px; }
 
+@media screen and (max-width: 767px) {
+  nav.pagination .next {
+    padding-left: 10px; }
+  nav.pagination .previous {
+    padding-right: 10px; } }
 footer.main {
   *zoom: 1;
   max-width: 75.99879em;
@@ -1158,6 +1187,10 @@ footer.main {
     footer.main p, footer.main p a {
       color: #8c8a8a; }
 
+@media screen and (max-width: 767px) {
+  footer.main p {
+    padding-left: 10px;
+    padding-right: 10px; } }
 .indent-paragraphs #content .container article.post .content > p,
 .indent-paragraphs #content .container article.page .content > p {
   text-indent: 16px; }

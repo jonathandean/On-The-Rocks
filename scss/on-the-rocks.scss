@@ -102,6 +102,12 @@ header.main{
       margin-bottom: 10px;
       font-size: $logo-font-size;
     }
+    @include media($mobile-portrait){
+      h1{
+        padding-left: $content-side-padding-mobile;
+        padding-right: $content-side-padding-mobile;
+      }
+    }
     nav{
       @include span-columns($header-nav-columns);
       ul{
@@ -114,6 +120,12 @@ header.main{
           &:last-child{
             padding-right: 0;
           }
+        }
+      }
+      @include media($mobile-portrait){
+        ul{
+          padding-left: $content-side-padding-mobile;
+          padding-right: $content-side-padding-mobile;
         }
       }
     }
@@ -302,11 +314,11 @@ aside#sidebar-two{
   aside#sidebar-one{
     @include span-columns(12);
     text-align: left;
-    @include pad($content-side-padding);
+    @include pad($content-side-padding-mobile);
   }
   aside#sidebar-two{
     @include span-columns(12);
-    @include pad($content-side-padding);
+    @include pad($content-side-padding-mobile);
   }
 }
 @include media($mobile-portrait) {
@@ -316,7 +328,7 @@ aside#sidebar-two{
   aside#sidebar-one{
     @include span-columns(12);
     text-align: left;
-    @include pad($content-side-padding);
+    @include pad($content-side-padding-mobile);
   }
   aside#sidebar-two{
     @include span-columns(12);
@@ -352,6 +364,12 @@ article.post, article.page{
   }
   .wp_rp_wrap{
     display: none;
+  }
+}
+@include media($mobile-portrait){
+  article.post, article.page{
+    padding-left: $content-side-padding-mobile;
+    padding-right: $content-side-padding-mobile;
   }
 }
 article.comments{
@@ -479,6 +497,12 @@ article.collapse{
     padding: 6px 0;
   }
 }
+@include media($mobile-portrait){
+  article.collapse{
+    padding-left: $content-side-padding-mobile;
+    padding-right: $content-side-padding-mobile;
+  }
+}
 article.hidden{
   display: none;
 }
@@ -497,6 +521,16 @@ nav.pagination{
   padding-bottom: 40px;
   font-weight: bold;
 }
+@include media($mobile-portrait){
+  nav.pagination{
+    .next{
+      padding-left: $content-side-padding-mobile;
+    }
+    .previous{
+      padding-right: $content-side-padding-mobile;
+    }
+  }
+}
 
 footer.main{
   @include outer-container;
@@ -507,6 +541,15 @@ footer.main{
     text-align: center;
     &, a{
       color: $subtle-font-color;
+    }
+  }
+}
+
+@include media($mobile-portrait){
+  footer.main{
+    p{
+      padding-left: $content-side-padding-mobile;
+      padding-right: $content-side-padding-mobile;
     }
   }
 }
