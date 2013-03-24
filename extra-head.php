@@ -1,0 +1,1 @@
+<?php /* Put some stuff here you want to add to the <head> element, such as your own iPhone touch icons, etc. */ ?>

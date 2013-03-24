@@ -33,6 +33,8 @@
   
   <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+
+  <?php get_template_part( 'extra-head' ); ?>
   
   <?php
     if ( is_singular() && get_option( 'thread_comments' ) )
