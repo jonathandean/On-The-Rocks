@@ -44,6 +44,7 @@
   ?>
 </head>
 <body <?php body_class(extra_body_classes()); ?>>
+  <?php get_template_part( 'analytics' ); ?>
   <div id="page">
     <header class="main">
       <div class="container">
